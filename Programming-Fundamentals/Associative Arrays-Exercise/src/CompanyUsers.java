@@ -25,7 +25,7 @@ public class CompanyUsers {
                 .forEach(c -> {
                     System.out.println(String.format("%s",c.getKey()));
                     c.getValue()
-                            .forEach(e-> System.out.println(String.format("--%s",e)));
+                            .forEach(e-> System.out.println(String.format("-- %s",e)));
                 });
     }
 }
