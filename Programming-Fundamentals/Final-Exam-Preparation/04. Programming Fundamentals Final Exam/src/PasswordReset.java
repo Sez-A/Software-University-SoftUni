@@ -38,6 +38,5 @@ public class PasswordReset {
             }
         }
         System.out.printf("Your password is: %s%n", password);
-
     }
 }
