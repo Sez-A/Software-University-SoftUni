@@ -66,6 +66,7 @@ Game ends after **50 rounds** or if any player **lose all** of his numbers.
 #### **Solution**
 You might help yourself with the code below:
 
+![](Aspose.Words.2bad1266-75f0-41a5-94b7-6d0c4e6dbcd6.001.png)
 1. ## **Maps**
 1. ### **Count Real Numbers**
 Write a program that counts the occurrence of real **numbers**. The input is a single line with real numbers separated by a space. Print the numbers in the order of appearance. All **numbers** must be formatted to **one digit** after the decimal point.
@@ -78,6 +79,7 @@ Write a program that counts the occurrence of real **numbers**. The input is a s
 #### **Solution**
 You might help yourself with the code below:
 
+![](Aspose.Words.2bad1266-75f0-41a5-94b7-6d0c4e6dbcd6.002.png)
 1. ### **Average Students Grades**
 Write a program, which reads the **name** of a student and their **grades** and **adds** them to the **student record**, then **prints** **grades** along with their **average grade – ordered the output by the names of the students**.
 #### **Input**
@@ -127,6 +129,8 @@ Write a program to read **continents**, **countries** and their **cities**, put 
 - Check if the continent **exists** before adding the country. If it doesn’t, **add** it to the dictionary.
 - Check if the country **exists**, before **adding** the city. If it doesn’t, add it to the dictionary.
 
+![](Aspose.Words.2bad1266-75f0-41a5-94b7-6d0c4e6dbcd6.003.png)
+
 - Pass through all **key-value pairs** in the Map and the values’ key-value pairs and print the results.
 1. ### **Academy Graduation**
 Write a program that:
@@ -149,6 +153,14 @@ Write a program that:
 #### **Solution**
 You might help yourself with the code below:
 
+![](Aspose.Words.2bad1266-75f0-41a5-94b7-6d0c4e6dbcd6.004.png)
 
 
+Follow us:
 
+© SoftUni – [about.softuni.bg](about.softuni.bg). Copyrighted document. Unauthorized copy, reproduction or use is not permitted.
+
+![](Aspose.Words.2bad1266-75f0-41a5-94b7-6d0c4e6dbcd6.007.png)   ![](Aspose.Words.2bad1266-75f0-41a5-94b7-6d0c4e6dbcd6.007.png)   ![](Aspose.Words.2bad1266-75f0-41a5-94b7-6d0c4e6dbcd6.007.png)   ![](Aspose.Words.2bad1266-75f0-41a5-94b7-6d0c4e6dbcd6.007.png)   ![](Aspose.Words.2bad1266-75f0-41a5-94b7-6d0c4e6dbcd6.007.png)  ![](Aspose.Words.2bad1266-75f0-41a5-94b7-6d0c4e6dbcd6.007.png)   ![](Aspose.Words.2bad1266-75f0-41a5-94b7-6d0c4e6dbcd6.007.png)   ![](Aspose.Words.2bad1266-75f0-41a5-94b7-6d0c4e6dbcd6.007.png)   ![](Aspose.Words.2bad1266-75f0-41a5-94b7-6d0c4e6dbcd6.007.png)
+
+Page  PAGE   \\* MERGEFORMAT 8 of  NUMPAGES   \\* MERGEFORMAT 8
+![](Aspose.Words.2bad1266-75f0-41a5-94b7-6d0c4e6dbcd6.005.png)![](Aspose.Words.2bad1266-75f0-41a5-94b7-6d0c4e6dbcd6.006.png)![](Aspose.Words.2bad1266-75f0-41a5-94b7-6d0c4e6dbcd6.008.png)![](Aspose.Words.2bad1266-75f0-41a5-94b7-6d0c4e6dbcd6.009.png)
