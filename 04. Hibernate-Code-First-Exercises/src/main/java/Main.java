@@ -1,18 +1,13 @@
-import entity.Customer;
 import entity.Product;
-import entity.Sale;
-import entity.StoreLocation;
+import entity.problem5.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
-import java.math.BigDecimal;
-import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
-
         EntityManager entityManager = Persistence
-                .createEntityManagerFactory("softuni")
+                .createEntityManagerFactory ("softuni")
                 .createEntityManager();
 
         entityManager.getTransaction().begin();
@@ -40,6 +35,8 @@ public class Main {
 //        for (Sale sale : sales) {
 //            System.out.println(sale.getDateTime());
 //        }
+
+        User user = new User();
         entityManager.getTransaction().commit();
     }
 }
