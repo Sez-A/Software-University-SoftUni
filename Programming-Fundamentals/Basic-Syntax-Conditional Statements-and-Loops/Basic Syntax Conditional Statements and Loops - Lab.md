@@ -18,9 +18,12 @@ First, we need a scanner, which we can use to read data from the console.
 ![image](https://user-images.githubusercontent.com/67644402/141779170-88e9149f-2cd9-4f46-be52-f9167f3d2b04.png)
 
 Read all the information – student name, age and grade
+
 ![image](https://user-images.githubusercontent.com/67644402/141779186-e5217dde-a478-4f6c-b037-0852768f24c7.png)
 Finally, we need to print the information in the specified format
+
 ![image](https://user-images.githubusercontent.com/67644402/141779201-3b589805-312c-43dc-9cd7-b0c684d59fe0.png)
+
 ## 2. **Passed**
 Write a program, which takes as an input a **grade** and prints "**Passed!**" if the grade is **equal or more than 3.00**.
 
@@ -123,11 +126,16 @@ For every **type of day**, we will need to add **different cases** to check the 
 Think **where** and **how** you can use **logical operators** for the **other cases**.
 
 We can check if the **price has a value** different, than the **initial** one. It it does, that means we got a **valid combination of day and age** and the price of the ticket is saved in the **price** variable. If the **price** has a **value of 0**, then none of the cases got hit, therefore we have to **print the error message**.
+
 ![image](https://user-images.githubusercontent.com/67644402/141779365-8d37984d-1b7f-4e49-bde3-b00f445bc8c3.png)
+
 ## 8. **Divisible by 3**
 Write a program, which prints all the numbers from **1 to 100**, which are **divisible by 3**. You have to use a single **for** loop. The program should not receive input.
 
 ### **Solution**
+
+
+
 ![image](https://user-images.githubusercontent.com/67644402/141779388-515915bc-a27b-4bce-9f6a-0b8c974feb86.png)
 ## 9. **Sum of Odd Numbers**
 Write a program that prints the next **n** **odd numbers** (starting from 1) and on the **last row** prints the **sum of them**.
