@@ -15,11 +15,12 @@ You will be given 3 lines of input – student name, age and average grade. Your
 |<p>Marry</p><p>12</p><p>6.00</p>|Name: Marry, Age: 12, Grade: 6.00|
 ### **Solution**
 First, we need a scanner, which we can use to read data from the console.
+![image](https://user-images.githubusercontent.com/67644402/141779170-88e9149f-2cd9-4f46-be52-f9167f3d2b04.png)
 
 Read all the information – student name, age and grade
-
+![image](https://user-images.githubusercontent.com/67644402/141779186-e5217dde-a478-4f6c-b037-0852768f24c7.png)
 Finally, we need to print the information in the specified format
-
+![image](https://user-images.githubusercontent.com/67644402/141779201-3b589805-312c-43dc-9cd7-b0c684d59fe0.png)
 ## 2. **Passed**
 Write a program, which takes as an input a **grade** and prints "**Passed!**" if the grade is **equal or more than 3.00**.
 
@@ -46,7 +47,7 @@ The **output** is either "**Passed!**" if the grade is **more than 2.99**, other
 |5.32|Passed!||2.36|Failed!|
 ### **Hint**
 We need to take **floating-point** number from the console. After that print in the **else** statement the appropriate message.
-
+![image](https://user-images.githubusercontent.com/67644402/141779228-4f9e5569-1492-444b-8b04-cd07e32a3d08.png)
 ## 4. **Back in 30 Minutes**
 Every time John tries to pay his bills he sees on the cash desk the sign: **"I will be back in 30 minutes"**. One day John was sick of waiting and decided he needs a program, which **prints the time** after **30** **minutes**. That way he won’t have to wait on the desk and come at the appropriate time. He gave the assignment to you, so you have to do it.
 
@@ -79,7 +80,7 @@ If the number is within the boundaries print the corresponding month, otherwise 
 | :-: | :-: | :-: | :-: | :-: |
 |2|February||13|Error!|
 ### **Hints**
-
+![image](https://user-images.githubusercontent.com/67644402/141779262-aae4878d-e133-4873-97a1-8cae0e67fe95.png)
 ## 6. **Foreign Languages**
 Write a program, which prints the language, that a given country speaks. You can receive only the following combinations: English **is spoken** in England and USA; Spanish **is spoken** in Spain, Argentina and Mexico; for the others**,** we should print "unknown".
 
@@ -116,18 +117,18 @@ Print the price of the ticket according to the table, or "**Error!**" if the age
 |<p>Weekday</p><p>42</p>|18$||<p>Holiday</p><p>-12</p>|Error!||<p>Holiday</p><p>15</p>|5$||<p>Weekend</p><p>122</p>|15$|
 ### **Hints**
 We need to read **two** lines. **First** one will be the **type of day**. We will convert it to **lower case** letters with the method "**toLowerCase()**". After that, we will read the **age** of the person and declare a **variable** – **price**, which we will use to set the price of the ticket.
-
+![image](https://user-images.githubusercontent.com/67644402/141779308-36b403bb-4e4e-4136-8354-f20030824c71.png)
 For every **type of day**, we will need to add **different cases** to check the **age** of the person and **set the price**. Some of the **age groups** have **equal** **prices** for the **same type** of day. This means we can use **logical operators** to **merge some of the conditions**.
-
+![image](https://user-images.githubusercontent.com/67644402/141779340-a7cbfdd1-d0b4-431c-96fa-e84b18fb496e.png)
 Think **where** and **how** you can use **logical operators** for the **other cases**.
 
 We can check if the **price has a value** different, than the **initial** one. It it does, that means we got a **valid combination of day and age** and the price of the ticket is saved in the **price** variable. If the **price** has a **value of 0**, then none of the cases got hit, therefore we have to **print the error message**.
-
+![image](https://user-images.githubusercontent.com/67644402/141779365-8d37984d-1b7f-4e49-bde3-b00f445bc8c3.png)
 ## 8. **Divisible by 3**
 Write a program, which prints all the numbers from **1 to 100**, which are **divisible by 3**. You have to use a single **for** loop. The program should not receive input.
 
 ### **Solution**
-
+![image](https://user-images.githubusercontent.com/67644402/141779388-515915bc-a27b-4bce-9f6a-0b8c974feb86.png)
 ## 9. **Sum of Odd Numbers**
 Write a program that prints the next **n** **odd numbers** (starting from 1) and on the **last row** prints the **sum of them**.
 
@@ -143,7 +144,7 @@ Print the next **n** odd numbers, starting from **1**, separated by **new lines*
 | :-: | :-: | :-: | :-: | :-: |
 |5|<p>1</p><p>3</p><p>5</p><p>7</p><p>9</p><p>Sum: 25</p>||3|<p>1</p><p>3</p><p>5</p><p>Sum: 9</p>|
 ### **Hints**
-
+![image](https://user-images.githubusercontent.com/67644402/141779412-85e8674b-0dcc-4803-be2e-4dd1f1218353.png)
 ## 10. **Multiplication Table**
 You will receive an **integer** as an input from the console. Print the **10 times table** for this integer. See the examples below for more information.
 
