@@ -13,9 +13,11 @@ You will be given 3 lines of input – student name, age and average grade. Your
 |<p>John</p><p>15</p><p>5.40</p>|Name: John, Age: 15, Grade: 5.40|
 |<p>Steve</p><p>16</p><p>2.50</p>|Name: Steve, Age: 16, Grade: 2.50|
 |<p>Marry</p><p>12</p><p>6.00</p>|Name: Marry, Age: 12, Grade: 6.00|
-### **Solution**
+|### **Solution**||
+
 First, we need a scanner, which we can use to read data from the console.
-![image](https://user-images.githubusercontent.com/67644402/141779170-88e9149f-2cd9-4f46-be52-f9167f3d2b04.png)
+
+![image-20211115141037419](C:\Users\beydo\AppData\Roaming\Typora\typora-user-images\image-20211115141037419.png)
 
 Read all the information – student name, age and grade
 
@@ -118,11 +120,18 @@ Print the price of the ticket according to the table, or "**Error!**" if the age
 |**Input**|**Output**||**Input**|**Output**||**Input**|**Output**||**Input**|**Output**|
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 |<p>Weekday</p><p>42</p>|18$||<p>Holiday</p><p>-12</p>|Error!||<p>Holiday</p><p>15</p>|5$||<p>Weekend</p><p>122</p>|15$|
-### **Hints**
-We need to read **two** lines. **First** one will be the **type of day**. We will convert it to **lower case** letters with the method "**toLowerCase()**". After that, we will read the **age** of the person and declare a **variable** – **price**, which we will use to set the price of the ticket.
-![image](https://user-images.githubusercontent.com/67644402/141779308-36b403bb-4e4e-4136-8354-f20030824c71.png)
+|### **Hints**|||||||||||
+|We need to read **two** lines. **First** one will be the **type of day**. We will convert it to **lower case** letters with the method "**toLowerCase()**". After that, we will read the **age** of the person and declare a **variable** – **price**, which we will use to set the price of the ticket.|||||||||||
+|![image](https://user-images.githubusercontent.com/67644402/141779308-36b403bb-4e4e-4136-8354-f20030824c71.png)|||||||||||
+
 For every **type of day**, we will need to add **different cases** to check the **age** of the person and **set the price**. Some of the **age groups** have **equal** **prices** for the **same type** of day. This means we can use **logical operators** to **merge some of the conditions**.
-![image](https://user-images.githubusercontent.com/67644402/141779340-a7cbfdd1-d0b4-431c-96fa-e84b18fb496e.png)
+
+
+
+![image-20211115141157234](C:\Users\beydo\AppData\Roaming\Typora\typora-user-images\image-20211115141157234.png)
+
+
+
 Think **where** and **how** you can use **logical operators** for the **other cases**.
 
 We can check if the **price has a value** different, than the **initial** one. It it does, that means we got a **valid combination of day and age** and the price of the ticket is saved in the **price** variable. If the **price** has a **value of 0**, then none of the cases got hit, therefore we have to **print the error message**.
