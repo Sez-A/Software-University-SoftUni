@@ -124,11 +124,17 @@ Print the price of the ticket according to the table, or "**Error!**" if the age
 ### **Hints**  
 
 We need to read **two** lines. **First** one will be the **type of day**. We will convert it to **lower case** letters with the method "**toLowerCase()**". After that, we will read the **age** of the person and declare a **variable** – **price**, which we will use to set the price of the ticket.
+
 ![image](https://user-images.githubusercontent.com/67644402/141780496-331349a9-db4c-471b-9860-a90d164cd4cc.png)
 For every **type of day**, we will need to add **different cases** to check the **age** of the person and **set the price**. Some of the **age groups** have **equal** **prices** for the **same type** of day. This means we can use **logical operators** to **merge some of the conditions**.
+
 ![image](https://user-images.githubusercontent.com/67644402/141780371-9a97a86c-b74c-4075-8d79-8ace6e4e11e5.png)
 
+
+
 Think **where** and **how** you can use **logical operators** for the **other cases**.
+
+
 
 We can check if the **price has a value** different, than the **initial** one. It it does, that means we got a **valid combination of day and age** and the price of the ticket is saved in the **price** variable. If the **price** has a **value of 0**, then none of the cases got hit, therefore we have to **print the error message**.
 
