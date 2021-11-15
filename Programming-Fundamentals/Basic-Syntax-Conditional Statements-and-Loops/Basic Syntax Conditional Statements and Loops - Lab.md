@@ -120,9 +120,10 @@ Print the price of the ticket according to the table, or "**Error!**" if the age
 |**Input**|**Output**||**Input**|**Output**||**Input**|**Output**||**Input**|**Output**|
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 |<p>Weekday</p><p>42</p>|18$||<p>Holiday</p><p>-12</p>|Error!||<p>Holiday</p><p>15</p>|5$||<p>Weekend</p><p>122</p>|15$|
-|### **Hints**|||||||||||
-|We need to read **two** lines. **First** one will be the **type of day**. We will convert it to **lower case** letters with the method "**toLowerCase()**". After that, we will read the **age** of the person and declare a **variable** – **price**, which we will use to set the price of the ticket.|||||||||||
-|![image](https://user-images.githubusercontent.com/67644402/141779308-36b403bb-4e4e-4136-8354-f20030824c71.png)|||||||||||
+
+### **Hints**  
+
+We need to read **two** lines. **First** one will be the **type of day**. We will convert it to **lower case** letters with the method "**toLowerCase()**". After that, we will read the **age** of the person and declare a **variable** – **price**, which we will use to set the price of the ticket.
 
 For every **type of day**, we will need to add **different cases** to check the **age** of the person and **set the price**. Some of the **age groups** have **equal** **prices** for the **same type** of day. This means we can use **logical operators** to **merge some of the conditions**.
 
