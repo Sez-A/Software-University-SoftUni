@@ -17,7 +17,7 @@ You will be given 3 lines of input – student name, age and average grade. Your
 
 First, we need a scanner, which we can use to read data from the console.
 
-![image-20211115141037419](C:\Users\beydo\AppData\Roaming\Typora\typora-user-images\image-20211115141037419.png)
+![image](https://user-images.githubusercontent.com/67644402/141780325-ed3cc608-7896-47d1-aadd-606c2dbfd9e4.png)
 
 Read all the information – student name, age and grade
 
@@ -126,12 +126,7 @@ Print the price of the ticket according to the table, or "**Error!**" if the age
 We need to read **two** lines. **First** one will be the **type of day**. We will convert it to **lower case** letters with the method "**toLowerCase()**". After that, we will read the **age** of the person and declare a **variable** – **price**, which we will use to set the price of the ticket.
 
 For every **type of day**, we will need to add **different cases** to check the **age** of the person and **set the price**. Some of the **age groups** have **equal** **prices** for the **same type** of day. This means we can use **logical operators** to **merge some of the conditions**.
-
-
-
-![image-20211115141157234](C:\Users\beydo\AppData\Roaming\Typora\typora-user-images\image-20211115141157234.png)
-
-
+![image](https://user-images.githubusercontent.com/67644402/141780371-9a97a86c-b74c-4075-8d79-8ace6e4e11e5.png)
 
 Think **where** and **how** you can use **logical operators** for the **other cases**.
 
