@@ -100,6 +100,7 @@ Write program to enter an integer number of **centuries** and convert it to **ye
 - Assume that a year has 365.2422 days at average ([the Tropical year](https://en.wikipedia.org/wiki/Tropical_year)).
 ### **Solution**
 You might help yourself with the code below:
+![image](https://user-images.githubusercontent.com/67644402/142459380-c46a7259-15b2-40dc-bea2-81a384d7d79f.png)
 
 ## 10. **Special Numbers**
 A **number** is **special** when its **sum of digits is 5, 7 or 11**.
