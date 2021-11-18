@@ -136,9 +136,7 @@ You are given a **working code** that is a solution to **Problem 9. Special Numb
 |**Sample Code**|
 | :-: |
 |Scanner scanner = new Scanner(System.in); |
-|**int** kolkko = Integer.*parseInt*(scanner.nextLine());  **int** obshto = 0;  **int** takova = 0;  **boolean** toe = **false**;  **for** (**int** ch = 1; ch <= kolkko; ch++) {    takova = ch;    **while** (ch > 0) {      obshto += ch % 10;      ch = ch / 10;    }    toe = (obshto == 5)|
-|\|\|(obshto == 7) \|\|(obshto == 11);    System.***out\***.printf(**"%d -> %b%n"**, takova, toe);    obshto = 0;    ch = takova;  }|
-||
+|**int** kolkko = Integer.*parseInt*(scanner.nextLine());<br />  **int** obshto = 0;  <br />**int** takova = 0;  <br />**boolean** toe = **false**;<br />  **for** (**int** ch = 1; ch <= kolkko; ch++) { <br />   takova = ch;    **while** (ch > 0)<br /> {      obshto += ch % 10;      ch = ch / 10;  <br />  }    toe = (obshto == 5)\|\|(obshto == 7)  \|\| (obshto == 11);   <br /> System.***out\***.printf(**"%d -> %b%n"**, takova, toe);    <br />obshto = 0;  <br />  ch = takova;  <br />}|
 |### **Hints**|
 |- Reduce the span of the variables by declaring them in the moment they receive a value, not before|
 |- Rename your variables to represent their real purpose (example: "toe" should become isSpecialNum, etc.)|
