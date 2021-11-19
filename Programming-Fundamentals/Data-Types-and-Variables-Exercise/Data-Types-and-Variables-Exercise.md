@@ -39,11 +39,15 @@ Calculate how many courses will be needed to **elevate n persons** by using an e
 |<p>17</p><p>3</p>|6|5 courses \* 3 people<br>+ 1 course \* 2 persons|
 |<p>4</p><p>5</p>|1|<p>All the persons fit inside in the elevator.</p><p>Only one course is needed.</p>|
 |<p>10</p><p>5</p>|2|2 courses \* 5 people|
-|### **Hints**|||
-|- You should **divide n by p**. This gives you the number of full courses (e.g. 17 / 3 = 5).|||
-|- If **n** does not divide **p** without a remainder, you will need one additional partially full course (e.g. 17 % 3 = 2).|||
-|- Another approach is to round up **n** **/** **p** to the nearest integer (ceiling), e.g. 17/3 = 5.67 à rounds up to 6.|||
-|- Sample code for the round-up calculation:|||
+
+### **Hints**
+
+- You should **divide n by p**. This gives you the number of full courses (e.g. 17 / 3 = 5).
+- - If **n** does not divide **p** without a remainder, you will need one additional partially full course (e.g. 17 % 3 = 2).
+  - - Another approach is to round up **n** **/** **p** to the nearest integer (ceiling), e.g. 17/3 = 5.67 à rounds up to 6.
+  - - Sample code for the round-up calculation:
+
+
 
 ![image](https://user-images.githubusercontent.com/67644402/142600845-e9930872-70db-4619-89fa-e5a1b358e74c.png)
 
