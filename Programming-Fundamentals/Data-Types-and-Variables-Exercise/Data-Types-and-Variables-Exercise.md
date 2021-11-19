@@ -43,6 +43,7 @@ The input holds two lines: the **number of people n** and the **capacity p** of 
 - If **n** does not divide **p** without a remainder, you will need one additional partially full course (e.g. 17 % 3 = 2).
 - Another approach is to round up **n** **/** **p** to the nearest integer (ceiling), e.g. 17/3 = 5.67 à rounds up to 6.
 - Sample code for the round-up calculation:
+![image](https://user-images.githubusercontent.com/67644402/142600845-e9930872-70db-4619-89fa-e5a1b358e74c.png)
 
 ## 4. **Sum of Chars**
 Write a program, which **sums the ASCII codes** of **n** characters. 
@@ -87,11 +88,11 @@ Write a program to read an integer **n** and print all **triples** of the first 
 |3|<p>aaa</p><p>aab</p><p>aac</p><p>aba</p><p>abb</p><p>abc</p><p>aca</p><p>acb</p><p>acc</p><p>baa</p><p>bab</p><p>bac</p><p>bba</p><p>bbb</p><p>bbc</p><p>bca</p><p>bcb</p><p>bcc</p><p>caa</p><p>cab</p><p>cac</p><p>cba</p><p>cbb</p><p>cbc</p><p>cca</p><p>ccb</p><p>ccc</p>|2|aaa<br>aab<br>aba<br>abb<br>baa<br>bab<br>bba<br>bbb|
 ### **Hints**
 Perform 3 nested loops from **0** to **n-1**. 
-
+![image](https://user-images.githubusercontent.com/67644402/142600892-1f406418-b2e5-4461-81fd-54a666e5df12.png)
 For each iteration generate new letters
-
+![image](https://user-images.githubusercontent.com/67644402/142600926-9e2b3649-4db9-42d8-8710-98304eb1c164.png)
 Concat all characters in a string and print it. You can use **String.format()**.
-
+![image](https://user-images.githubusercontent.com/67644402/142600942-59456986-1be9-40ce-be4b-47cc58a459be.png)
 ## 7. **Water Overflow**
 You have a **water** **tank** with capacity of **255 liters**. 
 On the next **n** lines, you will receive **liters of water**, which you have to **pour** in your **tank**. 
