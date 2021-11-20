@@ -35,6 +35,8 @@ First, we need to read **n** from the console.
 
 Create an **array of integer** with **n** size.
 
+
+
 ![image](https://user-images.githubusercontent.com/67644402/142737083-5c7bd884-ddc4-4c42-9778-f3ab5c882c85.png)
 Read **n** numbers using for loop and fill the array.
 
