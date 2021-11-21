@@ -155,9 +155,9 @@ We will need two variables – even and odd sum.
 
 
 
+
+
 Iterate through all elements in the array. Check the current number – if it is even add it to the even sum, otherwise add it to the odd sum.
-
-
 
 ![image](https://user-images.githubusercontent.com/67644402/142737134-75df2b34-602a-43d2-964d-9d65d4a6ebdf.png)
 
