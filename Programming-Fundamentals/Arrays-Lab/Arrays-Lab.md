@@ -88,6 +88,9 @@ We will need a variable for the sum.
 
 
 ![image](https://user-images.githubusercontent.com/67644402/142737103-fb4c9f9b-b0a6-4829-8e5f-c7fead910a3b.png)
+
+
+
 Iterate through all elements in the array with for loop. If the number is even add it to the sum. 
 
 
