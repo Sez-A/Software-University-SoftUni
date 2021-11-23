@@ -240,7 +240,7 @@ You are given two values of the same type as input. The values can be of type **
 
 1. Create a method which will compare integers:
 
-1. ![image](https://user-images.githubusercontent.com/67644402/142995610-9fc736d6-a65e-4e37-8880-484f5e71f971.png)
+  ![image](https://user-images.githubusercontent.com/67644402/142995610-9fc736d6-a65e-4e37-8880-484f5e71f971.png)
 
   
 
