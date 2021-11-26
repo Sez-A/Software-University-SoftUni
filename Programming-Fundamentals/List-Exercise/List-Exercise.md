@@ -3,7 +3,7 @@
 Problems for exercises and homework for the ["Technology Fundamentals" course @ SoftUni](https://softuni.bg/courses/programming-fundamentals).
 
 You can check your solutions in [Judge.](https://judge.softuni.bg/Contests/1297)
-## **Train**
+## 1. **Train**
 On the first line you will be given a **list of wagons** (integers). Each integer represents **the number of passengers that are currently in each wagon**. On the next line you will get **the max capacity of each wagon** (single integer). Until you receive "**end**" you will be given two types of input:
 
 - **Add** **{passengers}** - add a wagon to the end with the given number of passengers
@@ -16,8 +16,10 @@ At the end **print the final state** of the train (all the wagons separated by a
 | :-: | :-: |
 |<p>32 54 21 12 4 0 23</p><p>75</p><p>Add 10</p><p>Add 0</p><p>30</p><p>10</p><p>75</p><p>end</p>|72 54 21 12 4 75 23 10 0|
 |<p>0 0 0 10 2 4</p><p>10</p><p>Add 10</p><p>10</p><p>10</p><p>10</p><p>8</p><p>6</p><p>end</p>|10 10 10 10 10 10 10|
-## **Change List**
-Write a program, which reads a **list** of **integers** from the console and receives **commands**, which **manipulate** the list. Your program may receive the following commands: 
+
+## 2. **Change List**
+
+Write a program, which reads a **list** of **integers** from the console and receives **commands**, which **manipulate** the list. Your program may receive the following commands:
 
 - **Delete {element}** - delete all elements in the array, which are equal to the given element
 - **Insert {element} {position}** - insert element at the given position
@@ -29,8 +31,10 @@ You should stop the program when you receive the command **"end"**. Print all nu
 | :-: | :-: |
 |<p>1 2 3 4 5 5 5 6</p><p>Delete 5</p><p>Insert 10 1</p><p>Delete 5</p><p>end</p>|1 10 2 3 4 6|
 |<p>20 12 4 319 21 31234 2 41 23 4</p><p>Insert 50 2</p><p>Insert 50 5</p><p>Delete 4</p><p>end</p>|<p>20 12 50 319 50 21 31234 2 41 23</p><p></p>|
-## **House Party**
-Write a program that keeps track of the guests that are going to a house party. 
+
+## 3. **House Party**
+
+Write a program that keeps track of the guests that are going to a house party.
 
 On the **first** input line you are going to receive how many commands you are going to have. On the **next lines** you are going to receive some of the following inputs:
 
@@ -44,7 +48,11 @@ If you receive the first type of input, you have to add the person if he/she **i
 | :-: | :-: |
 |<p>4</p><p>Allie is going!</p><p>George is going!</p><p>John is not going!</p><p>George is not going!</p>|<p>John is not in the list!</p><p>Allie</p>|
 |<p>5</p><p>Tom is going!</p><p>Annie is going!</p><p>Tom is going!</p><p>Garry is going!</p><p>Jerry is going!</p>|<p>Tom is already in the list!</p><p>Tom</p><p>Annie</p><p>Garry</p><p>Jerry</p>|
-## **List Operations**
+|||
+|||
+
+## 4. **List Operations**
+
 You will be given numbers (list of integers) on the first input line. Until you receive **"End"** you will be given operations you have to apply on the list. The possible commands are:
 
 - **Add {number}** - add number at the end
@@ -60,9 +68,10 @@ You will be given numbers (list of integers) on the first input line. Until you 
 | :-: | :-: |
 |<p>1 23 29 18 43 21 20 </p><p>Add 5</p><p>Remove 5</p><p>Shift left 3</p><p>Shift left 1</p><p>End</p>|43 20 5 1 23 29 18|
 |<p>5 12 42 95 32 1</p><p>Insert  3 0</p><p>Remove 10</p><p>Insert 8 6</p><p>Shift right 1</p><p>Shift left 2</p><p>End</p>|<p>Invalid index</p><p>5 12 42 95 32 8 1 3</p>|
-## **Bomb Numbers**
-Write a program that **reads sequence of numbers** and **special bomb number** with a certain **power**. Your task is to **detonate every occurrence of the special bomb number** and according to its power - **his neighbors from left and right**. Detonations are performed from left to right and all detonated numbers disappear. Finally print the **sum of the remaining elements** in the sequence.
 
+## 5. **Bomb Numbers**
+
+Write a program that **reads sequence of numbers** and **special bomb number** with a certain **power**. Your task is to **detonate every occurrence of the special bomb number** and according to its power - **his neighbors from left and right**. Detonations are performed from left to right and all detonated numbers disappear. Finally print the **sum of the remaining elements** in the sequence.
 
 ### **Examples**
 
@@ -72,10 +81,13 @@ Write a program that **reads sequence of numbers** and **special bomb number** w
 |<p>1 4 4 2 8 9 1</p><p>9 3</p>|5|Special number is 9 with power 3. After detonation we left with the sequence [1, 4] with sum 5. Since the 9 has only 1 neighbor from the right we remove just it (one number instead of 3).|
 |<p>1 7 7 1 2 3</p><p>7 1</p>|6|Detonations are performed from left to right. We could not detonate the second occurrence of 7 because its already destroyed by the first occurrence. The numbers [1, 2, 3] survive. Their sum is 6.|
 |<p>1 1 2 1 1 1 2 1 1 1</p><p>2 1</p>|4|The red and yellow numbers disappear in two sequential detonations. The result is the sequence [1, 1, 1, 1]. Sum = 4.|
-## **Cards Game**
+
+## 6.  **Cards Game**
+
 You will be given two hands of cards, which will be **integer** numbers. Assume that you have two players. You have to find out the winning deck and respectively the winner.
 
 You start from the beginning of both hands. Compare the cards from the first deck to the cards from the second deck. The player, who has bigger card, takes both cards and puts them at the **back** of his hand - **the second player's card is last, and the first person's card (the winning one) is before it (second to last)** and the player with smaller card must **remove** the **card** from his deck. If both players' cards have the same values - no one wins, and the two cards must be **removed** **from** the **decks**. The game is over when one of the decks is left without any cards. You have to print the winner on the console and the sum of the left cards: **"Player {one/two} wins! Sum: {sum}"**.
+
 ### **Examples**
 20 30 40 50                                      30 40 50 20 10
 
@@ -89,7 +101,9 @@ You start from the beginning of both hands. Compare the cards from the first dec
 | :-: | :-: |
 |<p>20 30 40 50</p><p>10 20 30 40</p>|First player wins! Sum: 240|
 |<p>10 20 30 40 50</p><p>50 40 30 30 10</p>|Second player wins! Sum: 50|
-## **Append Arrays**
+
+## 7. **Append Arrays**
+
 Write a program to **append several arrays** of numbers.
 
 - Arrays are separated by "**|**"
@@ -100,11 +114,13 @@ Write a program to **append several arrays** of numbers.
 
 |**Input**|**Output**|
 | :-: | :-: |
-|1 2 3 |4 5 6 |  7  8|7 8 4 5 6 1 2 3|
-|7 | 4  5|1 0| 2 5 |3|3 2 5 1 0 4 5 7|
-|1| 4 5 6 7  |  8 9|8 9 4 5 6 7 1|
-## **\*Anonymous Threat**
-*The Anonymous have created a cyber hypervirus which steals data from the CIA. You, as the lead security developer in CIA, have been tasked to analyze the software of the virus and observe its actions on the data. The virus is known for his innovative and unbelievably clever technique of merging and dividing data into partitions.* 
+|1 2 3 |4 5 6 |
+|7 | 4  5|
+|1| 4 5 6 7  |
+
+## 8. **\*Anonymous Threat**
+
+*The Anonymous have created a cyber hypervirus which steals data from the CIA. You, as the lead security developer in CIA, have been tasked to analyze the software of the virus and observe its actions on the data. The virus is known for his innovative and unbelievably clever technique of merging and dividing data into partitions.*
 
 You will receive a **single input line** containing **STRINGS** separated by **spaces**. 
 The strings may contain **any ASCII** character except **whitespace**.
@@ -147,7 +163,9 @@ The **input ends** when you receive the command "**3:1**". At that point you mus
 | :-: | :-: |
 |<p>Ivo Johny Tony Bony Mony</p><p>merge 0 3</p><p>merge 3 4</p><p>merge 0 3</p><p>3:1</p>|IvoJohnyTonyBonyMony|
 |<p>abcd efgh ijkl mnop qrst uvwx yz</p><p>merge 4 10</p><p>divide 4 5</p><p>3:1</p>|abcd efgh ijkl mnop qr st uv wx yz|
-## **\*Pokemon Don't Go**
+
+## 9.**\*Pokemon Don't Go**
+
 *Ely likes to play Pokemon Go a lot. But Pokemon Go bankrupted… So, the developers made Pokemon Don't Go out of depression. And so, Ely now plays Pokemon Don't Go. In Pokemon Don't Go, when you walk to a certain pokemon, those closer to you, naturally get further, and those further from you, get closer.*
 
 You will receive a **sequence** of **integers**, separated by **spaces** - the distances to the pokemons.
@@ -178,8 +196,10 @@ The program **ends** when the **sequence** has **no elements** (there are no pok
 | :-: | :-: | :-: |
 |<p>4 5 3</p><p>1</p><p>1</p><p>0</p>|14|<p>The **array** is **{4, 5, 3}**. The index is **1**.</p><p>We **remove** **5**, and we **increase all** **lower** than it and **decrease all higher** than it.</p><p>In this case there are **no higher** than **5**.</p><p>The result is **{9, 8}**.</p><p>The **index** is **1**. So we remove **8**, and **decrease all higher** than it. </p><p>The result is **{1}**. </p><p>The **index** is **0**. So we remove **1**. </p><p>There are **no elements** **left**, so we print the **sum** of **all removed elements**. </p><p>**5 + 8 + 1 = 14**.</p>|
 |<p>5 10 6 3 5</p><p>2</p><p>4</p><p>1</p><p>1</p><p>3</p><p>0</p><p>0</p>|51|<p>**Step 1**: **{11, 4, 9, 11}**</p><p>**Step 2**: **{22, 15, 20, 22}**</p><p>**Step 3**: **{7, 5, 7}**</p><p>**Step 4**: **{2, 2}**</p><p>**Step 5**: **{4, 4}**</p><p>**Step 6**: **{8}**</p><p>**Step 7**: **{}** **(empty).**</p><p>**Result** = **6 + 11 + 15 + 5 + 2 + 4 + 8 = 51**.</p>|
-## ` `**\*SoftUni Course Planning**
-*You are tasked to help plan the next Programing Fundamentals course by keeping track of the lessons, that are going to be included in the course, as well as all the exercises for the lessons.* 
+
+## ` `10. **\*SoftUni Course Planning**
+
+You are tasked to help plan the next Programing Fundamentals course by keeping track of the lessons, that are going to be included in the course, as well as all the exercises for the lessons.
 
 On the first input line you will **receive the initial schedule of lessons and exercises** that are going to be part of the next course, separated by **comma and space ", ".** But before the course starts, there are some changes to be made. Until you receive **"course start"** you will be given **some commands to modify the course schedule**. The possible commands are:** 
 
@@ -208,5 +228,4 @@ On the first input line you will **receive the initial schedule of lessons and e
 |<p>Data Types, Objects, Lists</p><p>Add:Databases</p><p>Insert:Arrays:0</p><p>Remove:Lists</p><p>course start</p>|<p>1.Arrays</p><p>2.Data Types</p><p>3.Objects</p><p>4.Databases</p><p></p>|<p>We receive the initial schedule. </p><p>Next, we add Databases lesson, because it doesn't exist. </p><p>We Insert at the given index lesson Arrays, because it's not present in the schedule. </p><p>After receiving the last command and removing lesson Lists, we print the whole schedule.</p>|
 |**Input**|**Output**|**Comment**|
 |<p>Arrays, Lists, Methods</p><p>Swap:Arrays:Methods</p><p>Exercise:Databases</p><p>Swap:Lists:Databases</p><p>Insert:Arrays:0</p><p>course start</p>|<p>1.Methods</p><p>2.Databases</p><p>3.Databases-Exercise</p><p>4.Arrays</p><p>5.Lists</p>|<p>We swap the given lessons, because both exist.</p><p>After receiving the Exercise command, we see that such lesson doesn't exist, so we add the lesson at the end, followed by the exercise.</p><p>We swap Lists and Databases lessons, the Databases-Exercise is also moved after the Databases lesson.</p><p>We skip the next command, because we already have such lesson in our schedule.</p>|
-
 
