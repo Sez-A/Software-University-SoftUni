@@ -40,12 +40,12 @@ Use the class [**BigInteger**](https://docs.oracle.com/javase/7/docs/api/java/ma
 
 Import the namespace "**java.math.BigInteger**":
 
+![image](https://user-images.githubusercontent.com/67644402/143691214-b0cd40fe-0edc-4a9b-b6e1-ee9beaad88c2.png)
 
 
 Use the type **BigInteger** to read the numbers and calculate their sum:
 
-
-
+![image](https://user-images.githubusercontent.com/67644402/143691219-443c94b4-8619-49b3-bf65-796123215389.png)
 
 
 ## 3. **Big Factorial**
@@ -61,23 +61,9 @@ You will receive **N** - number in range **[0 - 1000]**. Calculate **Factorial**
 
 ## 4. **Songs**
 Define a class **Song**, which holds the following information about songs: **Type List**, **Name** and **Time**.
-
-
-
 On the first line you will receive the **number of songs** **-** **N**. 
-
-
-
 On the **next N-lines** you will be receiving data in the following format: **"{typeList}\_{name}\_{time}".**
-
-
-
 On the last line you will receive "**Type List"** / **"all".** Print only the **Names of the songs** which are from that **Type List** / **All songs**. 
-
-
-
-
-
 ### **Examples**
 
 |**Input**|**Output**|
@@ -92,24 +78,23 @@ On the last line you will receive "**Type List"** / **"all".** Print only the **
 
 Define class Song with fields: **Type List**, **Name** and **Time**:
 
-
+![image](https://user-images.githubusercontent.com/67644402/143691244-0dabb415-c1d5-45c4-98a0-a9e2ac19d7d1.png)
 
 Define getters and setters: use keys **ALT + INS** and generate Getter and Setter:
 
-
+![image](https://user-images.githubusercontent.com/67644402/143691248-a9f63ff2-b9ea-411a-a88b-9078af863d96.png)
 
 Read the input lines, make collection and store the data:
 
-
+![image](https://user-images.githubusercontent.com/67644402/143691256-6f8068d7-5a6c-4de2-b1c6-e733ad7fdb1c.png)
 
 Finally read your last line – **Type List** and print the result:
 
-
+![image](https://user-images.githubusercontent.com/67644402/143691265-88622259-092f-474d-948d-36ac39b0a390.png)
 
 You can use **Stream API** to filter the collection:
 
-
-
+![image](https://user-images.githubusercontent.com/67644402/143691268-4d2e678e-cf96-4441-ba4d-783ffb50321c.png)
 
 
 ## 5. **Students**
@@ -129,25 +114,20 @@ Read list of students until you receive "**end**" command. After that, you will 
 
 Define a class student with the following properties: **firstName**, **lastName**, **age** and **city**:  
 
-
+![image](https://user-images.githubusercontent.com/67644402/143691273-68d0163a-29fa-4272-ab4c-f6300d551678.png)
 
 Generate constructor in class Student**:  ALT + INSERT**
 
-
+![image](https://user-images.githubusercontent.com/67644402/143691275-78e38855-6bcd-4311-830b-78d7b2340999.png)
 
 Read a list of students.
 
-
+![image](https://user-images.githubusercontent.com/67644402/143691279-41a7d450-d483-45d3-a5c1-d2546211dc17.png)
 
 Read a city name and print only the students which are from the given city.
-
-
-
 You can filter the students with stream.
 
-
-
-
+![image](https://user-images.githubusercontent.com/67644402/143691290-2aea0eeb-a215-4c34-8058-53aa11212018.png)
 
 ## 6. **Students 2.0**
 Use the class from the previous problem. If you receive a student which already exists (first name and last name should be **unique**) overwrite the information.
@@ -155,23 +135,22 @@ Use the class from the previous problem. If you receive a student which already 
 ### **Hints**
 Check if the given student already exists:
 
-
+![image](https://user-images.githubusercontent.com/67644402/143691303-c6e739a2-bce6-4305-85bf-67a0d70bf922.png)
+![image](https://user-images.githubusercontent.com/67644402/143691307-d55adb6a-c8f3-42a6-af35-29f005e4ff1a.png)
 
 Overwrite the student information.
-
-
-
 First, we have to find the existing student:
 
-
+![image](https://user-images.githubusercontent.com/67644402/143691309-97aef7fe-1358-417b-8b5e-5dd33db4e551.png)
+![image](https://user-images.githubusercontent.com/67644402/143691313-da53646d-514b-4a00-9a82-8e2cb6e317b7.png)
 
 Finally, we have to overwrite the information:
 
-
+![image](https://user-images.githubusercontent.com/67644402/143691318-f934d150-5c39-4282-b62f-cab36479d67e.png)
 
 We can use **Stream API** as well:
 
-
+![image](https://user-images.githubusercontent.com/67644402/143691323-932953bf-69fa-4819-b5d8-6fddbc9ff91a.png)
 
 **findFirst** returns the first occurrence or **null**.
 
