@@ -16,13 +16,22 @@ You will be given series of strings until you receive an **"end"** command. Writ
 ### **Solution**
 
 Use while loop and read strings until you receive **"end"**.
+
 ![image](https://user-images.githubusercontent.com/67644402/143998017-a59e99cf-b6da-499c-b5a7-5f39208d5be9.png)
 
+
+
 Reverse the string with for loop. Start from the last index and append each symbol to the new string.
+
 ![image](https://user-images.githubusercontent.com/67644402/143998044-b219cf04-3406-4632-b3a3-9244cbaf8cee.png)
 
+
+
 Print the reversed string in the specified format.
+
 ![image](https://user-images.githubusercontent.com/67644402/143998077-b63a6316-b635-438a-891d-76ddffe8f984.png)
+
+
 
 ## 2. **Repeat Strings**
 
@@ -38,13 +47,22 @@ Print the reversed string in the specified format.
 ### **Solution**
 
 Read a **string array**.
+
 ![image](https://user-images.githubusercontent.com/67644402/143998092-83c4a965-18fd-4219-a243-0db9a2248913.png)
 
+
+
 Initialize **StringBuilder**.
+
 ![image](https://user-images.githubusercontent.com/67644402/143998122-dd16269b-1598-4223-9126-e4a3fe71987d.png)
 
+
+
 Iterate through elements in the array. Find the length of the word at each iteration and append it to the **StringBuilder**.
+
 ![image](https://user-images.githubusercontent.com/67644402/143998139-34cc7e71-cb82-4e22-bb0b-8ed6010fe3a8.png)
+
+
 
 Print the **StringBuilder**.
 ## 3. **Substring**
