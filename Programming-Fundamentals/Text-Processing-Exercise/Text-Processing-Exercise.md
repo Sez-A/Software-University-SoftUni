@@ -3,7 +3,7 @@
 Problems for exercises and homework for the ["Programming Fundamentals" course @ SoftUni](https://softuni.bg/courses/programming-fundamentals).
 
 You can check your solutions in [Judge.](https://judge.softuni.bg/Contests/1670/Text-Processing-Exercise)
-1. ## **Valid Usernames**
+## 1. **Valid Usernames**
 Write a program that reads user names on a single line (joined by ", ") and prints all valid usernames. 
 
 A valid username is:
@@ -16,8 +16,9 @@ A valid username is:
 | :-: | :-: |
 |sh, too\_long\_username, !lleg@l ch@rs, jeffbutt|jeffbutt|
 |Jeff, john45, ab, cd, peter-ivanov, @smith|<p>Jeff</p><p>john45</p><p>peter-ivanov</p><p></p>|
-1. ## **Character Multiplier**
+## 2. **Character Multiplier**
 Write a **method** that takes two strings as arguments and returns the sum of their character codes multiplied (multiply str1[0] with str2[0] and add to the total sum). Then continue with the next two characters. If one of the strings is longer than the other, add the remaining character codes to the total sum without multiplication.
+
 ### **Examples**
 
 |**Input**|**Output**|
@@ -25,23 +26,25 @@ Write a **method** that takes two strings as arguments and returns the sum of th
 |Gosho Pesho|53253|
 |123 522|7647|
 |a aaaa|9700|
-1. ## **Extract File**
+## 3. **Extract File**
 Write a program that reads the path to a file and subtracts the file name and its extension.
+
 ### **Examples**
 
 |**Input**|**Output**|
 | - | - |
 |C:\Internal\training-internal\Template.pptx|<p>File name: Template</p><p>File extension: pptx</p>|
 |C:\Projects\Data-Structures\LinkedList.cs|<p>File name: LinkedList</p><p>File extension: cs</p>|
-1. ## **Caesar Cipher**
+## 4. **Caesar Cipher**
 Write a program that returns an encrypted version of the same text. Encrypt the text by shifting each character with three positions forward. For example A would be replaced by D, B would become E, and so on. Print the encrypted text.
+
 ### **Examples**
 
 |**Input**|**Output**|
 | :-: | :-: |
 |Programming is cool!|Surjudpplqj#lv#frro$|
 |One year has 365 days.|Rqh#|hdu#kdv#698#gd|v1|
-1. ## **Multiply Big Number**
+## 5. **Multiply Big Number**
 You are given two lines – the first one can be a really big number (0 to 1050). The second one will be a single digit number (0 to 9). You must display the product of these numbers.
 
 Note: do not use the **BigInteger** class.
@@ -50,15 +53,16 @@ Note: do not use the **BigInteger** class.
 |**Input**|**Output**||**Input**|**Output**||**Input**|**Output**|
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 |<p>23</p><p>2</p>|46||<p>9999</p><p>9</p>|89991||<p>923847238931983192462832102</p><p>4</p>|3695388955727932769851328408|
-1. ## **Replace Repeating Chars**
+## 6. **Replace Repeating Chars**
 Write a program that reads a string from the console and replaces any sequence of the same letters with a single corresponding letter.
+
 ### **Examples**
 
 |**Input**|**Output**|
 | :-: | :-: |
 |aaaaabbbbbcdddeeeedssaa|abcdedsa|
 |qqqwerqwecccwd|qwerqwecwd|
-1. ## **String Explosion**
+## 7. **String Explosion**
 Explosions are marked with ‘**>**’. Immediately after the mark, there will be an **integer**, which signifies the **strength** of the explosion.
 
 You should **remove x characters** (where **x** is the **strength** of the explosion), **starting after** the punch **character** (‘**>**’).
@@ -82,7 +86,7 @@ Print what is left from the string after explosions.
 | :-: | :-: | :-: |
 |abv>1>1>2>2asdasd|abv>>>>dasd|<p>1st explosion is at index **3** and it is with **strength** of **1**. We delete **only** the **digit** **after** the explosion character. The string will look like this: **abv>>1>2>2asdasd**</p><p>2nd explosion is with strength **one** and the string transforms to this: **abv>>>2>2asdasd**</p><p>3rd explosion is now with strength of 2. We delete the digit and we find **another** explosion. At this point the string looks like this: **abv>>>>2asdasd**. </p><p>4th explosion is with strength **2**. We have **1** strength **left** from the previous explosion, we **add** the strength of the **current** explosion to what is **left** and that adds up to a **total** strength of **3**. We **delete** the next **three** **characters** and we **receive** the **string** **abv>>>>dasd** </p><p>We do **not** have **any more explosions** and we print the result: **abv>>>>dasd**</p>|
 |pesho>2sis>1a>2akarate>4hexmaster|pesho>is>a>karate>master||
-1. ## **\*Letters Change Numbers**
+## 8. **\*Letters Change Numbers**
 Nakov likes Math. But he also likes the English alphabet a lot. He invented a game with numbers and letters from the **English** alphabet. The game was simple. You get a string consisting of a **number between two letters**. Depending on whether the letter was in front of the number or after it you would perform different mathematical operations on the number to achieve the result.
 
 **First** you start with the letter **before** the number. 
