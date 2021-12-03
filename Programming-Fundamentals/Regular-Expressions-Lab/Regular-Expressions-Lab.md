@@ -16,12 +16,21 @@ You will be given series of strings until you receive an **"end"** command. Writ
 ### **Solution**
 
 Use while loop and read strings until you receive **"end"**.  
+
 ![image](https://user-images.githubusercontent.com/67644402/144562593-4a3ef5f4-f9f6-496c-a31f-d59b2bb86a5c.png)
 
+
+
 Reverse the string with for loop. Start from the last index and append each symbol to the new string.
+
 ![image](https://user-images.githubusercontent.com/67644402/144562616-40ed5f77-17e1-4e26-aeeb-8022dc404377.png)
+
 Print the reversed string in the specified format.
+
 ![image](https://user-images.githubusercontent.com/67644402/144562634-8fee8b97-dbb4-4819-a17b-c106711832a2.png)
+
+
+
 ## 2. **Repeat Strings**
 
 ### Write a Program That Reads an Array of Strings. Each String is Repeated N Times, Where N is the Length of the String. Print the Concatenated String.
@@ -36,12 +45,21 @@ Print the reversed string in the specified format.
 ### **Solution**
 
 Read a **string array**.
+
 ![image](https://user-images.githubusercontent.com/67644402/144562662-9a9ab4d2-7e47-4890-a72f-1e2dd453074c.png)
+
 Initialize **StringBuilder**.
+
 ![image](https://user-images.githubusercontent.com/67644402/144562681-710a72f1-77f3-4912-a53d-8dcad5c5e267.png)
+
 Iterate through elements in the array. Find the length of the word at each iteration and append it to the **StringBuilder**.
+
 ![image](https://user-images.githubusercontent.com/67644402/144562721-17131f45-4aa5-4c9d-8627-225500f0445a.png)
+
+
+
 Print the **StringBuilder**.
+
 ## 3. **Substring**
 On the first line you will receive a string. On the second line you will receive a second string. Write a program that removes all of the occurrences of the first string in the second until there is no match. At the end print the remaining string.
 
