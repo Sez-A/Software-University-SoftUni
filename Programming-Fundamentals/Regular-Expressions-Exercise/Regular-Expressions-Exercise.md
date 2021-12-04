@@ -3,7 +3,7 @@
 Problems for exercises and homework for the ["Programming Fundamentals" course @ SoftUni](https://softuni.bg/courses/programming-fundamentals).
 
 You can check your solutions in [Judge.](https://judge.softuni.bg/Contests/1673/Regular-Expressions-Exercises)
-1. ## **Furniture**
+## 1. **Furniture**
 Write a program to calculate the total cost of different types of furniture. You will be given some lines of input until you receive the line "Purchase". For the line to be valid it should be in the following format:
 
 **">>{furniture name}<<{price}!{quantity}"**
@@ -24,7 +24,7 @@ And on the last line print the following: **"Total money spend: {spend money}"**
 |**Input**|**Output**|**Comment**|
 | :-: | :-: | :-: |
 |<p>>>Sofa<<312.23!3</p><p>>>TV<<300!5</p><p>>Invalid<<!5</p><p>Purchase</p>|<p>Bought furniture:</p><p>Sofa</p><p>TV</p><p>Total money spend: 2436.69</p>|<p>Only the Sofa and the TV are valid, for each of them we multiply the price by the quantity and print the result</p><p></p>|
-1. ## **Race**
+## 2. **Race**
 Write a program that processes information about a race. On the **first line** you will be given a **list of participants** **separated by ", "**. On the next few lines until you receive a line **"end of race"** you will be given some info which will be some **alphanumeric characters**. In between them you could have some **extra characters which you should ignore**. For example: **"G!32e%o7r#32g$235@!2e"**. The **letters are the name** of the person and the **sum of the digits is the distance** he ran. So here we have **George** who ran **29 km**. Store the information about the person only **if the list of racers contains the name of the person**. If you receive the **same person more than once just add the distance to his old distance**. At the end **print the top 3 racers** ordered by **distance in descending** in the format:
 
 **"1st place: {first racer}**
@@ -37,7 +37,7 @@ Write a program that processes information about a race. On the **first line** y
 |**Input**|**Output**|**Comment**|
 | :-: | :-: | :-: |
 |<p>George, Peter, Bill, Tom</p><p>G4e@55or%6g6!68e!!@</p><p>R1@!3a$y4456@</p><p>B5@i@#123ll</p><p>G@e54o$r6ge#</p><p>7P%et^#e5346r</p><p>T$o553m&6</p><p>end of race</p>|<p>1st place: George</p><p>2nd place: Peter</p><p>3rd place: Tom</p>|<p>On the 3rd input line we have Ray. He is not in the list, so we do not count his result. The other ones are valid. George has total of 55 km, Peter has 25 and Tom has 19. We do not print Bill because he is on 4th place.</p><p></p>|
-1. ## **\*SoftUni Bar Income**
+## 3. **\*SoftUni Bar Income**
 Let`s take a break and visit the game bar at SoftUni. It is about time for the people behind the bar to go home and you are the person who has to draw the line and calculate the money from the products that were sold throughout the day. Until you receive a line with text **"end of shift"** you will be given lines of input. But before processing that line you have to do some validations first.
 
 **Each valid order** should have a **customer, product, count and a price:**
@@ -66,7 +66,7 @@ When you receive **"end of shift"** print the total amount of money for the day 
 | :-: | :-: | :-: |
 |<p>%George%<Croissant>|2|10.3$</p><p>%Peter%<Gum>|1|1.3$</p><p>%Maria%<Cola>|1|2.4$</p><p>end of shift</p>|<p>George: Croissant - 20.60</p><p>Peter: Gum - 1.30</p><p>Maria: Cola - 2.40</p><p>Total income: 24.30</p>|<p>Each line is valid, so we print each order, calculating the total price of the product bought.</p><p>At the end we print the total income for the day</p><p></p>|
 |<p>%InvalidName%<Croissant>|2|10.3$</p><p>%Peter%<Gum>1.3$</p><p>%Maria%<Cola>|1|2.4</p><p>%Valid%<Valid>valid|10|valid20$</p><p>end of shift</p>|<p>Valid: Valid - 200.00</p><p>Total income: 200.00</p>|<p>On the first line, the customer name isn`t valid, so we skip that line.<br>The second line is missing product count.</p><p>The third line don`t have a valid price.</p><p>And only the forth line is valid</p>|
-1. ## **\*Star Enigma**
+## 4. **\*Star Enigma**
 The war is in its peak, but you, young Padawan, can turn the tides with your programming skills. You are tasked to create a program to **decrypt** the messages of The Order and prevent the death of hundreds of lives. 
 
 You will receive several messages, which are **encrypted** using the legendary star enigma. You should **decrypt the messages**, following these rules:
@@ -107,7 +107,7 @@ The planets should be **ordered by name** **alphabetically.**
 |**Input**|**Output**|**Comments**|
 |<p>3</p><p>**tt**(''DG**s**vywge**r**x>6444444444%H%1B9444</p><p>GQh**rr**|**A**977777(H(**TTTT**</p><p>EHf**s**y**ts**nhf?8555&I&2C9555**SR**</p>|<p>Attacked planets: 0</p><p>Destroyed planets: 2</p><p>-> Cantonica</p><p>-> Coruscant</p>|<p>We receive three messages.</p><p>Message one is decrypted with key 4:</p><p>**pp$##@Coruscant:2000000000!D!->5000**</p><p>Message two is decrypted with key 7:</p><p>**@Jakku:200000!A!MMMM**</p><p>This is **invalid message**, missing soldier count, so we continue.</p><p>The third message has key 5.</p><p>**@Cantonica:3000!D!->4000NM**</p>|
 "It’s a trap!" – Admiral Ackbar
-1. ## **\*Nether Realms**
+## 5. **\*Nether Realms**
 Mighty battle is coming. In the stormy nether realms, demons are fighting against each other for supremacy in a duel from which only one will survive. 
 
 Your job, however, is not so exciting. You are assigned to **sign in all the participants** in the nether realm's mighty battle's demon book, which of course is **sorted alphabetically**. 
@@ -140,7 +140,7 @@ Print all demons **sorted by their name in ascending order**, each on a separate
 |M3ph1st0\*\*, Azazel|<p>Azazel - 615 health, 0.00 damage </p><p>M3ph1st0\*\* - 524 health, 16.00 damage</p>|<p>Azazel: </p><p>Health - 'A' + 'z' + 'a' + 'z' + 'e' + 'l' = 615 health. Damage - no digits = 0 damage.</p><p></p><p>M3ph1st0\*\*:</p><p>Health - 'M' + 'p' + 'h' + 's' + 't' = 524 health.</p><p>Damage - (3 + 1 + 0) \* 2 \* 2 = 16 damage.</p>|
 |Gos/ho|Gos/ho - 512 health, 0.00 damage||
 
-1. ## **\*Extract Emails**
+## 6. **\*Extract Emails**
 Write a program to **extract all email addresses from a given text**. The text comes at the only input line. Print the emails on the console, each at a separate line. Emails are considered to be in format **<user>@<host>**, where: 
 
 - **<user>** is a sequence of **letters** and **digits**, where '**.**', '**-**' and '**\_**' can appear between them.
