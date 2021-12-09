@@ -6,7 +6,7 @@ Filling a matrix in the regular way (**top to bottom** and **left to right**) is
 
 |**Pattern A**|**Pattern B**|
 | :-: | :-: |
-|||
+|![image](https://user-images.githubusercontent.com/67644402/145425955-8bb3a10a-5fb0-4b1e-8990-8f780929d7c2.png)|![image](https://user-images.githubusercontent.com/67644402/145425996-e66538d1-17a1-4e6e-9df0-477566a5d8e9.png)|
 
 
 
