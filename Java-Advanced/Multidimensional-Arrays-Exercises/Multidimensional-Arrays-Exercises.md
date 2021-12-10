@@ -46,6 +46,9 @@ Write a program to generate the following **matrix of palindromes** of **3** let
 1. ## **Diagonal Difference**
 Write a program that finds the **difference between the sums of the square matrix diagonals** (absolute value).
 
+![image](https://user-images.githubusercontent.com/67644402/145610296-f45b9e9e-91c5-4a4e-aa8f-894f4a946e52.png)
+
+
 ### **Input**
 - The **first line** holds a number **n** – the size of matrix.
 - The next **n lines** hold the **values for every row** – **n** numbers separated by a space.
