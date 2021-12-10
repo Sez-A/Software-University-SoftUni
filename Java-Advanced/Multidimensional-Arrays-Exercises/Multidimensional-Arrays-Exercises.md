@@ -1,7 +1,7 @@
 ﻿
 # **Exercises: Multidimensional Arrays**
 This document defines the exercises for ["Java Advanced" course @ Software University](https://softuni.bg/modules/59/java-advanced). Please submit your solutions (source code) of all below described problems in [Judge](https://judge.softuni.bg/Contests/1460/Multidimensional-Arrays-Exercises).
-1. ## **Fill the Matrix**
+## 1. **Fill the Matrix**
 Filling a matrix in the regular way (**top to bottom** and **left to right**) is boring. Write two **methods** that **fill** a **matrix** of size **N x N** in **two** different **patterns.** Both patterns are described below:
 
 |**Pattern A**|**Pattern B**|
@@ -20,9 +20,12 @@ Filling a matrix in the regular way (**top to bottom** and **left to right**) is
 |<p>3, A</p><p></p>|<p>1 4 7 </p><p>2 5 8 </p><p>3 6 9</p>|
 |3, B|<p>1 6 7 </p><p>2 5 8 </p><p>3 4 9</p>|
 ### **Hints**
+
 - Make a different method for each pattern.
 - Make a method for printing the matrix.
-1. ## **Matrix of Palindromes**
+
+## 2. **Matrix of Palindromes**
+
 Write a program to generate the following **matrix of palindromes** of **3** letters with **r** rows and **c** columns like the one in the examples below.
 
 - **Rows** define the first and the last letter: row 0 à ‘a’, row 1 à ‘b’, row 2 à ‘c’, …
@@ -40,10 +43,13 @@ Write a program to generate the following **matrix of palindromes** of **3** let
 |4 6|<p>aaa aba aca ada aea afa</p><p>bbb bcb bdb beb bfb bgb</p><p>ccc cdc cec cfc cgc chc</p><p>ddd ded dfd dgd dhd did</p>|
 |3 2|<p>aaa aba</p><p>bbb bcb</p><p>ccc cdc</p>|
 ### **Hints**
+
 - Use two nested loops to generate the matrix.
 - Print the matrix row by row in a loop.
 - Don’t forget to pack everything in methods.
-1. ## **Diagonal Difference**
+
+## 3. **Diagonal Difference**
+
 Write a program that finds the **difference between the sums of the square matrix diagonals** (absolute value).
 
 ![image](https://user-images.githubusercontent.com/67644402/145610296-f45b9e9e-91c5-4a4e-aa8f-894f4a946e52.png)
@@ -56,14 +62,18 @@ Write a program that finds the **difference between the sums of the square matri
 
 |**Input**|**Output**|**Comments**|
 | :-: | :-: | :-: |
-|<p>3</p><p>11 2 4</p><p>4 5 6</p><p>10 8 -12</p>|15|<p>**Primary diagonal:** sum = 11 + 5 + (-12) = 4</p><p>**Secondary diagonal:** sum = 4 + 5 + 10 = 19</p><p>**Difference:** |4 - 19| = 15</p>|
+|<p>3</p><p>11 2 4</p><p>4 5 6</p><p>10 8 -12</p>|15|<p>**Primary diagonal:** sum = 11 + 5 + (-12) = 4</p><p>**Secondary diagonal:** sum = 4 + 5 + 10 = 19</p><p>**Difference:** |
 |<p>4</p><p>-7 14 9 -20</p><p>3 4 9 21</p><p>-14 6 8 44</p><p>30 9 7 -14</p>|34||
 ### **Hints**
+
 - Use a **single** loop **i** = **[1** **…** **n]** to sum the diagonals.
 - The **primary diagonal** holds all cells {**row**, **col**} where **row** == **col** == **i**.
 - The **secondary diagonal** holds all cells {**row**, **col**} where **row** == **i** and **col** == **n-1-i**.
-1. ## **Maximal Sum**
+
+## 4. **Maximal Sum**
+
 Write a program that reads a rectangular integer matrix of size **N x M** and finds in it the square **3 x 3** that **has maximal sum of its elements**. 
+
 ### **Input**
 - On the first line, you will receive the rows **N** and columns **M**. 
 - On the next **N lines,** you will receive **each row with its elements**.
@@ -73,9 +83,9 @@ Print the **elements** of the 3 x 3 square as a matrix, along with their **sum**
 
 |**Input**|**Output**|**Comments**|
 | :-: | :-: | :-: |
-|<p>4 5</p><p>1 5 5 2 4</p><p>2 1 4 14 3</p><p>3 7 11 2 8</p><p>4 8 12 16 4</p>|<p>Sum = 75</p><p>1 4 14</p><p>7 11 2</p><p>8 12 16</p>||
+|<p>4 5</p><p>1 5 5 2 4</p><p>2 1 4 14 3</p><p>3 7 11 2 8</p><p>4 8 12 16 4</p>|<p>Sum = 75</p><p>1 4 14</p><p>7 11 2</p><p>8 12 16</p>|![image](https://user-images.githubusercontent.com/67644402/145610842-61a881dc-a8d8-40a1-b5b1-ca196456d0d8.png)|
 |<p>5 6</p><p>1 0 4 3 1 1 </p><p>1 3 1 3 0 4 </p><p>6 4 1 2 5 6 </p><p>2 2 1 5 4 1 </p><p>3 3 3 6 0 5</p>|<p>Sum = 34</p><p>2 5 6</p><p>5 4 1</p><p>6 0 5</p>||
-1. ## **Matrix Shuffling**
+## 5. **Matrix Shuffling**
 Write a program, which reads a string matrix from the console and performs certain operations with its elements. User input is provided in a similar way like in the problems above – first you read the **dimensions** and then the **data**. 
 
 Your program should then receive commands in format: "**swap row1 col1 row2c col2**" where row1, row2, col1, col2 are **coordinates** in the matrix. In order for a command to be valid, it should start with the "**swap**" keyword along with **four valid coordinates** (no more, no less). You should **swap the values** at the given coordinates (cell [row1, col1] with cell [row2, col2]) **and print the matrix at each step** (this you'll be able to check if the operation was performed correctly). 
@@ -88,9 +98,13 @@ If the **command is not valid** (doesn't contain the keyword "**swap**", has few
 |<p>2 3</p><p>1 2 3</p><p>4 5 6</p><p>swap 0 0 1 1</p><p>swap 10 9 8 7</p><p>swap 0 1 1 0</p><p>END</p>|<p>5 2 3</p><p>4 1 6</p><p>Invalid input!</p><p>5 4 3</p><p>2 1 6</p>|
 |<p>1 2</p><p>Hello World</p><p>0 0 0 1</p><p>swap 0 0 0 1</p><p>swap 0 1 0 0</p><p>END</p>|<p>Invalid input!</p><p>World Hello</p><p>Hello World</p>|
 ### **Hints**
+
 - Think about **Exception Handling**.
-1. ## ` `**String Matrix Rotation**
+
+## 6. **String Matrix Rotation**
+
 You are given a **sequence of text lines**. Assume these text lines form a **matrix of characters** (pad the missing positions with spaces to build a rectangular matrix). Write a program to **rotate the matrix** by 90, 180, 270, 360, … degrees. Print the result at the console as sequence of strings after receiving the “**END**” command.
+
 ### **Examples**
 
 |**Input**|**Rotate(90)**|**Rotate(180)**|**Rotate(270)**|
@@ -298,7 +312,6 @@ The total memory allowed for use by your program is **5MB**
 **Hints**
 
 For some of the tests you can solve the problem with naive approach, however complete solution can be obtained by using **Stack**, **Queue**, **DFS** or **BFS** – go search on the internet.
-
 
 
 
