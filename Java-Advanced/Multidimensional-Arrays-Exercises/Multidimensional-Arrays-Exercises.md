@@ -109,10 +109,13 @@ You are given a **sequence of text lines**. Assume these text lines form a **mat
 
 |**Input**|**Rotate(90)**|**Rotate(180)**|**Rotate(270)**|
 | :- | :-: | :-: | :-: |
-|<p>hello</p><p>softuni</p><p>exam</p><p>END</p>||||
-|||||
+|<p>hello</p><p>softuni</p><p>exam</p><p>END</p>|![image](https://user-images.githubusercontent.com/67644402/145610968-189cf152-d9dc-4d5c-b2bf-753cbb24fb10.png)|![image](https://user-images.githubusercontent.com/67644402/145611041-882195e1-b9ab-4969-87f5-dc8712f211d3.png)|![image](https://user-images.githubusercontent.com/67644402/145611056-a2d42ded-ef69-4d4d-a3e4-bf79805ef8eb.png)|
+|![image](https://user-images.githubusercontent.com/67644402/145610932-646bc887-cacb-4cdd-844d-7a8a1c51b8c0.png)||||
+
+
 
 ### **Input**
+
 The input is read from the console:
 
 - The first line holds a command in format "**Rotate(X)**" where **X** are the degrees of the requested rotation.
@@ -137,7 +140,7 @@ Print at the console the **rotated matrix** as a sequence of text lines.
 |**Input**|**Output**||**Input**|**Output**||**Input**|**Output**|
 | :-: | :-: | :- | :-: | :-: | :- | :-: | :-: |
 |<p>Rotate(720)</p><p>js</p><p>exam</p><p>END</p>|<p>js</p><p>exam</p><p></p>||<p>Rotate(810)</p><p>js</p><p>exam</p><p>END</p>|<p>ej</p><p>xs</p><p>a</p><p>m</p>||<p>Rotate(0)</p><p>js</p><p>exam</p><p>END</p>|<p>js</p><p>exam</p>|
-1. ## **Crossfire** 
+## 7. **Crossfire** 
 You will receive **two** **integers,** which represent the **dimensions** of a **matrix**. Then, you must **fill** **the** **matrix** with **increasing** **integers** starting from 1, and continuing on every row, like this:
 first row: 1, 2, 3, …, n
 second row: n + 1, n + 2, n + 3, …, n + n
@@ -166,7 +169,7 @@ The **input ends** when you receive the command "**Nuke it from orbit**". When t
 | :-: | :-: | :-: |
 |<p>5 5</p><p>3 3 2</p><p>4 3 2</p><p>Nuke it from orbit</p>|<p>1 2 3 4 5</p><p>6 7 8 10</p><p>11 12 13</p><p>16</p><p>21</p>|<p>Initial matrix:</p><p>1    2   3    4   5</p><p>6    7   8    9  10</p><p>11 12 13 14 15</p><p>16 17 18 19 20</p><p>21 22 23 24 25</p><p>Result from first destruction:</p><p>1  2  3  4  5</p><p>6  7  8  10</p><p>11 12 13 15</p><p>16           </p><p>21 22 23 25</p><p>Result from second destruction:</p><p>1  2  3  4  5</p><p>6  7  8  10</p><p>11 12 13</p><p>16</p><p>21</p>|
 |<p>5 5</p><p>4 4 4</p><p>Nuke it from orbit</p>|<p>1 2 3 4</p><p>6 7 8 9</p><p>11 12 13 14</p><p>16 7 18 19</p>||
-1. ## **The Heigan Dance**
+## 8. **The Heigan Dance**
 At last, level 80. And what do level eighties do? Go raiding. This is where you are now – trying not to be wiped by the famous dance boss, Heigan the Unclean. The fight is pretty straightforward - dance around the Plague Clouds and Eruptions, and you’ll be just fine.
 
 Heigan’s chamber is a 15-by-15 two-dimensional array. The player always starts at the **exact center.** For each turn, Heigan uses a spell that hits a certain cell and the neighboring **rows/columns**. For example, if he hits (1,1), he also hits (0,0, 0,1, 0,2, 1,0 … 2,2). If the player’s current position is within the area of damage, the player tries to move. First, he tries to move **up**, if there’s **damage/wall**, he tries to move **right**, then **down**, then **left**. If he **cannot move** in any direction, because **the cell is damaged** or there is **a wall**, the player **stays** in place and takes the damage.
@@ -200,17 +203,17 @@ The player always starts at **18500** hit points; Heigan starts at **3,000,000**
 
 
 
-1. ## **\*Parking System**
+## 9. **\*Parking System**
 The parking lot in front of SoftUni is one of the busiest in the country, and it’s a common cause for conflicts between the doorkeeper Svetlin and the students. The SoftUni team wants to proactively resolve all conflicts, so an automated parking system should be implemented. They are organizing a competition – Parkoniada – and the author of the best parking system will win a romantic dinner with RoYaL. That’s **exactly** what you’ve been dreaming of, so you decide to join in.
 
 The parking lot is a **rectangular** matrix, where the **first** column is **always** free and all other cells are parking spots. A car can enter from **any cell** of the **first column** and then decides to go to a specific spot. If that spot is **not** free, the car searches for the **closest** free spot on the **same** row. If **all** the cells on that specific row are used, the car cannot park and leaves. If **two** free cells are located at the **same** distance from the **initial** parking spot, the cell which is **closer** to the entrance is preferred. A car can **pass** through a used parking spot.
 
 Your task is to calculate the distance travelled by each car to its parking spot.
 
-**Example:** A car enters the parking at row 1. It wants to go to cell 2, 2 so it moves through **exactly four** cells to reach its parking spot.
 
 
-###
+###![image](https://user-images.githubusercontent.com/67644402/145611314-94131f77-94ec-4f92-bcf4-804ab7ec95e2.png)**Example:** A car enters the parking at row 1. It wants to go to cell 2, 2 so it moves through **exactly four** cells to reach its parking spot.
+
 ### **Input**
 - On the first line of input, you are given the integers **R** and **C**, defining the dimensions of the parking lot.
 - On the next several lines, you are given the integers **Z, X,** **Y** where **Z** is the entry row and **X, Y** are the coordinates of the desired parking spot.
@@ -229,7 +232,7 @@ Your task is to calculate the distance travelled by each car to its parking spot
 | :-: | :-: |
 |<p>4 4</p><p>1 2 2</p><p>2 2 2</p><p>2 2 2</p><p>3 2 2</p><p>stop</p>|<p>4</p><p>2</p><p>4</p><p>Row 2 full</p>|
 |<p>10000 10000</p><p>0 9999 9999</p><p>9999 0 9999</p><p>stop</p>|<p>19999</p><p>19999</p>|
-1. ## **\*Radioactive Mutant Vampire Bunnies**
+## 10. **\*Radioactive Mutant Vampire Bunnies**
 Browsing through GitHub, you come across an old JS Basics teamwork game. It is about very nasty bunnies that multiply extremely fast. There’s also a player that has to escape from their lair. You really like the game so you decide to port it to Java because that’s your language of choice. The last thing that is left is the algorithm that decides if the player will escape the lair or not.
 
 First, you will receive a line holding integers **N** and **M**, which represent the rows and columns in the lair. Then you receive **N** strings that can **only** consist of "**.**", "**B**", "**P**". The **bunnies** are marked with "**B**"**,** the **player** is marked with "**P**", and **everything** else is free space, marked with a dot "**.**". They represent the initial state of the lair. There will be **only** one player. Then you will receive a string with **commands** such as **LLRRUUDD** – where each letter represents the next **move** of the player (Left, Right, Up, Down).
@@ -255,8 +258,9 @@ Finally, print the final state of the lair with every row on a separate line. On
 | :-: | :-: |
 |<p>5 8</p><p>.......B</p><p>...B....</p><p>....B..B</p><p>........</p><p>..P.....</p><p>ULLL</p>|<p>BBBBBBBB</p><p>BBBBBBBB</p><p>BBBBBBBB</p><p>.BBBBBBB</p><p>..BBBBBB</p><p>won: 3 0</p><p></p>|
 |<p>4 5</p><p>.....</p><p>.....</p><p>.B...</p><p>...P.</p><p>LLLLLLLL</p>|<p>.B...</p><p>BBB..</p><p>BBBB.</p><p>BBB..</p><p>dead: 3 1</p><p></p>|
-1. ## ` `**Reverse Matrix Diagonals**
+## 11. **Reverse Matrix Diagonals**
 You are given a matrix (2D array) of integers. You have to print the matrix diagonal but in reversed order. Print each diagonal on new line.
+
 ### **Input**
 On the first line, single integer the number **R** of rows in the matrix. On each of the next **R** lines, **C** numbers separated by single spaces. Note that **R** and **C** may have different values. 
 ### **Output**
@@ -309,7 +313,9 @@ The total memory allowed for use by your program is **5MB**
 |<p>5 6</p><p>o o 1 1 o o</p><p>o 1 o o 1 o</p><p>1 o o o o 1</p><p>o 1 o o 1 o</p><p>o o 1 1 o o</p><p>3</p><p>2 1</p>|<p>oo11oo</p><p>o1331o</p><p>133331</p><p>o1331o</p><p>oo11oo</p>|
 |<p>5 6</p><p>o o o o o o</p><p>o o o 1 o o</p><p>o o 1 o 1 1</p><p>o 1 1 w 1 o</p><p>1 o o o o o</p><p>z</p><p>4 1</p>|<p>oooooo</p><p>ooo1oo</p><p>oo1o11</p><p>o11w1z</p><p>1zzzzz</p>|
 |<p>5 6</p><p>o 1 o o 1 o</p><p>o 1 o o 1 o</p><p>o 1 1 1 1 o</p><p>o 1 o w 1 o</p><p>o o o o o o</p><p>z</p><p>4 0</p>|<p>z1oo1z</p><p>z1oo1z</p><p>z1111z</p><p>z1zw1z</p><p>zzzzzz</p>|
-**Hints**
+|||
+
+### **Hints**
 
 For some of the tests you can solve the problem with naive approach, however complete solution can be obtained by using **Stack**, **Queue**, **DFS** or **BFS** – go search on the internet.
 
