@@ -212,7 +212,7 @@ Your task is to calculate the distance travelled by each car to its parking spot
 
 
 
-###![image](https://user-images.githubusercontent.com/67644402/145611314-94131f77-94ec-4f92-bcf4-804ab7ec95e2.png)**Example:** A car enters the parking at row 1. It wants to go to cell 2, 2 so it moves through **exactly four** cells to reach its parking spot.
+![image](https://user-images.githubusercontent.com/67644402/145611314-94131f77-94ec-4f92-bcf4-804ab7ec95e2.png)  **Example:** A car enters the parking at row 1. It wants to go to cell 2, 2 so it moves through **exactly four** cells to reach its parking spot.
 
 ### **Input**
 - On the first line of input, you are given the integers **R** and **C**, defining the dimensions of the parking lot.
@@ -274,7 +274,9 @@ All the integers will be in the range **[1….1000].**
 |<p>3 4</p><p>21 20 18 15</p><p>19 17 14 12</p><p>16 13 11 10</p>|<p>10</p><p>11 12</p><p>13 14 15</p><p>16 17 18</p><p>19 20</p><p>21</p>|
 |<p>1 3</p><p>3 2 1</p>|<p>1</p><p>2</p><p>3</p>|
 |<p>3 3</p><p>18 17 15</p><p>16 14 12</p><p>13 11 10</p>|<p>10</p><p>11 12</p><p>13 14 15</p><p>16 17</p><p>18</p>|
-**12.\*\*\* the Matrix**
+|||
+
+## **12.\*\*\* the Matrix**
 
 You are given a matrix (2D array) of lowercase alphanumeric characters (**a-z**, **0-9**), a starting position – defined by a start row **startRow** and a start column **startCol** – and a filling symbol **fillChar**. Let’s call the symbol originally at **startRow** and **startCol** the **startChar**. Write a program, which, starting from the symbol at **startRow** and **startCol**, changes to **fillChar** every symbol in the matrix which:
 
