@@ -66,6 +66,8 @@ Game ends after **50 rounds** or if any player **lose all** of his numbers.
 - When you find top number, be sure to **remove** it **immediately** .
 #### **Solution**
 You might help yourself with the code below:
+  
+![image](https://user-images.githubusercontent.com/67644402/145672308-a103a21f-5674-4cf3-8847-5711f04810d0.png)
 
 ![](Aspose.Words.2bad1266-75f0-41a5-94b7-6d0c4e6dbcd6.001.png)
 ## II.**Maps**
@@ -81,6 +83,8 @@ Write a program that counts the occurrence of real **numbers**. The input is a s
 |2.3 4.5 4.5 5.5 5.5 2.3 3.0 3.0 4.5 4.5 3.0 3.0 4.0 3.0 5.5 3.0 2.3 5.5 4.5 3.0|<p>2.3 -> 3</p><p>4.5 -> 5</p><p>5.5 -> 4</p><p>3.0 -> 7</p><p>4.0 -> 1</p>|
 #### **Solution**
 You might help yourself with the code below:
+  
+![image](https://user-images.githubusercontent.com/67644402/145672312-3743f7ad-4985-4d58-9788-89d73e51a45b.png)
 
 ![](Aspose.Words.2bad1266-75f0-41a5-94b7-6d0c4e6dbcd6.002.png)
 ### 5.**Average Students Grades**
@@ -134,8 +138,8 @@ Write a program to read **continents**, **countries** and their **cities**, put 
 - Check if the continent **exists** before adding the country. If it doesn’t, **add** it to the dictionary.
 - Check if the country **exists**, before **adding** the city. If it doesn’t, add it to the dictionary.
 
-![](Aspose.Words.2bad1266-75f0-41a5-94b7-6d0c4e6dbcd6.003.png)
-
+  ![image](https://user-images.githubusercontent.com/67644402/145672324-f71c8e2d-f087-4b83-90ac-8dbf7b0fdcfa.png)
+  
 - Pass through all **key-value pairs** in the Map and the values’ key-value pairs and print the results.
 ### 8.**Academy Graduation**
 Write a program that:
@@ -158,7 +162,7 @@ Write a program that:
 #### **Solution**
 You might help yourself with the code below:
 
-![](Aspose.Words.2bad1266-75f0-41a5-94b7-6d0c4e6dbcd6.004.png)
+![image](https://user-images.githubusercontent.com/67644402/145672343-c43af435-90b2-4f5d-b381-aeafd440cd48.png)
 
 
 Follow us:
