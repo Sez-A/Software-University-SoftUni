@@ -86,8 +86,11 @@ Depending on the **condition,** print the **pairs** in the right **format**.
 |**Input**|**Output**||**Input**|**Output**||**Input**|**Output**|
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 |<p>5</p><p>Peter, 20<br>George, 18<br>Maria, 29<br>Idan, 31<br>Simeon, 16</p><p>older</p><p>20</p><p>name age</p>|<p>Peter - 20</p><p>Maria - 29</p><p>Idan - 31</p>||<p>5</p><p>Peter, 20<br>George, 18<br>Maria, 29<br>Idan, 31<br>Simeon, 16</p><p>younger</p><p>20</p><p>name</p>|<p>Peter</p><p>George</p><p>Simeon</p>||<p>5</p><p>Peter, 20<br>George, 18<br>Maria, 29<br>Idan, 31<br>Simeon, 16</p><p>younger</p><p>50</p><p>age</p>|<p>20</p><p>18</p><p>29</p><p>31</p><p>16</p>|
-1. ## **Find Evens or Odds**
+
+## 6. **Find Evens or Odds**
+
 You are given a **lower** and an **upper** **bound** for a range of integer numbers. Then a command specifies if you need to list all **even** **or** **odd** numbers in the given range. Use **predicates** that need to be **passed to a method.**
+
 ### **Examples**
 
 |**Input**|**Output**|
