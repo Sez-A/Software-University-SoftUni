@@ -82,6 +82,7 @@ Depending on the **condition,** print the **pairs** in the right **format**.
 
 **Don’t use any build-in functionality. Write your own methods.**
 ### **Examples**
+  
 
 |**Input**|**Output**||**Input**|**Output**||**Input**|**Output**|
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
