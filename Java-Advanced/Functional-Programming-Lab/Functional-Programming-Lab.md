@@ -68,7 +68,7 @@ Use an **UnaryOperator<Double>.**
 
 ### **Hints**
 
-
+![image](https://user-images.githubusercontent.com/67644402/146786276-8185b7b4-ee81-4160-b4be-1cb465a96b57.png)
 
 ## 5. **Filter by Age**
 
