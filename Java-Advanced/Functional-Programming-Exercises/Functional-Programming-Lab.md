@@ -11,6 +11,7 @@ Write a program that reads one line of **Integers** separated by **", "**.
 Use 2 **Lambda Expresions** to do so.
 ### **Examples**
 
+
 |**Input**|**Output**|
 | :-: | :-: |
 |4, 2, 1, 3, 5, 7, 1, 4, 2, 12|<p>4, 2, 4, 2, 12</p><p>2, 2, 4, 4, 12</p>|
