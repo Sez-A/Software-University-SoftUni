@@ -30,7 +30,7 @@ Create a class **Book** from **UML diagram** below:
 
 ### **Solution**
 
-
+![image](https://user-images.githubusercontent.com/67644402/148659864-73dfea33-36b0-414b-a8b3-57412016347a.png)
 
 ## 2. **Library**
 
@@ -56,7 +56,7 @@ Create a class **Library** from **UML diagram** below:
 
 ### **Solution**
 
-
+![image](https://user-images.githubusercontent.com/67644402/148659872-a3faf4d5-ee01-4595-9527-fe3698d6234e.png)
 
 ## 3. **Comparable Book**
 
