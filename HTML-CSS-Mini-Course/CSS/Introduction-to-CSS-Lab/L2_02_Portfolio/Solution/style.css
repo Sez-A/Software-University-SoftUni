@@ -1,0 +1,103 @@
+body {
+  width: 1180px;
+  line-height: 24px;
+  margin: 0 auto;
+  padding: 0; 
+}
+
+
+nav {
+    background-color:#f0f1f5 ;
+}
+
+nav ul {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li{
+    display: inline-block;
+    color: #01bdbe;
+    width: 180px;
+    margin: 10px 0;
+    padding: 15px 0;
+    border-right: 3px solid white  ;
+}
+
+nav ul li:first-child {
+  border-left: 3px solid white;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: #01bdbe;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding-inline: 15px;
+}
+
+.main-section {
+  padding: 15px;
+  width: 437px;
+  color: #b2b6c0;
+  background-color: #555c6f;
+  
+}
+
+.main-section ul li  {
+  display: inline-block;
+  padding-right: 10px ;
+   
+}
+
+.main-section ul li a i {
+  color: #b2b6c0;
+}
+
+ /* SoftUni solution */
+
+ /* body {
+    margin: 0;
+  } 
+  
+  
+  nav {
+    background: #f0f1f5;
+  }
+
+ 
+  nav ul {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+ 
+  nav ul li {
+    display: inline-block;
+    width: 180px;
+    margin: 10px 0;
+    padding: 15px 0;
+    border-right: 3px solid white;
+  }
+  
+  
+  nav ul li:first-child {
+    border-left: 3px solid white;
+  }
+
+  
+  nav ul li a {
+    display: block; 
+    text-align: center;
+    text-decoration: none;
+    color: #00d3d4;
+  }
+
+
+  nav ul li i {
+    padding-bottom: 15px;
+    font-size: 30px;
+    color: #00d3d4;
+  }  */
