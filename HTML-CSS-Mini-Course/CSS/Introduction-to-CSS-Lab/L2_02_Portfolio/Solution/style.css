@@ -43,7 +43,14 @@ nav ul li a {
   width: 437px;
   color: #b2b6c0;
   background-color: #555c6f;
-  
+  padding-bottom: 5px;
+  float: left;
+}
+
+.main-section ul {
+  display: inline-block;
+  text-align: left;
+  margin-inline: -45px;
 }
 
 .main-section ul li  {
@@ -56,48 +63,30 @@ nav ul li a {
   color: #b2b6c0;
 }
 
- /* SoftUni solution */
+#copy-right {
+  margin-top: 44px;
+}
 
- /* body {
-    margin: 0;
-  } 
-  
-  
-  nav {
-    background: #f0f1f5;
-  }
+.about{
+  background-color: #01bdbe;
+  height: 444px;
+  display: inline-block;
+  width: 659px;
+  padding: 26px;
+  color: white;
+}
 
- 
-  nav ul {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
- 
-  nav ul li {
-    display: inline-block;
-    width: 180px;
-    margin: 10px 0;
-    padding: 15px 0;
-    border-right: 3px solid white;
-  }
-  
-  
-  nav ul li:first-child {
-    border-left: 3px solid white;
-  }
+.about article:nth-child(1) {
+  margin-left: 12px;
+    font-size: 18px;
+    width: 227px;
+    float: left;
+}
 
-  
-  nav ul li a {
-    display: block; 
-    text-align: center;
-    text-decoration: none;
-    color: #00d3d4;
-  }
-
-
-  nav ul li i {
-    padding-bottom: 15px;
-    font-size: 30px;
-    color: #00d3d4;
-  }  */
+.about article:nth-child(2) img {
+  display: inline-block;
+  /* size: 50px; */
+  width: 219px;
+  border: 10px solid;
+  float: right;
+}
