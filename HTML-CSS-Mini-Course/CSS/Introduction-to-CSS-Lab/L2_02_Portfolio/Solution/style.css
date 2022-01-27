@@ -43,8 +43,21 @@ nav ul li a {
   width: 437px;
   color: #b2b6c0;
   background-color: #555c6f;
-  padding-bottom: 5px;
+  padding-bottom: 4px;
   float: left;
+}
+
+.main-section h2 {
+  position: relative;
+  top: 9px;
+  left: 10px;
+}
+
+.main-section p {
+  position: relative;
+  top: 9px;
+  left: 13px;
+ font-size: 16px;
 }
 
 .main-section ul {
@@ -61,6 +74,9 @@ nav ul li a {
 
 .main-section ul li a i {
   color: #b2b6c0;
+  position: relative;
+  
+  left: 13px;
 }
 
 #copy-right {
@@ -69,7 +85,6 @@ nav ul li a {
 
 .about{
   background-color: #01bdbe;
-  height: 444px;
   display: inline-block;
   width: 659px;
   padding: 26px;
