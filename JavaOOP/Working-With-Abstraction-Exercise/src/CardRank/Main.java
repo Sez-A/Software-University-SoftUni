@@ -1,3 +1,5 @@
+package CardRank;
+
 import java.util.Scanner;
 
 public class Main {

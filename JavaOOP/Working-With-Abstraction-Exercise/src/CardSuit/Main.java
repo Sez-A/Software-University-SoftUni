@@ -1,3 +1,5 @@
+package CardSuit;
+
 import java.util.Scanner;
 
 public class Main {
