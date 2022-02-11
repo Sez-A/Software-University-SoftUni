@@ -1,8 +1,9 @@
 ﻿
 # **Working with Abstraction: Lab**
 This document defines the lab for ["Java Advanced" course @ Software University](https://softuni.bg/modules/59/java-advanced). Please submit your solutions (source code) of all below described problems in [Judge](https://judge.softuni.bg/Contests/1575/Working-with-Abstraction-Lab).
-1. ## **Rhombus of Stars**
+## 1. **Rhombus of Stars**
 Create a program that reads a **positive** **integer** **n** as input and prints on the console a **rhombus** with size **n**:
+
 ### **Examples**
 
 |**Input**|**Output**||**Input**|**Output**||**Input**|**Output**|
@@ -10,8 +11,9 @@ Create a program that reads a **positive** **integer** **n** as input and prints
 |1|\*||2|<p>` `\*</p><p>\* \*</p><p>` `\*</p>||3|<p>`  `\*</p><p>` `\* \*</p><p>\* \* \*</p><p>` `\* \*</p><p>`  `\*</p>|
 ### **Hint**
 Create a **printRow()** method to easily reuse code.
-1. ## **Point in Rectangle**
+## 2. **Point in Rectangle**
 Create a class **Point** and a class **Rectangle**. The **Point** should hold **coordinates X** and **Y** and the **Rectangle** should hold 2 **Points** – its **bottom** **left** and **top** **right** corners. In the **Rectangle** class, you should implement a **contains(Point point)** method that returns **true** or **false**, based on **whether** the **Point** given as **attribute** is **inside** or **outside** of the **Rectangle** object. Points **on** **the** **side** of a Square are considered **inside**.
+
 ### **Input**
 - On the first line read the **coordinates** of the **bottom** **left** and **top** **right** corner of the **Rectangle** in the format: **"{bottomLeftX} {bottomLeftY} {topRightX} {topRightY}"**.
 - On the second line, read an integer **N** and on the next **N** lines, read the **coordinates** of **points**.
@@ -22,7 +24,7 @@ Create a class **Point** and a class **Rectangle**. The **Point** should hold **
 |**Input**|**Output**||**Input**|**Output**||**Input**|**Output**|
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 |<p>0 0 3 3</p><p>5</p><p>0 0</p><p>0 1</p><p>4 4</p><p>5 3</p><p>1 2</p>|<p>true</p><p>true</p><p>false</p><p>false</p><p>true</p>||<p>2 -3 12 3</p><p>4</p><p>8 -1</p><p>11 3</p><p>1 1</p><p>2 4</p><p></p>|<p>true</p><p>true</p><p>false</p><p>false</p>||<p>5 8 12 15</p><p>6</p><p>0 0</p><p>5 8</p><p>12 15</p><p>8 15</p><p>7 15</p><p>8 12</p>|<p>false</p><p>true</p><p>true</p><p>true</p><p>true</p><p>true</p>|
-1. ## **Student System**
+## 3. **Student System**
 You are given a **working** **project** for a small **Student** **System**, but the code is very poorly organized. Break up the code **logically** into **smaller** **functional** **units** – **methods** and **classes** and don’t break the functionality.
 
 The program supports the following commands:
@@ -39,7 +41,7 @@ The program supports the following commands:
 | :-: | :-: |
 |<p>Create Peter 20 5.50</p><p>Create Maria 18 4.50</p><p>Create George 25 3</p><p>Show Peter</p><p>Show Maria</p><p>Exit</p>|<p>Peter is 20 years old. Excellent student.</p><p>Maria is 18 years old. Average student.</p>|
 |<p>Create Teo 19 2.00</p><p>Show Sam</p><p>Show Teo</p><p>Create Sam 20 3.00</p><p>Show Teo</p><p>Show Sam</p><p>Exit</p>|<p>Teo is 19 years old. Very nice person.</p><p>Teo is 19 years old. Very nice person.</p><p>Sam is 20 years old. Very nice person.</p>|
-1. ## **Hotel Reservation**
+## 4. **Hotel Reservation**
 Create a class **PriceCalculator** that calculates the total price of a holiday, given the **price** **per** **day**, **number** **of** **days**, the **season** and a **discount** **type**.** The **discount** **type** and **season** should be **enums**.
 
 Use the class in your **main()** method to read input and **print** on the console the **price** of the **whole** **holiday**.
