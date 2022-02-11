@@ -26,7 +26,6 @@ public class Product {
     }
 
     public void setCost(double cost) {
-        // Here maybe should to be <= !!!
         if (cost < 0) {
             throw new IllegalArgumentException("Money cannot be negative");
         }
