@@ -1,13 +1,17 @@
 package bg.softuni.mobilelele.service.impl;
 
+import bg.softuni.mobilelele.model.binding.OfferBindingModel;
+import bg.softuni.mobilelele.model.entity.Model;
 import bg.softuni.mobilelele.model.entity.enums.Engine;
 import bg.softuni.mobilelele.model.entity.Offer;
 import bg.softuni.mobilelele.model.entity.enums.Transmission;
 import bg.softuni.mobilelele.model.view.OfferSummaryView;
 import bg.softuni.mobilelele.repository.OfferRepository;
+import bg.softuni.mobilelele.service.BrandService;
 import bg.softuni.mobilelele.service.ModelService;
 import bg.softuni.mobilelele.service.OfferService;
 import bg.softuni.mobilelele.service.UserService;
+import bg.softuni.mobilelele.user.CurrentUser;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
@@ -22,12 +26,14 @@ public class OfferServiceImpl implements OfferService {
     private final UserService userService;
     private final ModelService modelService;
     private final ModelMapper modelMapper;
+    private final BrandService brandService;
 
-    public OfferServiceImpl(OfferRepository offerRepository, UserService userService, ModelService modelService, ModelMapper modelMapper) {
+    public OfferServiceImpl(OfferRepository offerRepository, UserService userService, ModelService modelService, ModelMapper modelMapper, BrandService brandService) {
         this.offerRepository = offerRepository;
         this.userService = userService;
         this.modelService = modelService;
         this.modelMapper = modelMapper;
+        this.brandService = brandService;
     }
 
     @Override
@@ -42,7 +48,7 @@ public class OfferServiceImpl implements OfferService {
             first.setTransmission(Transmission.AUTOMATIC);
             first.setYear(2018);
             first.setModel(this.modelService.getByName("Q8"));
-            first.setSeller(this.userService.getByFirstName("pesho"));
+            first.setSeller(this.userService.getByUserName("pesho"));
 
             Offer second = new Offer();
             second.setCreated(Instant.now());
@@ -53,7 +59,7 @@ public class OfferServiceImpl implements OfferService {
             second.setTransmission(Transmission.AUTOMATIC);
             second.setYear(2005);
             second.setModel(this.modelService.getByName("CLS"));
-            second.setSeller(this.userService.getByFirstName("pesho"));
+            second.setSeller(this.userService.getByUserName("pesho"));
 
             this.offerRepository.saveAll(List.of(first, second));
 
@@ -68,5 +74,25 @@ public class OfferServiceImpl implements OfferService {
                 .stream()
                 .map(o -> modelMapper.map(o, OfferSummaryView.class))
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public void addOffer(OfferBindingModel bindingModel) {
+
+
+        Model model = this.modelService.createNewModel(bindingModel);
+
+
+        Offer offer = this.modelMapper.map(bindingModel, Offer.class);
+        offer.setModel(model);
+        offer.setCreated(Instant.now());
+        CurrentUser currentLoggedIn = this.userService.getCurrentUser();
+        if(!currentLoggedIn.isLoggedIn()) {
+            offer.setSeller(this.userService.getByUserName("Admin"));
+        }else {
+            offer.setSeller(this.userService.getByUserName(currentLoggedIn.getUsername()));
+        }
+        this.offerRepository.save(offer);
+
     }
 }

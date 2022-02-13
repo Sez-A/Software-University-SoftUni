@@ -59,7 +59,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User getByFirstName(String username) {
+    public User getByUserName(String username) {
         return this.userRepository.findByUsername(username);
     }
 
@@ -99,5 +99,10 @@ public class UserServiceImpl implements UserService {
         }
 
         return false;
+    }
+
+    @Override
+    public CurrentUser getCurrentUser() {
+        return currentUser;
     }
 }

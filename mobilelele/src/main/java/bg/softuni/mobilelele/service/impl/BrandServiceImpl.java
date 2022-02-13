@@ -37,4 +37,21 @@ public class BrandServiceImpl implements BrandService {
     public Brand getByName(String name) {
         return this.brandRepository.findByName(name);
     }
+
+    @Override
+    public void saveBrand(Brand brand) {
+        this.brandRepository.save(brand);
+    }
+
+    @Override
+    public boolean containsBrand(String name) {
+        return this.brandRepository.findByName(name) == null;
+    }
+
+    @Override
+    public Brand createNewBrand(String name) {
+        Brand brand = new Brand();
+        brand.setName(name);
+        return this.brandRepository.save(brand);
+    }
 }
