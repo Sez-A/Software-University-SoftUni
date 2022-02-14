@@ -52,6 +52,7 @@ public class BrandServiceImpl implements BrandService {
     public Brand createNewBrand(String name) {
         Brand brand = new Brand();
         brand.setName(name);
+        brand.setCreated(Instant.now());
         return this.brandRepository.save(brand);
     }
 }

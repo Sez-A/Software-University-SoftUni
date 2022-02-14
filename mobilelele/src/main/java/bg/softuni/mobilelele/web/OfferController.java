@@ -1,6 +1,7 @@
 package bg.softuni.mobilelele.web;
 
 import bg.softuni.mobilelele.model.binding.OfferBindingModel;
+import bg.softuni.mobilelele.model.view.DetailsView;
 import bg.softuni.mobilelele.service.OfferService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,17 +17,6 @@ public class OfferController {
         this.offerService = offerService;
     }
 
-    @GetMapping("/offers/all")
-    public String allOffers(Model model) {
-        model.addAttribute("offers", offerService.getAllOffers());
-        return "offers";
-    }
-
-    @GetMapping("/offers/{id}/details")
-    public String showOffer(@PathVariable Long id) {
-        return "details";
-    }
-
     @GetMapping("/offers/add")
     public String offers() {
         return "offer-add";
@@ -37,5 +27,18 @@ public class OfferController {
 
         offerService.addOffer(bindingModel);
         return "redirect:/";
+    }
+
+    @GetMapping("/offers/all")
+    public String allOffers(Model model) {
+        model.addAttribute("offers", offerService.getAllOffers());
+        return "offers";
+    }
+
+    @GetMapping("/offers/{id}/details")
+    public String showOffer(@PathVariable Long id, Model model) {
+        DetailsView detailsView = this.offerService.getDetailsForOfferById(id);
+        model.addAttribute("details", detailsView);
+        return "details";
     }
 }

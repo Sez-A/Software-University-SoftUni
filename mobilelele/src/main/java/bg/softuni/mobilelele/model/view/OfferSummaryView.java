@@ -14,6 +14,7 @@ public class OfferSummaryView {
     private Transmission transmission;
     private int year;
     private String model;
+    private String brand;
 
     public Long getId() {
         return id;
@@ -84,6 +85,15 @@ public class OfferSummaryView {
 
     public OfferSummaryView setModel(String model) {
         this.model = model;
+        return this;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public OfferSummaryView setBrand(String brand) {
+        this.brand = brand;
         return this;
     }
 }

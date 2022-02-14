@@ -5,6 +5,7 @@ import bg.softuni.mobilelele.model.entity.Model;
 import bg.softuni.mobilelele.model.entity.enums.Engine;
 import bg.softuni.mobilelele.model.entity.Offer;
 import bg.softuni.mobilelele.model.entity.enums.Transmission;
+import bg.softuni.mobilelele.model.view.DetailsView;
 import bg.softuni.mobilelele.model.view.OfferSummaryView;
 import bg.softuni.mobilelele.repository.OfferRepository;
 import bg.softuni.mobilelele.service.BrandService;
@@ -72,7 +73,12 @@ public class OfferServiceImpl implements OfferService {
         return this.offerRepository
                 .findAll()
                 .stream()
-                .map(o -> modelMapper.map(o, OfferSummaryView.class))
+                .map(o -> {
+                    OfferSummaryView view = modelMapper.map(o, OfferSummaryView.class);
+                    view.setModel(o.getModel().getName());
+                    view.setBrand(o.getModel().getBrand().getName());
+                    return view;
+                })
                 .collect(Collectors.toList());
     }
 
@@ -87,12 +93,24 @@ public class OfferServiceImpl implements OfferService {
         offer.setModel(model);
         offer.setCreated(Instant.now());
         CurrentUser currentLoggedIn = this.userService.getCurrentUser();
-        if(!currentLoggedIn.isLoggedIn()) {
+        if (!currentLoggedIn.isLoggedIn()) {
             offer.setSeller(this.userService.getByUserName("Admin"));
-        }else {
+        } else {
             offer.setSeller(this.userService.getByUserName(currentLoggedIn.getUsername()));
         }
         this.offerRepository.save(offer);
 
+    }
+
+    @Override
+    public DetailsView getDetailsForOfferById(Long id) {
+        return this.offerRepository.findById(id)
+                .map(offer -> {
+                    DetailsView view = modelMapper.map(offer, DetailsView.class);
+                    Instant created = offer.getCreated();
+                    view.setCreated(created.toString().replace("T","").replace("Z",""));
+                    return view;
+                })
+                .orElse(null);
     }
 }
