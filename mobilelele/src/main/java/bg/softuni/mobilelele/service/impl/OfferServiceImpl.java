@@ -108,7 +108,14 @@ public class OfferServiceImpl implements OfferService {
                 .map(offer -> {
                     DetailsView view = modelMapper.map(offer, DetailsView.class);
                     Instant created = offer.getCreated();
-                    view.setCreated(created.toString().replace("T","").replace("Z",""));
+                    String creationDate = created.toString().substring(0, 10);
+                    creationDate += " " + created.toString().substring(11, created.toString().length() - 1);
+                    view.setCreated(creationDate);
+                    if (offer.getModified() != null) {
+                        String modificationDate = offer.getModified().toString().substring(0, 10);
+                        modificationDate += " " + offer.getModified().toString().substring(11, created.toString().length() - 1);
+                        view.setModified(modificationDate);
+                    }
                     return view;
                 })
                 .orElse(null);

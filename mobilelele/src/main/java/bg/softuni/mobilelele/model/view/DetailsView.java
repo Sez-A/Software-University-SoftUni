@@ -11,9 +11,8 @@ public class DetailsView {
     private BigDecimal price;
     private Engine engine;
     private Transmission transmission;
-//    private Instant created;
     private String created;
-    private Instant modified;
+    private String modified;
     private String sellerFirstName;
     private String sellerLastName;
     private String imageUrl;
@@ -54,20 +53,12 @@ public class DetailsView {
         return this;
     }
 
-//    public Instant getCreated() {
-//        return created;
-//    }
-//
-//    public DetailsView setCreated(Instant created) {
-//        this.created = created;
-//        return this;
-//    }
 
-    public Instant getModified() {
+    public String getModified() {
         return modified;
     }
 
-    public DetailsView setModified(Instant modified) {
+    public DetailsView setModified(String modified) {
         this.modified = modified;
         return this;
     }
