@@ -16,6 +16,7 @@ public class DetailsView {
     private String sellerFirstName;
     private String sellerLastName;
     private String imageUrl;
+    private Long id;
 
     public int getMileage() {
         return mileage;
@@ -97,5 +98,13 @@ public class DetailsView {
     public DetailsView setCreated(String created) {
         this.created = created;
         return this;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

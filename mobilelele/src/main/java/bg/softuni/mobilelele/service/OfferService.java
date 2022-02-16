@@ -14,4 +14,6 @@ public interface OfferService {
     void addOffer(OfferBindingModel bindingModel);
 
     DetailsView getDetailsForOfferById(Long id);
+
+    void deleteById(Long id);
 }
