@@ -120,4 +120,9 @@ public class OfferServiceImpl implements OfferService {
                 })
                 .orElse(null);
     }
+
+    @Override
+    public void deleteById(Long id) {
+        this.offerRepository.deleteById(id);
+    }
 }

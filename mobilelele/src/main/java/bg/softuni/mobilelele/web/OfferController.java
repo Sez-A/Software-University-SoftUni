@@ -5,6 +5,7 @@ import bg.softuni.mobilelele.model.view.DetailsView;
 import bg.softuni.mobilelele.service.OfferService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -40,5 +41,11 @@ public class OfferController {
         DetailsView detailsView = this.offerService.getDetailsForOfferById(id);
         model.addAttribute("details", detailsView);
         return "details";
+    }
+
+    @DeleteMapping("/offers/{id}")
+    public String delete(@PathVariable Long id) {
+        offerService.deleteById(id);
+        return "redirect:/offers/all";
     }
 }
