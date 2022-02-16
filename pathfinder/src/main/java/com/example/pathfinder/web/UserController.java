@@ -4,6 +4,7 @@ import com.example.pathfinder.model.binding.UserLoginBindingModel;
 import com.example.pathfinder.model.binding.UserRegisterBindingModel;
 import com.example.pathfinder.model.service.UserLoginServiceModel;
 import com.example.pathfinder.model.service.UserRegisterServiceModel;
+import com.example.pathfinder.model.view.UserProfileView;
 import com.example.pathfinder.service.UserService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Controller;
@@ -59,9 +60,9 @@ public class UserController {
 
     @GetMapping("/login")
     public String login(Model model) {
-         if(!model.containsAttribute("invalidUsername")) {
-             model.addAttribute("invalidUsername", false);
-         }
+        if (!model.containsAttribute("invalidUsername")) {
+            model.addAttribute("invalidUsername", false);
+        }
         return "login";
     }
 
@@ -78,7 +79,9 @@ public class UserController {
     }
 
     @GetMapping("/profile/{id}")
-    public String profile(@PathVariable Long id) {
+    public String profile(@PathVariable Long id, Model model) {
+        UserProfileView view = this.userService.findById(id);
+        model.addAttribute("user", view);
         return "profile";
     }
 
