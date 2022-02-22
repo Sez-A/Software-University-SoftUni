@@ -5,6 +5,7 @@ import com.example.pathfinder.model.entity.User;
 import com.example.pathfinder.model.entity.enums.LevelEnum;
 import com.example.pathfinder.model.service.UserLoginServiceModel;
 import com.example.pathfinder.model.service.UserRegisterServiceModel;
+import com.example.pathfinder.model.view.UserProfileView;
 import com.example.pathfinder.repository.UserRepository;
 import com.example.pathfinder.service.RoleService;
 import com.example.pathfinder.service.UserService;
@@ -63,5 +64,11 @@ public class UserServiceImpl implements UserService {
         user.setLevel(LevelEnum.BEGINNER);
         this.userRepository.save(user);
         return true;
+    }
+
+    @Override
+    public UserProfileView findById(Long id) {
+
+        return this.modelMapper.map(this.userRepository.findById(id).get(), UserProfileView.class);
     }
 }

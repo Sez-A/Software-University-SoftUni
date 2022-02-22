@@ -15,6 +15,7 @@ public class Route extends BaseEntity {
     private User author;
     private String videoUrl;
     private Set<Categories> categories;
+    private Set<Pictures> pictures;
 
     @Column(columnDefinition = "TEXT")
     public String getDescription() {
@@ -77,5 +78,15 @@ public class Route extends BaseEntity {
 
     public void setCategories(Set<Categories> categories) {
         this.categories = categories;
+    }
+
+    @OneToMany(mappedBy = "route", fetch = FetchType.EAGER)
+    public Set<Pictures> getPictures() {
+        return pictures;
+    }
+
+    public Route setPictures(Set<Pictures> pictures) {
+        this.pictures = pictures;
+        return this;
     }
 }
