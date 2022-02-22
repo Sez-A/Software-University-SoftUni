@@ -13,6 +13,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.time.Instant;
+
 @Controller
 public class OfferController {
     private final OfferService offerService;
@@ -70,7 +72,16 @@ public class OfferController {
                             RedirectAttributes redirectAttributes) {
 
 
-        // TODO: 16.02.22 Implement update logic!
+        System.out.println(Instant.now());
+        if (bindingResult.hasErrors()) {
+            redirectAttributes.addFlashAttribute("offerModel", offerModel);
+            redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.offerModel"
+                    , bindingResult);
+
+            return "redirect:/offers/" + id + "/details";
+        }
+
+        offerService.updateOffer(offerModel);
 
         return "redirect:/offers/" + id + "/details";
     }

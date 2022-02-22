@@ -1,6 +1,7 @@
 package bg.softuni.mobilelele.service.impl;
 
 import bg.softuni.mobilelele.model.binding.OfferBindingModel;
+import bg.softuni.mobilelele.model.binding.OfferUpdateBindingModel;
 import bg.softuni.mobilelele.model.entity.Model;
 import bg.softuni.mobilelele.model.entity.enums.Engine;
 import bg.softuni.mobilelele.model.entity.Offer;
@@ -17,7 +18,9 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.time.Clock;
 import java.time.Instant;
+import java.time.ZoneId;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -131,5 +134,24 @@ public class OfferServiceImpl implements OfferService {
     @Override
     public DetailsView findById(Long id) {
         return this.modelMapper.map(this.offerRepository.findById(id).get(), DetailsView.class);
+    }
+
+    @Override
+    public void updateOffer(OfferUpdateBindingModel updateBindingModel) {
+
+        Offer offer = this.offerRepository.findById(updateBindingModel.getId()).get();
+
+        offer.setYear(updateBindingModel.getYear());
+        offer.setMileage(updateBindingModel.getMileage());
+        offer.setPrice(updateBindingModel.getPrice());
+        offer.setEngine(updateBindingModel.getEngine());
+        offer.setTransmission(updateBindingModel.getTransmission());
+
+        offer.setModified(Instant.now());
+        offer.setImageUrl(updateBindingModel.getImageUrl());
+        offer.setDescription(updateBindingModel.getDescription());
+
+        this.offerRepository.save(offer);
+
     }
 }

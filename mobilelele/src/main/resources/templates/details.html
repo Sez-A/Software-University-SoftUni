@@ -32,6 +32,8 @@
                     <div class="card-text"><span th:text="'Price:  $' + *{getPrice()}">• Price</span></div>
                     <div class="card-text"><span th:text="|Engine type:  *{getEngine()}|">• Engine type</span></div>
                     <div class="card-text"><span th:text="|Transmission type:   *{getTransmission()}|">• Transmission type</span></div>
+                    <div class="card-text"><span th:if="*{getDescription()} != ''" th:text="|Description:  *{getDescription()}|"> Description </span></div>
+
                     <div class="card-text"><span th:text="|Offer created:   *{getCreated()}|">• Offer created</span></div>
                     <div class="card-text"><span th:if="*{getModified()} != null" th:text="|Offer modified:  *{getModified()}|">• Offer modified</span></div>
                     <div class="card-text"><span th:text="|Seller:   *{getSellerFirstName()} *{getSellerLastName()}|">• Seller - First and Last name</span></div>

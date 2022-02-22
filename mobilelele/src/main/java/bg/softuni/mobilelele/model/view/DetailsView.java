@@ -19,6 +19,7 @@ public class DetailsView {
     private String sellerFirstName;
     private String sellerLastName;
     private String imageUrl;
+    private String description;
     private Long id;
 
     public int getMileage() {
@@ -133,5 +134,14 @@ public class DetailsView {
 
     public void setYear(int year) {
         this.year = year;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public DetailsView setDescription(String description) {
+        this.description = description;
+        return this;
     }
 }

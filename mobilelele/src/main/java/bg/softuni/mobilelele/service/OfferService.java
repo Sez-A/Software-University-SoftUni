@@ -1,6 +1,7 @@
 package bg.softuni.mobilelele.service;
 
 import bg.softuni.mobilelele.model.binding.OfferBindingModel;
+import bg.softuni.mobilelele.model.binding.OfferUpdateBindingModel;
 import bg.softuni.mobilelele.model.view.DetailsView;
 import bg.softuni.mobilelele.model.view.OfferSummaryView;
 
@@ -18,4 +19,6 @@ public interface OfferService {
     void deleteById(Long id);
 
     DetailsView findById(Long id);
+
+    void updateOffer(OfferUpdateBindingModel updateBindingModel);
 }
