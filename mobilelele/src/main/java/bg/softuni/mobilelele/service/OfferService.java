@@ -16,4 +16,6 @@ public interface OfferService {
     DetailsView getDetailsForOfferById(Long id);
 
     void deleteById(Long id);
+
+    DetailsView findById(Long id);
 }

@@ -111,6 +111,8 @@ public class OfferServiceImpl implements OfferService {
                     String creationDate = created.toString().substring(0, 10);
                     creationDate += " " + created.toString().substring(11, created.toString().length() - 1);
                     view.setCreated(creationDate);
+                    view.setBrand(offer.getModel().getBrand().getName());
+                    view.setModel(offer.getModel().getName());
                     if (offer.getModified() != null) {
                         String modificationDate = offer.getModified().toString().substring(0, 10);
                         modificationDate += " " + offer.getModified().toString().substring(11, created.toString().length() - 1);
@@ -124,5 +126,10 @@ public class OfferServiceImpl implements OfferService {
     @Override
     public void deleteById(Long id) {
         this.offerRepository.deleteById(id);
+    }
+
+    @Override
+    public DetailsView findById(Long id) {
+        return this.modelMapper.map(this.offerRepository.findById(id).get(), DetailsView.class);
     }
 }

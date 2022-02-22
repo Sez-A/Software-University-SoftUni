@@ -1,12 +1,11 @@
-package bg.softuni.mobilelele.model.view;
+package bg.softuni.mobilelele.model.binding;
 
 import bg.softuni.mobilelele.model.entity.enums.Engine;
 import bg.softuni.mobilelele.model.entity.enums.Transmission;
 
 import java.math.BigDecimal;
-import java.time.Instant;
 
-public class DetailsView {
+public class OfferUpdateBindingModel {
     private String brand;
     private String model;
     private int year;
@@ -21,94 +20,7 @@ public class DetailsView {
     private String imageUrl;
     private Long id;
 
-    public int getMileage() {
-        return mileage;
-    }
-
-    public DetailsView setMileage(int mileage) {
-        this.mileage = mileage;
-        return this;
-    }
-
-    public BigDecimal getPrice() {
-        return price;
-    }
-
-    public DetailsView setPrice(BigDecimal price) {
-        this.price = price;
-        return this;
-    }
-
-    public Engine getEngine() {
-        return engine;
-    }
-
-    public DetailsView setEngine(Engine engine) {
-        this.engine = engine;
-        return this;
-    }
-
-    public Transmission getTransmission() {
-        return transmission;
-    }
-
-    public DetailsView setTransmission(Transmission transmission) {
-        this.transmission = transmission;
-        return this;
-    }
-
-
-    public String getModified() {
-        return modified;
-    }
-
-    public DetailsView setModified(String modified) {
-        this.modified = modified;
-        return this;
-    }
-
-    public String getSellerFirstName() {
-        return sellerFirstName;
-    }
-
-    public DetailsView setSellerFirstName(String sellerFirstName) {
-        this.sellerFirstName = sellerFirstName;
-        return this;
-    }
-
-    public String getSellerLastName() {
-        return sellerLastName;
-    }
-
-    public DetailsView setSellerLastName(String sellerLastName) {
-        this.sellerLastName = sellerLastName;
-        return this;
-    }
-
-    public String getImageUrl() {
-        return imageUrl;
-    }
-
-    public DetailsView setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-        return this;
-    }
-
-    public String getCreated() {
-        return created;
-    }
-
-    public DetailsView setCreated(String created) {
-        this.created = created;
-        return this;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
+    public OfferUpdateBindingModel() {
     }
 
     public String getBrand() {
@@ -133,5 +45,85 @@ public class DetailsView {
 
     public void setYear(int year) {
         this.year = year;
+    }
+
+    public int getMileage() {
+        return mileage;
+    }
+
+    public void setMileage(int mileage) {
+        this.mileage = mileage;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
+
+    public Transmission getTransmission() {
+        return transmission;
+    }
+
+    public void setTransmission(Transmission transmission) {
+        this.transmission = transmission;
+    }
+
+    public String getCreated() {
+        return created;
+    }
+
+    public void setCreated(String created) {
+        this.created = created;
+    }
+
+    public String getModified() {
+        return modified;
+    }
+
+    public void setModified(String modified) {
+        this.modified = modified;
+    }
+
+    public String getSellerFirstName() {
+        return sellerFirstName;
+    }
+
+    public void setSellerFirstName(String sellerFirstName) {
+        this.sellerFirstName = sellerFirstName;
+    }
+
+    public String getSellerLastName() {
+        return sellerLastName;
+    }
+
+    public void setSellerLastName(String sellerLastName) {
+        this.sellerLastName = sellerLastName;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

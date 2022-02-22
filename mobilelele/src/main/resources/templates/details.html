@@ -22,10 +22,10 @@
     <div class="offers row mx-auto d-flex flex-row justify-content-center">
         <div class="offer card col-sm-2 col-md-3  col-lg-4 m-1 p-0" th:object="${details}" >
 
-<!--            <div class="card-body pb-1">-->
-<!--                <h5 class="card-title">-->
-<!--                    Offer year Brand name Model name</h5>-->
-<!--            </div>-->
+            <div class="card-body pb-1">
+                <h5 class="card-title" th:text="|*{getBrand()}  *{getModel()}  *{getYear()}|">
+                    Offer year Brand name Model name</h5>
+            </div>
             <ul class="offer-details list-group list-group-flush">
                 <li class="list-group-item">
                     <div class="card-text"><span th:text="|Mileage:  *{getMileage()}km|">Mileage</span></div>
@@ -38,10 +38,12 @@
                 </li>
             </ul>
             <div class="card-body">
-                <a class="card-link" href="/">Update</a>
-                <form th:action="@{/offers/{id}(id=*{id})}" th:method="delete">
-                    <input type="submit" class="btn btn-link" value="Delete"/>
-                </form>
+               <div class="row">
+                   <a class="btn btn-link" th:href="@{/offers/{id}/edit(id=*{id})}">Update</a>
+                   <form th:action="@{/offers/{id}(id=*{id})}" th:method="delete">
+                       <input type="submit" class="btn btn-link" value="Delete"/>
+                   </form>
+               </div>
             </div>
         </div>
         <div class="offer card col-sm-2 col-md-3  col-lg-4 m-1 p-0">
