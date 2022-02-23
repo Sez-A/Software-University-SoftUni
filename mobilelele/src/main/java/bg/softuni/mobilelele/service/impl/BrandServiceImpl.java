@@ -1,21 +1,25 @@
 package bg.softuni.mobilelele.service.impl;
 
 import bg.softuni.mobilelele.model.entity.Brand;
+import bg.softuni.mobilelele.model.view.BrandsView;
 import bg.softuni.mobilelele.repository.BrandRepository;
 import bg.softuni.mobilelele.service.BrandService;
-import org.springframework.stereotype.Repository;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
 @Service
 public class BrandServiceImpl implements BrandService {
     private final BrandRepository brandRepository;
+    private final ModelMapper modelMapper;
 
-    public BrandServiceImpl(BrandRepository brandRepository) {
+    public BrandServiceImpl(BrandRepository brandRepository, ModelMapper modelMapper) {
         this.brandRepository = brandRepository;
+        this.modelMapper = modelMapper;
     }
 
     @Override
@@ -54,5 +58,16 @@ public class BrandServiceImpl implements BrandService {
         brand.setName(name);
         brand.setCreated(Instant.now());
         return this.brandRepository.save(brand);
+    }
+
+    @Override
+    public Set<BrandsView> getAllBrands() {
+        List<Brand> all = this.brandRepository.findAll();
+        Set<BrandsView> brandsViews = new HashSet<>();
+        for (Brand brand : all) {
+            brandsViews.add(this.modelMapper.map(brand, BrandsView.class));
+        }
+
+        return brandsViews;
     }
 }
