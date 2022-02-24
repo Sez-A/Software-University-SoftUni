@@ -4,6 +4,8 @@ import bg.softuni.mobilelele.model.binding.UserLoginBindingModel;
 import bg.softuni.mobilelele.model.binding.UserRegisterBindingModel;
 import bg.softuni.mobilelele.service.UserService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -42,12 +44,16 @@ public class UserController {
     }
 
     @PostMapping("/users/login")
-    public String login(UserLoginBindingModel loginBindingModel) {
+    public String login(UserLoginBindingModel loginBindingModel,
+                        BindingResult bindingResult,
+                        Model model) {
 
         if (this.userService.authenticate(loginBindingModel)) {
             return "redirect:/";
         }
 
+
+        model.addAttribute("error", true);
         return "auth-login";
     }
 

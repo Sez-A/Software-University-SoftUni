@@ -22,7 +22,9 @@
           class="main-form mx-auto col-md-8 d-flex flex-column justify-content-center">
         <div class="form-group">
             <label for="username" class="text-white font-weight-bold">Username</label>
-            <input value="" id="username" name="username" type="text" min="2" max="50"
+            <input value="" id="username"
+                   name="username"
+                   type="text" min="2" max="50"
                    class="form-control"
                    placeholder=""/>
         </div>
@@ -34,9 +36,9 @@
 
         </div>
         
-<!--        <p class="errors alert alert-danger">-->
-<!--            Invalid username or password.-->
-<!--        </p>-->
+        <p th:if="${error}" style="color: red">
+            Invalid username or password.
+        </p>
 
         <div class="row">
             <div class="col col-md-4">
