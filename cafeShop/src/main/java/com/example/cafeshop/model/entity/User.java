@@ -1,9 +1,8 @@
 package com.example.cafeshop.model.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -13,6 +12,7 @@ public class User extends BaseEntity {
     private String lastName;
     private String password;
     private String username;
+    private List<Orders> orders;
 
     @Column(nullable = false, unique = true)
     public String getEmail() {
@@ -60,6 +60,16 @@ public class User extends BaseEntity {
 
     public User setUsername(String username) {
         this.username = username;
+        return this;
+    }
+
+    @OneToMany(mappedBy = "employee", fetch = FetchType.EAGER)
+    public List<Orders> getOrders() {
+        return orders;
+    }
+
+    public User setOrders(List<Orders> orders) {
+        this.orders = orders;
         return this;
     }
 }

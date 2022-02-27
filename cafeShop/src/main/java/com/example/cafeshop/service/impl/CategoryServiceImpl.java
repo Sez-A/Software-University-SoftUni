@@ -44,4 +44,9 @@ public class CategoryServiceImpl implements CategoryService {
                 })
                 .forEach(this.categoryRepository::save);
     }
+
+    @Override
+    public Category findByName(CategoryNameEnum name) {
+        return this.categoryRepository.findByName(name).orElse(this.categoryRepository.findById(4L).get());
+    }
 }
