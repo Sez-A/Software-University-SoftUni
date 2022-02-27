@@ -1,10 +1,12 @@
 package com.example.cafeshop.web;
 
+import com.example.cafeshop.model.binding.UserLoginBindingModel;
 import com.example.cafeshop.model.binding.UserRegisterBindingModel;
 import com.example.cafeshop.model.service.UserServiceModel;
 import com.example.cafeshop.service.UserService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -50,5 +52,44 @@ public class UserController {
         this.userService.register(this.modelMapper.map(userRegisterBindingModel, UserServiceModel.class));
 
         return "redirect:login";
+    }
+
+    @ModelAttribute
+    public UserLoginBindingModel userLoginBindingModel() {
+        return new UserLoginBindingModel();
+    }
+
+    @GetMapping("/login")
+    public String login(Model model) {
+        model.addAttribute("invalidUserNameOrPassword", false);
+        return "login";
+    }
+
+    @PostMapping("/login")
+    public String loginPost(@Valid UserLoginBindingModel userLoginBindingModel,
+                            BindingResult bindingResult, RedirectAttributes redirectAttributes,
+                            Model model) {
+
+        if (bindingResult.hasErrors()) {
+            redirectAttributes.addFlashAttribute("userLoginBindingModel", userLoginBindingModel);
+            redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.userLoginBindingModel", bindingResult);
+            return "redirect:login";
+        }
+
+        boolean successfullyLogin = this.userService
+                .loginUser(this.modelMapper.map(userLoginBindingModel, UserServiceModel.class));
+
+        if (!successfullyLogin) {
+            model.addAttribute("invalidUserNameOrPassword", true);
+            return "login";
+        }
+
+        return "index";
+    }
+
+    @GetMapping("/logout")
+    public String logout() {
+        this.userService.logoutUser();
+        return "index";
     }
 }

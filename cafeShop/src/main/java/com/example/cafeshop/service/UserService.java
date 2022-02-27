@@ -4,4 +4,9 @@ import com.example.cafeshop.model.service.UserServiceModel;
 
 public interface UserService {
     void register(UserServiceModel userServiceModel);
+
+    boolean loginUser(UserServiceModel userServiceModel);
+
+    void logoutUser();
+
 }
