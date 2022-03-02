@@ -3,6 +3,7 @@ package com.example.coffeShop.web;
 import com.example.coffeShop.model.binding.AddOrderBindingModel;
 import com.example.coffeShop.model.service.OrderServiceModel;
 import com.example.coffeShop.service.OrderService;
+import com.example.coffeShop.util.CurrentUser;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -19,10 +20,11 @@ import javax.validation.Valid;
 public class OrderController {
     private final OrderService orderService;
     private final ModelMapper modelMapper;
-
-    public OrderController(OrderService orderService, ModelMapper modelMapper) {
+    private final CurrentUser currentUser;
+    public OrderController(OrderService orderService, ModelMapper modelMapper, CurrentUser currentUser) {
         this.orderService = orderService;
         this.modelMapper = modelMapper;
+        this.currentUser = currentUser;
     }
 
     @ModelAttribute
@@ -32,6 +34,9 @@ public class OrderController {
 
     @GetMapping("/add")
     public String addOrder() {
+        if(currentUser.getId() == null) {
+            return "redirect:/";
+        }
         return "order-add";
     }
 
