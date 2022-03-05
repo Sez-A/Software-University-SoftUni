@@ -1,10 +1,19 @@
 package com.example.pathfinder.model.view;
 
 public class RouteSummaryView {
+    private Long id;
     private String name;
     private String description;
     private String videoUrl;
     private String pictureUrl;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;

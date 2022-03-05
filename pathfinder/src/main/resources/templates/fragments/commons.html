@@ -34,7 +34,7 @@
                 <a href="/about">About</a>
             </li>
             <li th:if="${@currentUser.id != null}">
-                <a href="/">Add new route</a>
+                <a href="/routes/add">Add new route</a>
             </li>
             <li th:if="${@currentUser.id != null}">
                 <a th:href="@{/users/profile/{id} (id = ${@currentUser.id})}">Profile</a>

@@ -1,5 +1,8 @@
 package com.example.pathfinder.service.impl;
 
+import com.example.pathfinder.model.entity.Pictures;
+import com.example.pathfinder.model.entity.Route;
+import com.example.pathfinder.model.view.RouteDetailsView;
 import com.example.pathfinder.model.view.RouteSummaryView;
 import com.example.pathfinder.repository.RouteRepository;
 import com.example.pathfinder.service.RouteService;
@@ -30,5 +33,20 @@ public class RouteServiceImpl implements RouteService {
                     return view;
                 })
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public RouteDetailsView findRouteById(Long id) {
+        Route route = this.routeRepository.findById(id).orElse(null);
+
+        RouteDetailsView routeDetailsView = this.modelMapper.map(route, RouteDetailsView.class);
+        routeDetailsView.setAuthorName(route.getAuthor().getUsername());
+
+        for (Pictures picture : route.getPictures()) {
+            routeDetailsView.setPictureUrl(picture.getUrl());
+        }
+
+
+        return routeDetailsView;
     }
 }

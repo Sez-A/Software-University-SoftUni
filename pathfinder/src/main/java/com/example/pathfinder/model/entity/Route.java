@@ -53,7 +53,7 @@ public class Route extends BaseEntity {
         this.name = name;
     }
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     public User getAuthor() {
         return author;
     }
