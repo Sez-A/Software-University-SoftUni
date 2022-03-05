@@ -71,7 +71,7 @@ public class Route extends BaseEntity {
         this.videoUrl = videoUrl;
     }
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     public Set<Categories> getCategories() {
         return categories;
     }

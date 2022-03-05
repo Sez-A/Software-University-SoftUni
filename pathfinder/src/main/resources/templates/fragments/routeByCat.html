@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section th:fragment="info" th:each="r : ${routeByCategory}" th:object="${r}" class="road">
+    <div>
+        <h2 th:text="*{title}">Title</h2>
+        <p th:text="*{description}">Very long description</p>
+        <a href="/" class="btn">Learn More</a>
+    </div>
+    <img class="rounded-circle w-75 ml-5" th:src="*{imageUrl}" alt="Title image">
+</section>
+</body>
+</html>

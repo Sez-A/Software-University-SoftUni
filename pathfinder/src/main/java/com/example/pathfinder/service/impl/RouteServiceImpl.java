@@ -2,9 +2,11 @@ package com.example.pathfinder.service.impl;
 
 import com.example.pathfinder.model.entity.Pictures;
 import com.example.pathfinder.model.entity.Route;
+import com.example.pathfinder.model.view.RouteByCategoryView;
 import com.example.pathfinder.model.view.RouteDetailsView;
 import com.example.pathfinder.model.view.RouteSummaryView;
 import com.example.pathfinder.repository.RouteRepository;
+import com.example.pathfinder.service.CategoriesService;
 import com.example.pathfinder.service.RouteService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -14,12 +16,15 @@ import java.util.stream.Collectors;
 
 @Service
 public class RouteServiceImpl implements RouteService {
+
     private final RouteRepository routeRepository;
     private final ModelMapper modelMapper;
+    private final CategoriesService categoriesService;
 
-    public RouteServiceImpl(RouteRepository routeRepository, ModelMapper modelMapper) {
+    public RouteServiceImpl(RouteRepository routeRepository, ModelMapper modelMapper, CategoriesService categoriesService) {
         this.routeRepository = routeRepository;
         this.modelMapper = modelMapper;
+        this.categoriesService = categoriesService;
     }
 
     @Override
@@ -48,5 +53,19 @@ public class RouteServiceImpl implements RouteService {
 
 
         return routeDetailsView;
+    }
+
+    @Override
+    public List<RouteByCategoryView> findAllRoutesByCategory(String categoryName) {
+
+        return this.routeRepository.findAllRoutesByCategory(categoryName)
+                .stream()
+                .map(route -> {
+                    RouteByCategoryView routeByCategoryView = this.modelMapper.map(route, RouteByCategoryView.class);
+                    routeByCategoryView.setTitle(route.getName());
+                    routeByCategoryView.setImageUrl(route.getPictures().stream().findFirst().get().getUrl());
+                    return routeByCategoryView;
+                })
+                .collect(Collectors.toList());
     }
 }
