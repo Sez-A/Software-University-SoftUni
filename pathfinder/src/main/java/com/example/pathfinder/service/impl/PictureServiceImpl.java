@@ -1,5 +1,6 @@
 package com.example.pathfinder.service.impl;
 
+import com.example.pathfinder.model.entity.Pictures;
 import com.example.pathfinder.repository.PictureRepository;
 import com.example.pathfinder.service.PictureService;
 import org.springframework.stereotype.Service;
@@ -17,5 +18,11 @@ public class PictureServiceImpl implements PictureService {
     @Override
     public List<String> findAllUrls() {
         return this.pictureRepository.findAllUrls();
+    }
+
+    @Override
+    public Pictures findById(Long id) {
+
+        return this.pictureRepository.findById(id).orElse(null);
     }
 }

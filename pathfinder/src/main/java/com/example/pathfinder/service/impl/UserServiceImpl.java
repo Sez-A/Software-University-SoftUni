@@ -68,7 +68,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserProfileView findById(Long id) {
-
         return this.modelMapper.map(this.userRepository.findById(id).get(), UserProfileView.class);
+    }
+
+    @Override
+    public User findUserEntityById(Long id) {
+        return this.userRepository.findById(id).orElse(this.userRepository.findById(1L).get());
     }
 }

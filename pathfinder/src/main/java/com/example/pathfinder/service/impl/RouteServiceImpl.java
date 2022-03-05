@@ -1,17 +1,28 @@
 package com.example.pathfinder.service.impl;
 
+import com.example.pathfinder.model.entity.Categories;
 import com.example.pathfinder.model.entity.Pictures;
 import com.example.pathfinder.model.entity.Route;
+import com.example.pathfinder.model.entity.enums.CategoryNamesEnum;
+import com.example.pathfinder.model.entity.enums.LevelEnum;
+import com.example.pathfinder.model.service.AddRouteServiceModel;
 import com.example.pathfinder.model.view.RouteByCategoryView;
 import com.example.pathfinder.model.view.RouteDetailsView;
 import com.example.pathfinder.model.view.RouteSummaryView;
 import com.example.pathfinder.repository.RouteRepository;
 import com.example.pathfinder.service.CategoriesService;
+import com.example.pathfinder.service.PictureService;
 import com.example.pathfinder.service.RouteService;
+import com.example.pathfinder.service.UserService;
+import com.example.pathfinder.util.CurrentUser;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
@@ -20,24 +31,36 @@ public class RouteServiceImpl implements RouteService {
     private final RouteRepository routeRepository;
     private final ModelMapper modelMapper;
     private final CategoriesService categoriesService;
+    private final UserService userService;
+    private final CurrentUser currentUser;
+    private final PictureService pictureService;
 
-    public RouteServiceImpl(RouteRepository routeRepository, ModelMapper modelMapper, CategoriesService categoriesService) {
+    public RouteServiceImpl(RouteRepository routeRepository, ModelMapper modelMapper, CategoriesService categoriesService, UserService userService, CurrentUser currentUser, PictureService pictureService) {
         this.routeRepository = routeRepository;
         this.modelMapper = modelMapper;
         this.categoriesService = categoriesService;
+        this.userService = userService;
+        this.currentUser = currentUser;
+        this.pictureService = pictureService;
     }
 
     @Override
     public List<RouteSummaryView> getAllRoutes() {
-        return this.routeRepository.findAll()
+        List<RouteSummaryView> collect = this.routeRepository.findAll()
                 .stream()
                 .map(route -> {
                     RouteSummaryView view = this.modelMapper.map(route, RouteSummaryView.class);
-                    view.setPictureUrl(route.getPictures().stream().findFirst().get().getUrl());
+                    if(route.getPictures().isEmpty()) {
+                        view.setPictureUrl("http://res.cloudinary.com/ch-cloud/image/upload/v1630581418/tqhjrinmsb69ev7upg0q.jpg");
+                    }else {
+                        view.setPictureUrl(route.getPictures().stream().findFirst().get().getUrl());
+                    }
 
                     return view;
                 })
                 .collect(Collectors.toList());
+
+        return collect;
     }
 
     @Override
@@ -67,5 +90,21 @@ public class RouteServiceImpl implements RouteService {
                     return routeByCategoryView;
                 })
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public void addRoute(AddRouteServiceModel addRouteServiceModel) throws IOException {
+        Route route = this.modelMapper.map(addRouteServiceModel, Route.class);
+
+        route.setAuthor(this.userService.findUserEntityById(currentUser.getId()));
+        route.setGpxCoordinates(new String(addRouteServiceModel
+                .getGpxCoordinates().getBytes()));
+
+        Set<Categories> categories = new HashSet<>();
+        for (CategoryNamesEnum name : addRouteServiceModel.getCategories()) {
+            categories.add(this.categoriesService.findByName(name));
+        }
+        route.setCategories(categories);
+        this.routeRepository.save(route);
     }
 }
