@@ -79,7 +79,7 @@ If you do everything correctly for this problem, you should write code only in t
 |<p>add Pikeman</p><p>add Pikeman</p><p>add Gunner</p><p>add Horseman</p><p>add Archer</p><p>add Gunner</p><p>add Gunner</p><p>add Horseman</p><p>report</p><p>fight</p>|<p>Pikeman added!</p><p>Pikeman added!</p><p>Gunner added!</p><p>Horseman added!</p><p>Archer added!</p><p>Gunner added!</p><p>Gunner added!</p><p>Horseman added!</p><p>Archer -> 1</p><p>Gunner -> 3</p><p>Horseman -> 2</p><p>Pikeman -> 2</p>|
 |||
 
-### **BarracksWars – the Commands Strike Back**
+## **BarracksWars – the Commands Strike Back**
 
 As you might have noticed commands in the project from **Problem 3** are implemented via a switch case with method calls in the **Engine** class. Although this approach works it is flawed when you add a new command because you have to add a new case for it. In some projects you might not have access to the engine and this would not work. Imagine this project will be outsourced and the outsourcing firm will not have access to the engine. Make it so whenever they want to add a new command they won't have to change anything in the **Engine.**
 
@@ -104,7 +104,7 @@ If you do everything correctly for this problem, you should write/refactor code 
 | :-: | :-: |
 |<p>retire Archer</p><p>add Pikeman</p><p>add Pikeman</p><p>add Gunner</p><p>add Horseman</p><p>add Archer</p><p>add Gunner</p><p>add Gunner</p><p>add Horseman</p><p>report</p><p>retire Gunner</p><p>retire Archer</p><p>report</p><p>retire Swordsman</p><p>retire Archer</p><p>fight</p>|<p>No such units in repository.</p><p>Pikeman added!</p><p>Pikeman added!</p><p>Gunner added!</p><p>Horseman added!</p><p>Archer added!</p><p>Gunner added!</p><p>Gunner added!</p><p>Horseman added!</p><p>Archer -> 1</p><p>Gunner -> 3</p><p>Horseman -> 2</p><p>Pikeman -> 2</p><p>Gunner retired!</p><p>Archer retired!</p><p>Archer -> 0</p><p>Gunner -> 2</p><p>Horseman -> 2</p><p>Pikeman -> 2</p><p>No such units in repository.</p><p>No such units in repository.</p>|
 
-### **\* BarracksWars – Return of the Dependencies**
+## **\* BarracksWars – Return of the Dependencies**
 
 In the final part of this epic problem trilogy we will resolve the issue where all Commands received all utility classes as parameters in their constructors. We can accomplish this by using an approach called **dependency injection container**. This approach is used in many frameworks like **Spring** for instance.
 
