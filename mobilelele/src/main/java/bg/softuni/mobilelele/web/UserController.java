@@ -33,7 +33,7 @@ public class UserController {
             return "redirect:/";
         } else {
             // TODO: 10.2.2022 г. Show message with flash attribute
-            return "redirect:/users/register";
+            return "redirect:/auth-register";
         }
 
     }
@@ -55,11 +55,5 @@ public class UserController {
 
         model.addAttribute("error", true);
         return "auth-login";
-    }
-
-    @GetMapping("/users/logout")
-    public String logout() {
-        this.userService.logout();
-        return "redirect:/";
     }
 }

@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec='http://www.thymeleaf.org/extras/spring-security'>
 <head>
     <meta charset="UTF-8">
 
@@ -25,7 +27,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/offers/all">All Offers</a>
                 </li>
-                <li th:if="${@currentUser.isAdmin()}" class="nav-item dropdown">
+                <!--TODO-->
+                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Admin
@@ -37,19 +40,22 @@
                         <a class="dropdown-item" href="/">Something else here</a>
                     </div>
                 </li>
-                <li th:if="${@currentUser.isLoggedIn()}" class="nav-item">
+                <!--TODO-->
+                <li class="nav-item">
                     <div class="form-inline my-2 my-lg-0 border px-3">
                         <div style="color: white">Welcome,
-                            <th:block th:text="${@currentUser.getFirstName()}"></th:block>
+                            <!--TODO-->
                         </div>
                         <a class="nav-link" th:href="@{/users/logout}">Logout</a>
                     </div>
                 </li>
 
-                <li th:unless="${@currentUser.isLoggedIn()}" class="nav-item">
+                <!--TODO-->
+                <li class="nav-item">
                     <a class="nav-link" th:href="@{/users/register}">Register</a>
                 </li>
-                <li th:unless="${@currentUser.isLoggedIn()}" class="nav-item">
+                <!--TODO-->
+                <li class="nav-item">
                     <a class="nav-link" th:href="@{/users/login}">Login</a>
                 </li>
 

@@ -3,8 +3,8 @@ package bg.softuni.mobilelele.service.impl;
 import bg.softuni.mobilelele.model.binding.OfferBindingModel;
 import bg.softuni.mobilelele.model.binding.OfferUpdateBindingModel;
 import bg.softuni.mobilelele.model.entity.Model;
-import bg.softuni.mobilelele.model.entity.enums.Engine;
 import bg.softuni.mobilelele.model.entity.Offer;
+import bg.softuni.mobilelele.model.entity.enums.Engine;
 import bg.softuni.mobilelele.model.entity.enums.Transmission;
 import bg.softuni.mobilelele.model.view.DetailsView;
 import bg.softuni.mobilelele.model.view.OfferSummaryView;
@@ -13,14 +13,11 @@ import bg.softuni.mobilelele.service.BrandService;
 import bg.softuni.mobilelele.service.ModelService;
 import bg.softuni.mobilelele.service.OfferService;
 import bg.softuni.mobilelele.service.UserService;
-import bg.softuni.mobilelele.user.CurrentUser;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
-import java.time.Clock;
 import java.time.Instant;
-import java.time.ZoneId;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -95,12 +92,9 @@ public class OfferServiceImpl implements OfferService {
         Offer offer = this.modelMapper.map(bindingModel, Offer.class);
         offer.setModel(model);
         offer.setCreated(Instant.now());
-        CurrentUser currentLoggedIn = this.userService.getCurrentUser();
-        if (!currentLoggedIn.isLoggedIn()) {
-            offer.setSeller(this.userService.getByUserName("Admin"));
-        } else {
-            offer.setSeller(this.userService.getByUserName(currentLoggedIn.getUsername()));
-        }
+        // TODO: 3/13/2022 Set properly seller to offer!
+
+
         this.offerRepository.save(offer);
 
     }
