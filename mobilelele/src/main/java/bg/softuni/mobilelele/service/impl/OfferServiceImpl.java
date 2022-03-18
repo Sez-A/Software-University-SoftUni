@@ -4,6 +4,7 @@ import bg.softuni.mobilelele.model.binding.OfferBindingModel;
 import bg.softuni.mobilelele.model.binding.OfferUpdateBindingModel;
 import bg.softuni.mobilelele.model.entity.Model;
 import bg.softuni.mobilelele.model.entity.Offer;
+import bg.softuni.mobilelele.model.entity.User;
 import bg.softuni.mobilelele.model.entity.enums.Engine;
 import bg.softuni.mobilelele.model.entity.enums.Transmission;
 import bg.softuni.mobilelele.model.view.DetailsView;
@@ -83,18 +84,14 @@ public class OfferServiceImpl implements OfferService {
     }
 
     @Override
-    public void addOffer(OfferBindingModel bindingModel) {
-
-
+    public void addOffer(OfferBindingModel bindingModel, String username) {
         Model model = this.modelService.createNewModel(bindingModel);
-
 
         Offer offer = this.modelMapper.map(bindingModel, Offer.class);
         offer.setModel(model);
         offer.setCreated(Instant.now());
-        // TODO: 3/13/2022 Set properly seller to offer!
-
-
+        User seller = this.userService.findUserByUsername(username);
+        offer.setSeller(seller);
         this.offerRepository.save(offer);
 
     }

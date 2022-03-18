@@ -4,6 +4,8 @@ import bg.softuni.mobilelele.model.binding.UserLoginBindingModel;
 import bg.softuni.mobilelele.model.binding.UserRegisterBindingModel;
 import bg.softuni.mobilelele.model.entity.User;
 
+import java.util.Optional;
+
 public interface UserService {
      void register(UserRegisterBindingModel registerBindingModel);
 
@@ -14,4 +16,6 @@ public interface UserService {
     boolean userNameFree(String username);
 
     User getByUserName(String username);
+
+    User findUserByUsername(String username);
 }

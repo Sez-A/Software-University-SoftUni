@@ -12,7 +12,7 @@ public interface OfferService {
 
     List<OfferSummaryView> getAllOffers();
 
-    void addOffer(OfferBindingModel bindingModel);
+    void addOffer(OfferBindingModel bindingModel, String userName);
 
     DetailsView getDetailsForOfferById(Long id);
 

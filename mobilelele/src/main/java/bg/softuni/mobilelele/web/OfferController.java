@@ -13,6 +13,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.security.Principal;
 import java.time.Instant;
 
 @Controller
@@ -31,9 +32,9 @@ public class OfferController {
     }
 
     @PostMapping("/offers/add")
-    public String addOffer(OfferBindingModel bindingModel) {
+    public String addOffer(OfferBindingModel bindingModel, Principal principal) {
 
-        offerService.addOffer(bindingModel);
+        offerService.addOffer(bindingModel, principal.getName());
         return "redirect:/";
     }
 
