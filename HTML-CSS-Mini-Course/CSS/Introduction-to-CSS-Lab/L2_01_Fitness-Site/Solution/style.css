@@ -33,6 +33,11 @@ nav ul li a {
     color: #F76925;
 }
 
+nav ul li a:hover {
+    color: white;
+    background: #F76925;
+}
+
 main section:nth-child(1) {
  background-image: url(/L2_01_Fitness-Site/Requirements-and-Resources/Images/picture.jpg) ;
  margin-top: 3.5rem;
