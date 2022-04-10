@@ -5,7 +5,9 @@ import bg.softuni.mobilelele.model.binding.OfferUpdateBindingModel;
 import bg.softuni.mobilelele.model.entity.Model;
 import bg.softuni.mobilelele.model.entity.Offer;
 import bg.softuni.mobilelele.model.entity.User;
+import bg.softuni.mobilelele.model.entity.UserRole;
 import bg.softuni.mobilelele.model.entity.enums.Engine;
+import bg.softuni.mobilelele.model.entity.enums.Role;
 import bg.softuni.mobilelele.model.entity.enums.Transmission;
 import bg.softuni.mobilelele.model.view.DetailsView;
 import bg.softuni.mobilelele.model.view.OfferSummaryView;
@@ -20,6 +22,7 @@ import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
 import java.time.Instant;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -120,6 +123,27 @@ public class OfferServiceImpl implements OfferService {
     @Override
     public void deleteById(Long id) {
         this.offerRepository.deleteById(id);
+    }
+
+    @Override
+    public boolean isOwner(String userName, Long id) {
+        Optional<Offer> offerOptional = this.offerRepository.findById(id);
+        User caller = this.userService.findUserByUsername(userName);
+        if (offerOptional.isEmpty() || caller == null) {
+            return false;
+        } else {
+            Offer offer = offerOptional.get();
+            return isAdmin(caller)
+                    || offer.getSeller().getUsername().equalsIgnoreCase(userName);
+        }
+
+    }
+
+    private boolean isAdmin(User caller) {
+        return caller.getRoles()
+                .stream()
+                .map(UserRole::getRole)
+                .anyMatch(r -> r == (Role.ADMIN));
     }
 
     @Override

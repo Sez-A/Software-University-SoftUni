@@ -18,6 +18,8 @@ public interface OfferService {
 
     void deleteById(Long id);
 
+    boolean isOwner(String userName, Long id);
+
     DetailsView findById(Long id);
 
     void updateOffer(OfferUpdateBindingModel updateBindingModel);

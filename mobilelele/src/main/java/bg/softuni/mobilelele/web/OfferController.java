@@ -7,6 +7,7 @@ import bg.softuni.mobilelele.model.entity.enums.Transmission;
 import bg.softuni.mobilelele.model.view.DetailsView;
 import bg.softuni.mobilelele.service.OfferService;
 import org.modelmapper.ModelMapper;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -51,8 +52,9 @@ public class OfferController {
         return "details";
     }
 
+    @PreAuthorize("@offerServiceImpl.isOwner(#principal.name, #id)")
     @DeleteMapping("/offers/{id}")
-    public String delete(@PathVariable Long id) {
+    public String delete(@PathVariable Long id, Principal principal) {
         offerService.deleteById(id);
         return "redirect:/offers/all";
     }
