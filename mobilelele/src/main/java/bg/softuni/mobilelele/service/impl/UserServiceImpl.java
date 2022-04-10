@@ -7,12 +7,12 @@ import bg.softuni.mobilelele.model.entity.UserRole;
 import bg.softuni.mobilelele.repository.UserRepository;
 import bg.softuni.mobilelele.service.UserRoleService;
 import bg.softuni.mobilelele.service.UserService;
-import bg.softuni.mobilelele.user.CurrentUser;
 import org.modelmapper.ModelMapper;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
+import java.util.Optional;
 import java.util.Set;
 
 @Service
@@ -21,14 +21,14 @@ public class UserServiceImpl implements UserService {
     private final PasswordEncoder passwordEncoder;
     private final ModelMapper modelMapper;
     private final UserRoleService userRoleService;
-    private final CurrentUser currentUser;
 
-    public UserServiceImpl(UserRepository userRepository, PasswordEncoder passwordEncoder, ModelMapper modelMapper, UserRoleService userRoleService, CurrentUser currentUser) {
+
+    public UserServiceImpl(UserRepository userRepository, PasswordEncoder passwordEncoder,
+                           ModelMapper modelMapper, UserRoleService userRoleService) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
         this.modelMapper = modelMapper;
         this.userRoleService = userRoleService;
-        this.currentUser = currentUser;
     }
 
     @Override
@@ -49,17 +49,17 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void logout() {
-        this.currentUser.clean();
-    }
-
-    @Override
     public boolean userNameFree(String username) {
         return this.userRepository.findByUsernameIgnoreCase(username).isEmpty();
     }
 
     @Override
     public User getByUserName(String username) {
+        return this.userRepository.findByUsername(username);
+    }
+
+    @Override
+    public User findUserByUsername(String username) {
         return this.userRepository.findByUsername(username);
     }
 
@@ -83,15 +83,7 @@ public class UserServiceImpl implements UserService {
         if (loggedIn != null) {
             boolean passIsValid = this.passwordEncoder.matches(rawPassword, loggedIn.getPassword());
             if (passIsValid) {
-
-                currentUser.setLoggedIn(true)
-                        .setFirstName(loggedIn.getFirstName())
-                        .setLastName(loggedIn.getLastName())
-                        .setUsername(loggedIn.getUsername());
-
-                loggedIn.getRoles()
-                        .forEach(r -> currentUser.addRole(r.getRole()));
-
+                // TODO Logic for login
                 return true;
             } else {
                 return false;
@@ -99,10 +91,5 @@ public class UserServiceImpl implements UserService {
         }
 
         return false;
-    }
-
-    @Override
-    public CurrentUser getCurrentUser() {
-        return currentUser;
     }
 }

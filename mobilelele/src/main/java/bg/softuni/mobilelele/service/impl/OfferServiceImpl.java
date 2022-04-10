@@ -3,8 +3,11 @@ package bg.softuni.mobilelele.service.impl;
 import bg.softuni.mobilelele.model.binding.OfferBindingModel;
 import bg.softuni.mobilelele.model.binding.OfferUpdateBindingModel;
 import bg.softuni.mobilelele.model.entity.Model;
-import bg.softuni.mobilelele.model.entity.enums.Engine;
 import bg.softuni.mobilelele.model.entity.Offer;
+import bg.softuni.mobilelele.model.entity.User;
+import bg.softuni.mobilelele.model.entity.UserRole;
+import bg.softuni.mobilelele.model.entity.enums.Engine;
+import bg.softuni.mobilelele.model.entity.enums.Role;
 import bg.softuni.mobilelele.model.entity.enums.Transmission;
 import bg.softuni.mobilelele.model.view.DetailsView;
 import bg.softuni.mobilelele.model.view.OfferSummaryView;
@@ -13,15 +16,13 @@ import bg.softuni.mobilelele.service.BrandService;
 import bg.softuni.mobilelele.service.ModelService;
 import bg.softuni.mobilelele.service.OfferService;
 import bg.softuni.mobilelele.service.UserService;
-import bg.softuni.mobilelele.user.CurrentUser;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
-import java.time.Clock;
 import java.time.Instant;
-import java.time.ZoneId;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -86,21 +87,14 @@ public class OfferServiceImpl implements OfferService {
     }
 
     @Override
-    public void addOffer(OfferBindingModel bindingModel) {
-
-
+    public void addOffer(OfferBindingModel bindingModel, String username) {
         Model model = this.modelService.createNewModel(bindingModel);
-
 
         Offer offer = this.modelMapper.map(bindingModel, Offer.class);
         offer.setModel(model);
         offer.setCreated(Instant.now());
-        CurrentUser currentLoggedIn = this.userService.getCurrentUser();
-        if (!currentLoggedIn.isLoggedIn()) {
-            offer.setSeller(this.userService.getByUserName("Admin"));
-        } else {
-            offer.setSeller(this.userService.getByUserName(currentLoggedIn.getUsername()));
-        }
+        User seller = this.userService.findUserByUsername(username);
+        offer.setSeller(seller);
         this.offerRepository.save(offer);
 
     }
@@ -129,6 +123,27 @@ public class OfferServiceImpl implements OfferService {
     @Override
     public void deleteById(Long id) {
         this.offerRepository.deleteById(id);
+    }
+
+    @Override
+    public boolean isOwner(String userName, Long id) {
+        Optional<Offer> offerOptional = this.offerRepository.findById(id);
+        User caller = this.userService.findUserByUsername(userName);
+        if (offerOptional.isEmpty() || caller == null) {
+            return false;
+        } else {
+            Offer offer = offerOptional.get();
+            return isAdmin(caller)
+                    || offer.getSeller().getUsername().equalsIgnoreCase(userName);
+        }
+
+    }
+
+    private boolean isAdmin(User caller) {
+        return caller.getRoles()
+                .stream()
+                .map(UserRole::getRole)
+                .anyMatch(r -> r == (Role.ADMIN));
     }
 
     @Override

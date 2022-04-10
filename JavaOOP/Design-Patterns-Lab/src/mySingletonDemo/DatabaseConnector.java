@@ -12,6 +12,7 @@ public class DatabaseConnector {
         if (connector == null) {
             connector = new DatabaseConnector();
         }
+		
         return connector;
     }
 
