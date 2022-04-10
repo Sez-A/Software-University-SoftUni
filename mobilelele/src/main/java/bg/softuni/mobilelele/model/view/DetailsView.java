@@ -18,6 +18,7 @@ public class DetailsView {
     private String modified;
     private String sellerFirstName;
     private String sellerLastName;
+    private String userNameOfSeller;
     private String imageUrl;
     private String description;
     private Long id;
@@ -83,6 +84,15 @@ public class DetailsView {
 
     public DetailsView setSellerLastName(String sellerLastName) {
         this.sellerLastName = sellerLastName;
+        return this;
+    }
+
+    public String getUserNameOfSeller() {
+        return userNameOfSeller;
+    }
+
+    public DetailsView setUserNameOfSeller(String userNameOfSeller) {
+        this.userNameOfSeller = userNameOfSeller;
         return this;
     }
 

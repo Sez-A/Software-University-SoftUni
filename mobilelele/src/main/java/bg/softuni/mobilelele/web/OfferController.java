@@ -46,9 +46,10 @@ public class OfferController {
     }
 
     @GetMapping("/offers/{id}/details")
-    public String showOffer(@PathVariable Long id, Model model) {
+    public String showOffer(@PathVariable Long id, Model model, Principal principal) {
         DetailsView detailsView = this.offerService.getDetailsForOfferById(id);
         model.addAttribute("details", detailsView);
+        model.addAttribute("currentLoggedInUserName", principal.getName());
         return "details";
     }
 

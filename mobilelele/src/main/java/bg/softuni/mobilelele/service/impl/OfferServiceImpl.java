@@ -110,6 +110,7 @@ public class OfferServiceImpl implements OfferService {
                     view.setCreated(creationDate);
                     view.setBrand(offer.getModel().getBrand().getName());
                     view.setModel(offer.getModel().getName());
+                    view.setUserNameOfSeller(offer.getSeller().getUsername());
                     if (offer.getModified() != null) {
                         String modificationDate = offer.getModified().toString().substring(0, 10);
                         modificationDate += " " + offer.getModified().toString().substring(11, created.toString().length() - 1);
