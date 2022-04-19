@@ -59,7 +59,8 @@
                 </div>
             </th:block>
 
-            <th:block sec:authorize="hasRole('USER')">
+            <th:block sec:authorize="!hasRole('ADMIN')">
+
                 <div class="card-body">
                     <div class="row" th:if="${#authentication.name}==*{getUserNameOfSeller()}">
                         <a class="btn btn-link" th:href="@{/offers/{id}/edit(id=*{id})}">Update</a>
@@ -69,6 +70,7 @@
                         </form>
                     </div>
                 </div>
+
             </th:block>
         </div>
         <div class="offer card col-sm-2 col-md-3  col-lg-4 m-1 p-0">
