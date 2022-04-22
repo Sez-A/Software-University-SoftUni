@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec='http://www.thymeleaf.org/extras/spring-security'>
 <head th:fragment="head">
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -20,31 +21,39 @@
 <body>
 <header th:fragment="navigation">
     <nav class="main-nav">
-        <ul >
-            <li>
-                <a href="/">Home</a>
-            </li>
-            <li th:if="${@currentUser.id == null}">
-                <a href="/users/login">Login</a>
-            </li>
-            <li th:if="${@currentUser.id == null}">
-                <a href="/users/register">Register</a>
-            </li>
-            <li th:if="${@currentUser.id == null}">
-                <a href="/about">About</a>
-            </li>
-            <li th:if="${@currentUser.id != null}">
-                <a href="/routes/add">Add new route</a>
-            </li>
-            <li th:if="${@currentUser.id != null}">
-                <a th:href="@{/users/profile/{id} (id = ${@currentUser.id})}">Profile</a>
-            </li>
-            <li th:if="${@currentUser.isAdmin}">
-                <a href="/">Admin</a>
-            </li>
-            <li th:if="${@currentUser.id != null}">
-                <a href="/users/logout">Logout</a>
-            </li>
+        <ul>
+            <th:block sec:authorize="!isAuthenticated()">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/users/login">Login</a>
+                </li>
+                <li>
+                    <a href="/users/register">Register</a>
+                </li>
+                <li>
+                    <a href="/about">About</a>
+                </li>
+            </th:block>
+
+            <th:block sec:authorize="isAuthenticated()">
+                <li>
+                    <a href="/routes/add">Add new route</a>
+                </li>
+                <li>
+                    <a>Profile</a>
+                </li>
+                <li>
+                    <a href="/">Admin</a>
+                </li>
+                <li>
+                    <form th:action="@{/users/logout}" th:method="post">
+                        <input style="width: 500px; height: 50px;" type="submit" value="LOGOUT">
+                    </form>
+                </li>
+            </th:block>
+
         </ul>
     </nav>
 </header>

@@ -1,8 +1,6 @@
 package com.example.pathfinder.web;
 
-import com.example.pathfinder.model.binding.UserLoginBindingModel;
 import com.example.pathfinder.model.binding.UserRegisterBindingModel;
-import com.example.pathfinder.model.service.UserLoginServiceModel;
 import com.example.pathfinder.model.service.UserRegisterServiceModel;
 import com.example.pathfinder.model.view.UserProfileView;
 import com.example.pathfinder.service.UserService;
@@ -66,28 +64,10 @@ public class UserController {
         return "login";
     }
 
-    @PostMapping("/login")
-    public String loginConfirm(UserLoginBindingModel loginBindingModel, Model model) {
-        boolean successfulLogin = this.userService.loginUser(this.modelMapper.map(loginBindingModel, UserLoginServiceModel.class));
-
-        if (successfulLogin) {
-            return "redirect:/";
-        }
-
-        model.addAttribute("invalidUsername", true);
-        return "login";
-    }
-
     @GetMapping("/profile/{id}")
     public String profile(@PathVariable Long id, Model model) {
         UserProfileView view = this.userService.findById(id);
         model.addAttribute("user", view);
         return "profile";
-    }
-
-    @GetMapping("/logout")
-    public String logout() {
-        this.userService.logout();
-        return "redirect:/";
     }
 }

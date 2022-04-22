@@ -4,7 +4,6 @@ import com.example.pathfinder.model.binding.AddRouteBindingModel;
 import com.example.pathfinder.model.service.AddRouteServiceModel;
 import com.example.pathfinder.model.view.RouteDetailsView;
 import com.example.pathfinder.service.RouteService;
-import com.example.pathfinder.util.CurrentUser;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,11 +24,10 @@ public class RouteController {
     private static final String CAR_CATEGORY_NAME = "CAR";
 
     private final RouteService routeService;
-    private final CurrentUser currentUser;
-private final ModelMapper modelMapper;
-    public RouteController(RouteService routeService, CurrentUser currentUser, ModelMapper modelMapper) {
+    private final ModelMapper modelMapper;
+
+    public RouteController(RouteService routeService, ModelMapper modelMapper) {
         this.routeService = routeService;
-        this.currentUser = currentUser;
         this.modelMapper = modelMapper;
     }
 
@@ -46,20 +44,18 @@ private final ModelMapper modelMapper;
 
     @GetMapping("/add")
     public String addRoute() {
-        if (currentUser.getId() == null) {
-            return "redirect:/";
-        }
+        // TODO Check for user is logged in !
         return "add-route";
     }
 
     @PostMapping("/add")
-public String addRoutePost(@Valid AddRouteBindingModel addRouteBindingModel, BindingResult bindingResult
+    public String addRoutePost(@Valid AddRouteBindingModel addRouteBindingModel, BindingResult bindingResult
             , RedirectAttributes redirectAttributes) throws IOException {
 
-        if(bindingResult.hasErrors()) {
-            redirectAttributes.addFlashAttribute("addRouteBindingModel",addRouteBindingModel);
+        if (bindingResult.hasErrors()) {
+            redirectAttributes.addFlashAttribute("addRouteBindingModel", addRouteBindingModel);
             redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.addRouteBindingModel"
-                    ,bindingResult);
+                    , bindingResult);
 
             return "redirect:add";
         }
