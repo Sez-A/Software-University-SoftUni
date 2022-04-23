@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    background-color: #F0F1F5;
+    padding: 3rem 15rem;
+}
+
+header > i {
+    color: #F76925;
+    float: left;
+    padding: 0px 4px;
+    margin-top: 12px;
+    font-size: 23px;
+}
+
+header > p {
+    float: left;
+    color: #F76925;
+    /* margin-top: 5px; */
+}
+
+nav {
+    margin: 0;
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 0 5px;
+    color: #F76925;
+}
+
+nav ul li a:hover {
+    color: white;
+    background: #F76925;
+}
+
+main section:nth-child(1) {
+ background-image: url(/L2_01_Fitness-Site/Requirements-and-Resources/Images/picture.jpg) ;
+ margin-top: 3.5rem;
+ background-size: cover;
+ background-position: center;
+  padding: 11rem;
+}
+
+main section:nth-child(1) h1 {
+    
+    color: white;
+}
+
+main section:nth-child(1) h1 span {
+    color: #F76925;
+}
+
+main section:nth-child(1) h1 span#center {
+    display: block;
+    margin-left: 9.5rem;
+    color: white;
+    padding-bottom: 25px;
+}
+
+main section:nth-child(1) button {
+    padding: 10px;
+    position: relative;
+    margin-left: 11rem;
+    background: #F76925;
+    color: white;
+    border: none;
+}
+
+main section:nth-child(1) button:hover {
+    padding: 10px;
+    position: relative;
+    margin-left: 11rem;
+    background: white;
+    color: #F76925;
+    border: none;
+}
+
+main section:nth-child(2) article {
+    display: inline-block;
+    width: 30%;
+    color: white;
+    background: #F76925;
+    padding: 14.6px;
+}
+
+main section:nth-child(2) article {
+    text-align: center;
+}
+
+footer {
+    margin-top: 2rem;
+}
+
+footer > p {
+    float: left;
+}
+
+.social-media {
+    float: right;
+    padding: 17px;
+    margin-left: 15;
+    margin-right: -18px;
+    letter-spacing: 8px;
+}
