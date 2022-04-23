@@ -18,6 +18,7 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -101,5 +102,10 @@ public class RouteServiceImpl implements RouteService {
         }
         route.setCategories(categories);
         this.routeRepository.save(route);
+    }
+
+    @Override
+    public Optional<Route> findOptionalRouteById(Long routeId) {
+        return this.routeRepository.findById(routeId);
     }
 }

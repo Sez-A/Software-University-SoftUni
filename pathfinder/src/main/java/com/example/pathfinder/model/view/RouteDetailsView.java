@@ -7,6 +7,7 @@ import java.util.Set;
 
 
 public class RouteDetailsView {
+    private Long id;
     private String authorName;
     private LevelEnum level;
     private String description;
@@ -15,6 +16,15 @@ public class RouteDetailsView {
 
     public RouteDetailsView() {
         this.pictureUrls = new HashSet<>();
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public RouteDetailsView setId(Long id) {
+        this.id = id;
+        return this;
     }
 
     public String getAuthorName() {
