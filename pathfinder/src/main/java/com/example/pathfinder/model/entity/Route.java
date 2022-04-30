@@ -19,7 +19,7 @@ public class Route extends BaseEntity {
     private Set<Pictures> pictures;
     private List<Comments> comments;
 
-    @Column(columnDefinition = "TEXT")
+    @Lob
     public String getDescription() {
         return description;
     }
@@ -28,7 +28,7 @@ public class Route extends BaseEntity {
         this.description = description;
     }
 
-    @Column(columnDefinition = "LONGTEXT")
+    @Lob
     public String getGpxCoordinates() {
         return gpxCoordinates;
     }
@@ -92,7 +92,7 @@ public class Route extends BaseEntity {
         return this;
     }
 
-    @OneToMany(mappedBy = "route", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "route", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     public List<Comments> getComments() {
         return comments;
     }
