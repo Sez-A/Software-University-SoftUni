@@ -1,9 +1,6 @@
 package com.example.pathfinder.model.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
@@ -33,7 +30,8 @@ public class Comments extends BaseEntity {
         this.created = created;
     }
 
-    @Column(nullable = false, columnDefinition = "TEXT")
+    @Lob
+    @Column(nullable = false)
     public String getTextContent() {
         return textContent;
     }

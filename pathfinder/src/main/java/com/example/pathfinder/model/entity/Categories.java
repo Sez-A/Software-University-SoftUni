@@ -21,7 +21,7 @@ public class Categories extends BaseEntity {
         this.name = name;
     }
 
-    @Column(columnDefinition = "TEXT")
+    @Lob
     public String getDescription() {
         return description;
     }

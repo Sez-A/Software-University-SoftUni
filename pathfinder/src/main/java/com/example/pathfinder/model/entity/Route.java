@@ -3,6 +3,7 @@ package com.example.pathfinder.model.entity;
 import com.example.pathfinder.model.entity.enums.LevelEnum;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -16,8 +17,9 @@ public class Route extends BaseEntity {
     private String videoUrl;
     private Set<Categories> categories;
     private Set<Pictures> pictures;
+    private List<Comments> comments;
 
-    @Column(columnDefinition = "TEXT")
+    @Lob
     public String getDescription() {
         return description;
     }
@@ -26,7 +28,7 @@ public class Route extends BaseEntity {
         this.description = description;
     }
 
-    @Column(columnDefinition = "LONGTEXT")
+    @Lob
     public String getGpxCoordinates() {
         return gpxCoordinates;
     }
@@ -87,6 +89,16 @@ public class Route extends BaseEntity {
 
     public Route setPictures(Set<Pictures> pictures) {
         this.pictures = pictures;
+        return this;
+    }
+
+    @OneToMany(mappedBy = "route", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    public List<Comments> getComments() {
+        return comments;
+    }
+
+    public Route setComments(List<Comments> comments) {
+        this.comments = comments;
         return this;
     }
 }

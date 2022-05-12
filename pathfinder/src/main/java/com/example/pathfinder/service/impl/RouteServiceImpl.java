@@ -4,7 +4,6 @@ import com.example.pathfinder.model.entity.Categories;
 import com.example.pathfinder.model.entity.Pictures;
 import com.example.pathfinder.model.entity.Route;
 import com.example.pathfinder.model.entity.enums.CategoryNamesEnum;
-import com.example.pathfinder.model.entity.enums.LevelEnum;
 import com.example.pathfinder.model.service.AddRouteServiceModel;
 import com.example.pathfinder.model.view.RouteByCategoryView;
 import com.example.pathfinder.model.view.RouteDetailsView;
@@ -14,14 +13,12 @@ import com.example.pathfinder.service.CategoriesService;
 import com.example.pathfinder.service.PictureService;
 import com.example.pathfinder.service.RouteService;
 import com.example.pathfinder.service.UserService;
-import com.example.pathfinder.util.CurrentUser;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
-
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -32,15 +29,14 @@ public class RouteServiceImpl implements RouteService {
     private final ModelMapper modelMapper;
     private final CategoriesService categoriesService;
     private final UserService userService;
-    private final CurrentUser currentUser;
     private final PictureService pictureService;
 
-    public RouteServiceImpl(RouteRepository routeRepository, ModelMapper modelMapper, CategoriesService categoriesService, UserService userService, CurrentUser currentUser, PictureService pictureService) {
+    public RouteServiceImpl(RouteRepository routeRepository, ModelMapper modelMapper, CategoriesService categoriesService,
+                            UserService userService, PictureService pictureService) {
         this.routeRepository = routeRepository;
         this.modelMapper = modelMapper;
         this.categoriesService = categoriesService;
         this.userService = userService;
-        this.currentUser = currentUser;
         this.pictureService = pictureService;
     }
 
@@ -96,7 +92,7 @@ public class RouteServiceImpl implements RouteService {
     public void addRoute(AddRouteServiceModel addRouteServiceModel) throws IOException {
         Route route = this.modelMapper.map(addRouteServiceModel, Route.class);
 
-        route.setAuthor(this.userService.findUserEntityById(currentUser.getId()));
+       // TODO set the current logged in user as author of route
         route.setGpxCoordinates(new String(addRouteServiceModel
                 .getGpxCoordinates().getBytes()));
 
@@ -106,5 +102,10 @@ public class RouteServiceImpl implements RouteService {
         }
         route.setCategories(categories);
         this.routeRepository.save(route);
+    }
+
+    @Override
+    public Optional<Route> findOptionalRouteById(Long routeId) {
+        return this.routeRepository.findById(routeId);
     }
 }

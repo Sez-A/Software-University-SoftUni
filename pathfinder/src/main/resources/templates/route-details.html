@@ -6,7 +6,7 @@
 <div class="wrapper">
     <header th:replace="fragments/commons::navigation"></header>
 
-    <input type="hidden" name="routeId" id="routeId">
+    <input type="hidden" name="routeId" id="routeId" th:value="*{id}">
     <div th:object="${routeDetails}" class="details-main">
         <section class="route-info text-center">
             <h4 id="track-name"></h4>
@@ -102,8 +102,9 @@
     </div>
     <!-- Scripts: track and comments
     <script th:src="@{/js/track.js}"></script>
-    <script th:src="@{/js/comments.js}"></script>
     -->
+    <script th:src="@{/js/comments.js}"></script>
+
 </div>
 <footer th:replace="fragments/commons::footer"></footer>
 </body>
