@@ -76,4 +76,11 @@ class UserControllerTest {
         assertEquals(TEST_USER_FULL_NAME, newlyCreatedUser.getFullName());
     }
 
+    @Test
+    void testOpenLoginForm() throws Exception {
+        mockMvc
+                .perform(get("/users/login"))
+                .andExpect(status().isOk())
+                .andExpect(view().name("login"));
+    }
 }
