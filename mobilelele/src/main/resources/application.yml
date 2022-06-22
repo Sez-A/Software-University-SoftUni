@@ -18,7 +18,7 @@ spring:
 
 logging:
   level:
-      blog: WARN
-      org: WARN
-      org.hibernate.SQL: DEBUG
+    blog: WARN
+    org: WARN
+    org.hibernate.SQL: DEBUG
 
