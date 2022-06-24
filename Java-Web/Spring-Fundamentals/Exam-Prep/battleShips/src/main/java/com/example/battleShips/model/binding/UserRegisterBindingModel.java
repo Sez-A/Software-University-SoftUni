@@ -1,6 +1,7 @@
 package com.example.battleShips.model.binding;
 
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 public class UserRegisterBindingModel {
@@ -10,7 +11,7 @@ public class UserRegisterBindingModel {
     private String confirmPassword;
     private String email;
 
-    @Size(min = 3, max = 10)
+    @Size(min = 3, max = 10, message = "Username length must be between 3 and 10 characters")
     public String getUsername() {
         return username;
     }
@@ -20,7 +21,7 @@ public class UserRegisterBindingModel {
         return this;
     }
 
-    @Size(min = 5, max = 20)
+    @Size(min = 5, max = 20, message = "Full name length must be between 5 and 20 characters")
     public String getFullName() {
         return fullName;
     }
@@ -30,7 +31,7 @@ public class UserRegisterBindingModel {
         return this;
     }
 
-    @Size(min = 3)
+    @Size(min = 3, message = "Password length must be more than 3 characters")
     public String getPassword() {
         return password;
     }
@@ -40,6 +41,7 @@ public class UserRegisterBindingModel {
         return this;
     }
 
+    @Size(min = 3, message = "Password length must be more than 3 characters")
     public String getConfirmPassword() {
         return confirmPassword;
     }
@@ -49,7 +51,8 @@ public class UserRegisterBindingModel {
         return this;
     }
 
-    @Email
+    @Email(message = "Enter valid email address")
+    @NotBlank
     public String getEmail() {
         return email;
     }
