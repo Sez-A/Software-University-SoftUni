@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -12,7 +13,7 @@ public class Ship extends BaseEntity {
     private String name;
     private Long health;
     private Long power;
-    private LocalDateTime created;
+    private LocalDate created;
     private Category category;
     private User user;
 
@@ -47,11 +48,11 @@ public class Ship extends BaseEntity {
     }
 
     @Column(nullable = false)
-    public LocalDateTime getCreated() {
+    public LocalDate getCreated() {
         return created;
     }
 
-    public Ship setCreated(LocalDateTime created) {
+    public Ship setCreated(LocalDate created) {
         this.created = created;
         return this;
     }

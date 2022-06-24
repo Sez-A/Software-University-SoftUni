@@ -7,6 +7,7 @@ import com.example.battleShips.service.CategoryService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -31,5 +32,11 @@ public class CategoryServiceImpl implements CategoryService {
                 .setName(CategoryName.PATROL);
 
         categoryRepository.saveAll(List.of(cargo, battle, patrol));
+    }
+
+    @Override
+    public Optional<Category> findCategoryByCategoryName(String categoryName) {
+
+        return categoryRepository.findByName(CategoryName.valueOf(categoryName));
     }
 }
