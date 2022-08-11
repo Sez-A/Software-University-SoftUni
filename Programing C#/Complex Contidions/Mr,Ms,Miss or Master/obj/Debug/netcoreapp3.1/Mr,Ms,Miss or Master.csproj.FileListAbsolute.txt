@@ -1,0 +1,11 @@
+D:\Profesional Programing\Complex Contidions\Mr,Ms,Miss or Master\bin\Debug\netcoreapp3.1\Mr,Ms,Miss or Master.exe
+D:\Profesional Programing\Complex Contidions\Mr,Ms,Miss or Master\bin\Debug\netcoreapp3.1\Mr,Ms,Miss or Master.deps.json
+D:\Profesional Programing\Complex Contidions\Mr,Ms,Miss or Master\bin\Debug\netcoreapp3.1\Mr,Ms,Miss or Master.runtimeconfig.json
+D:\Profesional Programing\Complex Contidions\Mr,Ms,Miss or Master\bin\Debug\netcoreapp3.1\Mr,Ms,Miss or Master.runtimeconfig.dev.json
+D:\Profesional Programing\Complex Contidions\Mr,Ms,Miss or Master\bin\Debug\netcoreapp3.1\Mr,Ms,Miss or Master.dll
+D:\Profesional Programing\Complex Contidions\Mr,Ms,Miss or Master\bin\Debug\netcoreapp3.1\Mr,Ms,Miss or Master.pdb
+D:\Profesional Programing\Complex Contidions\Mr,Ms,Miss or Master\obj\Debug\netcoreapp3.1\Mr,Ms,Miss or Master.csprojAssemblyReference.cache
+D:\Profesional Programing\Complex Contidions\Mr,Ms,Miss or Master\obj\Debug\netcoreapp3.1\Mr,Ms,Miss or Master.AssemblyInfoInputs.cache
+D:\Profesional Programing\Complex Contidions\Mr,Ms,Miss or Master\obj\Debug\netcoreapp3.1\Mr,Ms,Miss or Master.AssemblyInfo.cs
+D:\Profesional Programing\Complex Contidions\Mr,Ms,Miss or Master\obj\Debug\netcoreapp3.1\Mr,Ms,Miss or Master.dll
+D:\Profesional Programing\Complex Contidions\Mr,Ms,Miss or Master\obj\Debug\netcoreapp3.1\Mr,Ms,Miss or Master.pdb

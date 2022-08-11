@@ -1,0 +1,10 @@
+D:\Profesional Programing\SimpleConditions\BonusScore\bin\Debug\netcoreapp3.1\BonusScore.exe
+D:\Profesional Programing\SimpleConditions\BonusScore\bin\Debug\netcoreapp3.1\BonusScore.deps.json
+D:\Profesional Programing\SimpleConditions\BonusScore\bin\Debug\netcoreapp3.1\BonusScore.runtimeconfig.json
+D:\Profesional Programing\SimpleConditions\BonusScore\bin\Debug\netcoreapp3.1\BonusScore.runtimeconfig.dev.json
+D:\Profesional Programing\SimpleConditions\BonusScore\bin\Debug\netcoreapp3.1\BonusScore.dll
+D:\Profesional Programing\SimpleConditions\BonusScore\bin\Debug\netcoreapp3.1\BonusScore.pdb
+D:\Profesional Programing\SimpleConditions\BonusScore\obj\Debug\netcoreapp3.1\BonusScore.AssemblyInfoInputs.cache
+D:\Profesional Programing\SimpleConditions\BonusScore\obj\Debug\netcoreapp3.1\BonusScore.AssemblyInfo.cs
+D:\Profesional Programing\SimpleConditions\BonusScore\obj\Debug\netcoreapp3.1\BonusScore.dll
+D:\Profesional Programing\SimpleConditions\BonusScore\obj\Debug\netcoreapp3.1\BonusScore.pdb

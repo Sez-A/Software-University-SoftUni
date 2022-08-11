@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Rectangle In The Plane/1.0.0": {
+        "runtime": {
+          "Rectangle In The Plane.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Rectangle In The Plane/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

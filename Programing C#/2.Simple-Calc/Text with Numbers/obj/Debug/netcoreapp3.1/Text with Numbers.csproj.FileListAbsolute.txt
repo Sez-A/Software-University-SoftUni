@@ -1,0 +1,10 @@
+D:\Profesional Programing\2.Simple-Calc\Text with Numbers\bin\Debug\netcoreapp3.1\Text with Numbers.exe
+D:\Profesional Programing\2.Simple-Calc\Text with Numbers\bin\Debug\netcoreapp3.1\Text with Numbers.deps.json
+D:\Profesional Programing\2.Simple-Calc\Text with Numbers\bin\Debug\netcoreapp3.1\Text with Numbers.runtimeconfig.json
+D:\Profesional Programing\2.Simple-Calc\Text with Numbers\bin\Debug\netcoreapp3.1\Text with Numbers.runtimeconfig.dev.json
+D:\Profesional Programing\2.Simple-Calc\Text with Numbers\bin\Debug\netcoreapp3.1\Text with Numbers.dll
+D:\Profesional Programing\2.Simple-Calc\Text with Numbers\bin\Debug\netcoreapp3.1\Text with Numbers.pdb
+D:\Profesional Programing\2.Simple-Calc\Text with Numbers\obj\Debug\netcoreapp3.1\Text with Numbers.AssemblyInfoInputs.cache
+D:\Profesional Programing\2.Simple-Calc\Text with Numbers\obj\Debug\netcoreapp3.1\Text with Numbers.AssemblyInfo.cs
+D:\Profesional Programing\2.Simple-Calc\Text with Numbers\obj\Debug\netcoreapp3.1\Text with Numbers.dll
+D:\Profesional Programing\2.Simple-Calc\Text with Numbers\obj\Debug\netcoreapp3.1\Text with Numbers.pdb

@@ -1,0 +1,10 @@
+D:\Profesional Programing\2.Simple-Calc\Inch to Cm\bin\Debug\netcoreapp3.1\Inch to Cm.exe
+D:\Profesional Programing\2.Simple-Calc\Inch to Cm\bin\Debug\netcoreapp3.1\Inch to Cm.deps.json
+D:\Profesional Programing\2.Simple-Calc\Inch to Cm\bin\Debug\netcoreapp3.1\Inch to Cm.runtimeconfig.json
+D:\Profesional Programing\2.Simple-Calc\Inch to Cm\bin\Debug\netcoreapp3.1\Inch to Cm.runtimeconfig.dev.json
+D:\Profesional Programing\2.Simple-Calc\Inch to Cm\bin\Debug\netcoreapp3.1\Inch to Cm.dll
+D:\Profesional Programing\2.Simple-Calc\Inch to Cm\bin\Debug\netcoreapp3.1\Inch to Cm.pdb
+D:\Profesional Programing\2.Simple-Calc\Inch to Cm\obj\Debug\netcoreapp3.1\Inch to Cm.AssemblyInfoInputs.cache
+D:\Profesional Programing\2.Simple-Calc\Inch to Cm\obj\Debug\netcoreapp3.1\Inch to Cm.AssemblyInfo.cs
+D:\Profesional Programing\2.Simple-Calc\Inch to Cm\obj\Debug\netcoreapp3.1\Inch to Cm.dll
+D:\Profesional Programing\2.Simple-Calc\Inch to Cm\obj\Debug\netcoreapp3.1\Inch to Cm.pdb

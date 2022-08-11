@@ -1,0 +1,10 @@
+D:\Profesional Programing\2.Simple-Calc\Circle Area and Perimter\bin\Debug\netcoreapp3.1\Circle Area and Perimter.exe
+D:\Profesional Programing\2.Simple-Calc\Circle Area and Perimter\bin\Debug\netcoreapp3.1\Circle Area and Perimter.deps.json
+D:\Profesional Programing\2.Simple-Calc\Circle Area and Perimter\bin\Debug\netcoreapp3.1\Circle Area and Perimter.runtimeconfig.json
+D:\Profesional Programing\2.Simple-Calc\Circle Area and Perimter\bin\Debug\netcoreapp3.1\Circle Area and Perimter.runtimeconfig.dev.json
+D:\Profesional Programing\2.Simple-Calc\Circle Area and Perimter\bin\Debug\netcoreapp3.1\Circle Area and Perimter.dll
+D:\Profesional Programing\2.Simple-Calc\Circle Area and Perimter\bin\Debug\netcoreapp3.1\Circle Area and Perimter.pdb
+D:\Profesional Programing\2.Simple-Calc\Circle Area and Perimter\obj\Debug\netcoreapp3.1\Circle Area and Perimter.AssemblyInfoInputs.cache
+D:\Profesional Programing\2.Simple-Calc\Circle Area and Perimter\obj\Debug\netcoreapp3.1\Circle Area and Perimter.AssemblyInfo.cs
+D:\Profesional Programing\2.Simple-Calc\Circle Area and Perimter\obj\Debug\netcoreapp3.1\Circle Area and Perimter.dll
+D:\Profesional Programing\2.Simple-Calc\Circle Area and Perimter\obj\Debug\netcoreapp3.1\Circle Area and Perimter.pdb

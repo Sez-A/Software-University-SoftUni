@@ -1,0 +1,11 @@
+D:\Profesional Programing\Complex Contidions\PointInRactagnle\bin\Debug\netcoreapp3.1\PointInRactagnle.exe
+D:\Profesional Programing\Complex Contidions\PointInRactagnle\bin\Debug\netcoreapp3.1\PointInRactagnle.deps.json
+D:\Profesional Programing\Complex Contidions\PointInRactagnle\bin\Debug\netcoreapp3.1\PointInRactagnle.runtimeconfig.json
+D:\Profesional Programing\Complex Contidions\PointInRactagnle\bin\Debug\netcoreapp3.1\PointInRactagnle.runtimeconfig.dev.json
+D:\Profesional Programing\Complex Contidions\PointInRactagnle\bin\Debug\netcoreapp3.1\PointInRactagnle.dll
+D:\Profesional Programing\Complex Contidions\PointInRactagnle\bin\Debug\netcoreapp3.1\PointInRactagnle.pdb
+D:\Profesional Programing\Complex Contidions\PointInRactagnle\obj\Debug\netcoreapp3.1\PointInRactagnle.csprojAssemblyReference.cache
+D:\Profesional Programing\Complex Contidions\PointInRactagnle\obj\Debug\netcoreapp3.1\PointInRactagnle.AssemblyInfoInputs.cache
+D:\Profesional Programing\Complex Contidions\PointInRactagnle\obj\Debug\netcoreapp3.1\PointInRactagnle.AssemblyInfo.cs
+D:\Profesional Programing\Complex Contidions\PointInRactagnle\obj\Debug\netcoreapp3.1\PointInRactagnle.dll
+D:\Profesional Programing\Complex Contidions\PointInRactagnle\obj\Debug\netcoreapp3.1\PointInRactagnle.pdb

@@ -1,0 +1,10 @@
+D:\Profesional Programing\SimpleConditions\SeriesOfConditions\bin\Debug\netcoreapp3.1\SeriesOfConditions.exe
+D:\Profesional Programing\SimpleConditions\SeriesOfConditions\bin\Debug\netcoreapp3.1\SeriesOfConditions.deps.json
+D:\Profesional Programing\SimpleConditions\SeriesOfConditions\bin\Debug\netcoreapp3.1\SeriesOfConditions.runtimeconfig.json
+D:\Profesional Programing\SimpleConditions\SeriesOfConditions\bin\Debug\netcoreapp3.1\SeriesOfConditions.runtimeconfig.dev.json
+D:\Profesional Programing\SimpleConditions\SeriesOfConditions\bin\Debug\netcoreapp3.1\SeriesOfConditions.dll
+D:\Profesional Programing\SimpleConditions\SeriesOfConditions\bin\Debug\netcoreapp3.1\SeriesOfConditions.pdb
+D:\Profesional Programing\SimpleConditions\SeriesOfConditions\obj\Debug\netcoreapp3.1\SeriesOfConditions.AssemblyInfoInputs.cache
+D:\Profesional Programing\SimpleConditions\SeriesOfConditions\obj\Debug\netcoreapp3.1\SeriesOfConditions.AssemblyInfo.cs
+D:\Profesional Programing\SimpleConditions\SeriesOfConditions\obj\Debug\netcoreapp3.1\SeriesOfConditions.dll
+D:\Profesional Programing\SimpleConditions\SeriesOfConditions\obj\Debug\netcoreapp3.1\SeriesOfConditions.pdb

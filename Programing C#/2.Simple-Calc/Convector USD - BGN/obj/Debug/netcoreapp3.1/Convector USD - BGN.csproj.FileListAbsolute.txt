@@ -1,0 +1,11 @@
+D:\Profesional Programing\2.Simple-Calc\Convector USD - BGN\bin\Debug\netcoreapp3.1\Convector USD - BGN.exe
+D:\Profesional Programing\2.Simple-Calc\Convector USD - BGN\bin\Debug\netcoreapp3.1\Convector USD - BGN.deps.json
+D:\Profesional Programing\2.Simple-Calc\Convector USD - BGN\bin\Debug\netcoreapp3.1\Convector USD - BGN.runtimeconfig.json
+D:\Profesional Programing\2.Simple-Calc\Convector USD - BGN\bin\Debug\netcoreapp3.1\Convector USD - BGN.runtimeconfig.dev.json
+D:\Profesional Programing\2.Simple-Calc\Convector USD - BGN\bin\Debug\netcoreapp3.1\Convector USD - BGN.dll
+D:\Profesional Programing\2.Simple-Calc\Convector USD - BGN\bin\Debug\netcoreapp3.1\Convector USD - BGN.pdb
+D:\Profesional Programing\2.Simple-Calc\Convector USD - BGN\obj\Debug\netcoreapp3.1\Convector USD - BGN.AssemblyInfoInputs.cache
+D:\Profesional Programing\2.Simple-Calc\Convector USD - BGN\obj\Debug\netcoreapp3.1\Convector USD - BGN.AssemblyInfo.cs
+D:\Profesional Programing\2.Simple-Calc\Convector USD - BGN\obj\Debug\netcoreapp3.1\Convector USD - BGN.dll
+D:\Profesional Programing\2.Simple-Calc\Convector USD - BGN\obj\Debug\netcoreapp3.1\Convector USD - BGN.pdb
+D:\Profesional Programing\2.Simple-Calc\Convector USD - BGN\obj\Debug\netcoreapp3.1\Convector USD - BGN.csprojAssemblyReference.cache

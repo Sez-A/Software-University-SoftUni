@@ -1,0 +1,10 @@
+D:\Profesional Programing\Complex Contidions\Number 100-200\bin\Debug\netcoreapp3.1\Number 100-200.exe
+D:\Profesional Programing\Complex Contidions\Number 100-200\bin\Debug\netcoreapp3.1\Number 100-200.deps.json
+D:\Profesional Programing\Complex Contidions\Number 100-200\bin\Debug\netcoreapp3.1\Number 100-200.runtimeconfig.json
+D:\Profesional Programing\Complex Contidions\Number 100-200\bin\Debug\netcoreapp3.1\Number 100-200.runtimeconfig.dev.json
+D:\Profesional Programing\Complex Contidions\Number 100-200\bin\Debug\netcoreapp3.1\Number 100-200.dll
+D:\Profesional Programing\Complex Contidions\Number 100-200\bin\Debug\netcoreapp3.1\Number 100-200.pdb
+D:\Profesional Programing\Complex Contidions\Number 100-200\obj\Debug\netcoreapp3.1\Number 100-200.AssemblyInfoInputs.cache
+D:\Profesional Programing\Complex Contidions\Number 100-200\obj\Debug\netcoreapp3.1\Number 100-200.AssemblyInfo.cs
+D:\Profesional Programing\Complex Contidions\Number 100-200\obj\Debug\netcoreapp3.1\Number 100-200.dll
+D:\Profesional Programing\Complex Contidions\Number 100-200\obj\Debug\netcoreapp3.1\Number 100-200.pdb

@@ -1,0 +1,10 @@
+D:\Profesional Programing\SimpleConditions\SumatorSeconds\bin\Debug\netcoreapp3.1\SumatorSeconds.exe
+D:\Profesional Programing\SimpleConditions\SumatorSeconds\bin\Debug\netcoreapp3.1\SumatorSeconds.deps.json
+D:\Profesional Programing\SimpleConditions\SumatorSeconds\bin\Debug\netcoreapp3.1\SumatorSeconds.runtimeconfig.json
+D:\Profesional Programing\SimpleConditions\SumatorSeconds\bin\Debug\netcoreapp3.1\SumatorSeconds.runtimeconfig.dev.json
+D:\Profesional Programing\SimpleConditions\SumatorSeconds\bin\Debug\netcoreapp3.1\SumatorSeconds.dll
+D:\Profesional Programing\SimpleConditions\SumatorSeconds\bin\Debug\netcoreapp3.1\SumatorSeconds.pdb
+D:\Profesional Programing\SimpleConditions\SumatorSeconds\obj\Debug\netcoreapp3.1\SumatorSeconds.AssemblyInfoInputs.cache
+D:\Profesional Programing\SimpleConditions\SumatorSeconds\obj\Debug\netcoreapp3.1\SumatorSeconds.AssemblyInfo.cs
+D:\Profesional Programing\SimpleConditions\SumatorSeconds\obj\Debug\netcoreapp3.1\SumatorSeconds.dll
+D:\Profesional Programing\SimpleConditions\SumatorSeconds\obj\Debug\netcoreapp3.1\SumatorSeconds.pdb

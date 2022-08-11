@@ -1,0 +1,11 @@
+D:\Profesional Programing\2.Simple-Calc\Rectangle In The Plane\bin\Debug\netcoreapp3.1\Rectangle In The Plane.exe
+D:\Profesional Programing\2.Simple-Calc\Rectangle In The Plane\bin\Debug\netcoreapp3.1\Rectangle In The Plane.deps.json
+D:\Profesional Programing\2.Simple-Calc\Rectangle In The Plane\bin\Debug\netcoreapp3.1\Rectangle In The Plane.runtimeconfig.json
+D:\Profesional Programing\2.Simple-Calc\Rectangle In The Plane\bin\Debug\netcoreapp3.1\Rectangle In The Plane.runtimeconfig.dev.json
+D:\Profesional Programing\2.Simple-Calc\Rectangle In The Plane\bin\Debug\netcoreapp3.1\Rectangle In The Plane.dll
+D:\Profesional Programing\2.Simple-Calc\Rectangle In The Plane\bin\Debug\netcoreapp3.1\Rectangle In The Plane.pdb
+D:\Profesional Programing\2.Simple-Calc\Rectangle In The Plane\obj\Debug\netcoreapp3.1\Rectangle In The Plane.csprojAssemblyReference.cache
+D:\Profesional Programing\2.Simple-Calc\Rectangle In The Plane\obj\Debug\netcoreapp3.1\Rectangle In The Plane.AssemblyInfoInputs.cache
+D:\Profesional Programing\2.Simple-Calc\Rectangle In The Plane\obj\Debug\netcoreapp3.1\Rectangle In The Plane.AssemblyInfo.cs
+D:\Profesional Programing\2.Simple-Calc\Rectangle In The Plane\obj\Debug\netcoreapp3.1\Rectangle In The Plane.dll
+D:\Profesional Programing\2.Simple-Calc\Rectangle In The Plane\obj\Debug\netcoreapp3.1\Rectangle In The Plane.pdb

@@ -1,0 +1,10 @@
+D:\Profesional Programing\Complex Contidions\Street Shop\bin\Debug\netcoreapp3.1\Street Shop.exe
+D:\Profesional Programing\Complex Contidions\Street Shop\bin\Debug\netcoreapp3.1\Street Shop.deps.json
+D:\Profesional Programing\Complex Contidions\Street Shop\bin\Debug\netcoreapp3.1\Street Shop.runtimeconfig.json
+D:\Profesional Programing\Complex Contidions\Street Shop\bin\Debug\netcoreapp3.1\Street Shop.runtimeconfig.dev.json
+D:\Profesional Programing\Complex Contidions\Street Shop\bin\Debug\netcoreapp3.1\Street Shop.dll
+D:\Profesional Programing\Complex Contidions\Street Shop\bin\Debug\netcoreapp3.1\Street Shop.pdb
+D:\Profesional Programing\Complex Contidions\Street Shop\obj\Debug\netcoreapp3.1\Street Shop.AssemblyInfoInputs.cache
+D:\Profesional Programing\Complex Contidions\Street Shop\obj\Debug\netcoreapp3.1\Street Shop.AssemblyInfo.cs
+D:\Profesional Programing\Complex Contidions\Street Shop\obj\Debug\netcoreapp3.1\Street Shop.dll
+D:\Profesional Programing\Complex Contidions\Street Shop\obj\Debug\netcoreapp3.1\Street Shop.pdb

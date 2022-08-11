@@ -1,0 +1,11 @@
+D:\Profesional Programing\Complex Contidions\FruitsAndVegetable\bin\Debug\netcoreapp3.1\FruitsAndVegetable.exe
+D:\Profesional Programing\Complex Contidions\FruitsAndVegetable\bin\Debug\netcoreapp3.1\FruitsAndVegetable.deps.json
+D:\Profesional Programing\Complex Contidions\FruitsAndVegetable\bin\Debug\netcoreapp3.1\FruitsAndVegetable.runtimeconfig.json
+D:\Profesional Programing\Complex Contidions\FruitsAndVegetable\bin\Debug\netcoreapp3.1\FruitsAndVegetable.runtimeconfig.dev.json
+D:\Profesional Programing\Complex Contidions\FruitsAndVegetable\bin\Debug\netcoreapp3.1\FruitsAndVegetable.dll
+D:\Profesional Programing\Complex Contidions\FruitsAndVegetable\bin\Debug\netcoreapp3.1\FruitsAndVegetable.pdb
+D:\Profesional Programing\Complex Contidions\FruitsAndVegetable\obj\Debug\netcoreapp3.1\FruitsAndVegetable.csprojAssemblyReference.cache
+D:\Profesional Programing\Complex Contidions\FruitsAndVegetable\obj\Debug\netcoreapp3.1\FruitsAndVegetable.AssemblyInfoInputs.cache
+D:\Profesional Programing\Complex Contidions\FruitsAndVegetable\obj\Debug\netcoreapp3.1\FruitsAndVegetable.AssemblyInfo.cs
+D:\Profesional Programing\Complex Contidions\FruitsAndVegetable\obj\Debug\netcoreapp3.1\FruitsAndVegetable.dll
+D:\Profesional Programing\Complex Contidions\FruitsAndVegetable\obj\Debug\netcoreapp3.1\FruitsAndVegetable.pdb
