@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
+import java.security.Principal;
 
 @Controller()
 @RequestMapping("/users")
@@ -64,9 +65,9 @@ public class UserController {
         return "login";
     }
 
-    @GetMapping("/profile/{id}")
-    public String profile(@PathVariable Long id, Model model) {
-        UserProfileView view = this.userService.findById(id);
+    @GetMapping("/profile")
+    public String profile(Model model, Principal principal) {
+        UserProfileView view = this.userService.findCurrentLoggedIn(principal);
         model.addAttribute("user", view);
         return "profile";
     }

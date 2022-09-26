@@ -12,6 +12,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.security.Principal;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -50,5 +51,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public User findUserEntityById(Long id) {
         return this.userRepository.findById(id).orElse(this.userRepository.findById(1L).get());
+    }
+
+    @Override
+    public UserProfileView findCurrentLoggedIn(Principal principal) {
+        return modelMapper.map(this.userRepository.findByUsername(principal.getName()).get(), UserProfileView.class);
     }
 }
