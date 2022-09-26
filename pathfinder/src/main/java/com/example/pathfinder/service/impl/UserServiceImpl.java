@@ -54,6 +54,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public User findUserEntityByName(String name) {
+        return this.userRepository.findByUsername(name).orElseThrow();
+    }
+
+    @Override
     public UserProfileView findCurrentLoggedIn(Principal principal) {
         return modelMapper.map(this.userRepository.findByUsername(principal.getName()).get(), UserProfileView.class);
     }

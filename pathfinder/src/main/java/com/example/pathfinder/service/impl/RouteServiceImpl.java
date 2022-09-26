@@ -3,6 +3,7 @@ package com.example.pathfinder.service.impl;
 import com.example.pathfinder.model.entity.Categories;
 import com.example.pathfinder.model.entity.Pictures;
 import com.example.pathfinder.model.entity.Route;
+import com.example.pathfinder.model.entity.User;
 import com.example.pathfinder.model.entity.enums.CategoryNamesEnum;
 import com.example.pathfinder.model.service.AddRouteServiceModel;
 import com.example.pathfinder.model.view.RouteByCategoryView;
@@ -17,6 +18,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.security.Principal;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
@@ -65,22 +67,20 @@ public class RouteServiceImpl implements RouteService {
         Route route = this.routeRepository.findById(id).orElse(null);
 
         RouteDetailsView routeDetailsView = this.modelMapper.map(route, RouteDetailsView.class);
-        StringBuilder gpsUrl = new StringBuilder(route.getName()+"&t=&z=13&ie=UTF8&iwloc=&output=embed");
+        StringBuilder gpsUrl = new StringBuilder(route.getName() + "&t=&z=13&ie=UTF8&iwloc=&output=embed");
         routeDetailsView.setGpsUrl(gpsUrl.toString());
         routeDetailsView.setAuthorName(route.getAuthor().
 
-    getUsername());
+                getUsername());
 
-        for(
-    Pictures picture :route.getPictures())
-
-    {
-        routeDetailsView.setPictureUrl(picture.getUrl());
-    }
+        for (
+                Pictures picture : route.getPictures()) {
+            routeDetailsView.setPictureUrl(picture.getUrl());
+        }
 
 
         return routeDetailsView;
-}
+    }
 
     @Override
     public List<RouteByCategoryView> findAllRoutesByCategory(String categoryName) {
@@ -97,13 +97,13 @@ public class RouteServiceImpl implements RouteService {
     }
 
     @Override
-    public void addRoute(AddRouteServiceModel addRouteServiceModel) throws IOException {
+    public void addRoute(AddRouteServiceModel addRouteServiceModel, Principal principal) throws IOException {
         Route route = this.modelMapper.map(addRouteServiceModel, Route.class);
 
         // TODO set the current logged in user as author of route
         route.setGpxCoordinates(new String(addRouteServiceModel
                 .getGpxCoordinates().getBytes()));
-
+        route.setAuthor(userService.findUserEntityByName(principal.getName()));
         Set<Categories> categories = new HashSet<>();
         for (CategoryNamesEnum name : addRouteServiceModel.getCategories()) {
             categories.add(this.categoriesService.findByName(name));

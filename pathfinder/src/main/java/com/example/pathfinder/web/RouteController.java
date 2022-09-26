@@ -13,6 +13,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
 import java.io.IOException;
+import java.security.Principal;
 
 
 @Controller
@@ -50,7 +51,8 @@ public class RouteController {
 
     @PostMapping("/add")
     public String addRoutePost(@Valid AddRouteBindingModel addRouteBindingModel, BindingResult bindingResult
-            , RedirectAttributes redirectAttributes) throws IOException {
+            , RedirectAttributes redirectAttributes,
+                               Principal principal) throws IOException {
 
         if (bindingResult.hasErrors()) {
             redirectAttributes.addFlashAttribute("addRouteBindingModel", addRouteBindingModel);
@@ -60,7 +62,7 @@ public class RouteController {
             return "redirect:add";
         }
 
-        this.routeService.addRoute(this.modelMapper.map(addRouteBindingModel, AddRouteServiceModel.class));
+        this.routeService.addRoute(this.modelMapper.map(addRouteBindingModel, AddRouteServiceModel.class), principal);
 
         return "redirect:/routes";
     }

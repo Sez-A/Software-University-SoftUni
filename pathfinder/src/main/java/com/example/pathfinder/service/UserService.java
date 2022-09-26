@@ -13,6 +13,8 @@ public interface UserService {
 
     User findUserEntityById(Long id);
 
+    User findUserEntityByName(String name);
+
     UserProfileView findCurrentLoggedIn(Principal principal);
 
 }
