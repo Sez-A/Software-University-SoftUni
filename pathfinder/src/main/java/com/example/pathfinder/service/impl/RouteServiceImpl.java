@@ -15,6 +15,7 @@ import com.example.pathfinder.service.RouteService;
 import com.example.pathfinder.service.UserService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
+
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.List;
@@ -46,9 +47,9 @@ public class RouteServiceImpl implements RouteService {
                 .stream()
                 .map(route -> {
                     RouteSummaryView view = this.modelMapper.map(route, RouteSummaryView.class);
-                    if(route.getPictures().isEmpty()) {
+                    if (route.getPictures().isEmpty()) {
                         view.setPictureUrl("http://res.cloudinary.com/ch-cloud/image/upload/v1630581418/tqhjrinmsb69ev7upg0q.jpg");
-                    }else {
+                    } else {
                         view.setPictureUrl(route.getPictures().stream().findFirst().get().getUrl());
                     }
 
@@ -64,15 +65,22 @@ public class RouteServiceImpl implements RouteService {
         Route route = this.routeRepository.findById(id).orElse(null);
 
         RouteDetailsView routeDetailsView = this.modelMapper.map(route, RouteDetailsView.class);
-        routeDetailsView.setAuthorName(route.getAuthor().getUsername());
+        StringBuilder gpsUrl = new StringBuilder(route.getName()+"&t=&z=13&ie=UTF8&iwloc=&output=embed");
+        routeDetailsView.setGpsUrl(gpsUrl.toString());
+        routeDetailsView.setAuthorName(route.getAuthor().
 
-        for (Pictures picture : route.getPictures()) {
-            routeDetailsView.setPictureUrl(picture.getUrl());
-        }
+    getUsername());
+
+        for(
+    Pictures picture :route.getPictures())
+
+    {
+        routeDetailsView.setPictureUrl(picture.getUrl());
+    }
 
 
         return routeDetailsView;
-    }
+}
 
     @Override
     public List<RouteByCategoryView> findAllRoutesByCategory(String categoryName) {
@@ -92,7 +100,7 @@ public class RouteServiceImpl implements RouteService {
     public void addRoute(AddRouteServiceModel addRouteServiceModel) throws IOException {
         Route route = this.modelMapper.map(addRouteServiceModel, Route.class);
 
-       // TODO set the current logged in user as author of route
+        // TODO set the current logged in user as author of route
         route.setGpxCoordinates(new String(addRouteServiceModel
                 .getGpxCoordinates().getBytes()));
 

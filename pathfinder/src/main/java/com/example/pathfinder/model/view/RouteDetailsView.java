@@ -13,6 +13,8 @@ public class RouteDetailsView {
     private String description;
     private String videoUrl;
     private Set<String> pictureUrls;
+    private String name;
+    private String gpsUrl;
 
     public RouteDetailsView() {
         this.pictureUrls = new HashSet<>();
@@ -74,5 +76,23 @@ public class RouteDetailsView {
 
     public void setPictureUrl(String url) {
         this.pictureUrls.add(url);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public RouteDetailsView setName(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public String getGpsUrl() {
+        return gpsUrl;
+    }
+
+    public RouteDetailsView setGpsUrl(String gpsUrl) {
+        this.gpsUrl = gpsUrl;
+        return this;
     }
 }
