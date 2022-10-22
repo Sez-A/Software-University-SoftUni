@@ -4,7 +4,14 @@
 
 **## :construction_worker: Built with** 
 
-[Spring Boot](https://spring.io/projects/spring-boot) (https://github.com/spring-projects/spring-boot)
+- [Spring Boot](https://spring.io/projects/spring-boot)
+- [Spring Data JPA](https://github.com/spring-projects/spring-data-jpa)
+- [Spring Security](https://github.com/spring-projects/spring-security)
+- [ModelMapper](https://github.com/modelmapper)
+- [MySQL](https://github.com/mysql)
+- [HSQLDB](https://hsqldb.org/)
+- [Cloudinary](https://github.com/cloudinary)
+
 
 ##### © 2013-2022 - Software University LTD - All Rights Reserved
 
