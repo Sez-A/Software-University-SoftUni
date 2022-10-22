@@ -4,7 +4,7 @@
 
 **## :construction_worker: Built with** 
 
-- [Spring Boot](https://spring.io/projects/spring-boot)
+- [Spring Boot](https://github.com/spring-projects/spring-boot)
 - [Spring Data JPA](https://github.com/spring-projects/spring-data-jpa)
 - [Spring Security](https://github.com/spring-projects/spring-security)
 - [ModelMapper](https://github.com/modelmapper)
