@@ -14,7 +14,8 @@
 - [MySQL](https://github.com/mysql)
 - [HSQLDB](https://hsqldb.org/)
 - [Cloudinary](https://github.com/cloudinary)
-
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Docker](https://github.com/docker)
 
 ##### © 2013-2022 - Software University LTD - All Rights Reserved
 
