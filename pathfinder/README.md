@@ -2,7 +2,7 @@
 
 ## Pathfinder application built for [Spring-Advanced course](https://softuni.bg/trainings/3494/spring-advanced-october-2021#lesson-31208) at SoftUni
 
-## :construction_worker: Built with** 
+## :construction_worker: Built with 
 
 - [Spring Boot](https://github.com/spring-projects/spring-boot)
 - [Spring Data JPA](https://github.com/spring-projects/spring-data-jpa)
