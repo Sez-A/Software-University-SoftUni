@@ -22,9 +22,7 @@
                                id="inputUsername"
                                class="form-control"
                                aria-describedby="usernameHelpInline">
-                    <small th:if="${invalidUsername}"  class=" bg-danger rounded" style="font-size: 15px"> Invalid username </small>
                     </div>
-                </div>
                 <div>
                     <div class="col-auto">
                         <label for="inputPassword" class="col-form-label ">Password</label>
@@ -35,8 +33,10 @@
                                required minlength="4" maxlength="20"
                                id="inputPassword" class="form-control"
                                aria-describedby="passwordHelpInline">
-                        <small th:if="${invalidUsername}"  class=" bg-danger rounded" style="font-size: 15px">Or invalid password </small>
-
+                        <p th:if="${bad_credentials}" class="errors alert alert-danger">
+                            Invalid username or password.
+                        </p>
+                    </div>
                     </div>
                 </div>
                 <div class="d-flex justify-content-center mt-2">

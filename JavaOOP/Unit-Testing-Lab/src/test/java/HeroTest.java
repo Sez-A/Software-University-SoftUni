@@ -1,4 +1,3 @@
-package rpg_lab;
 import org.junit.Test;
 import org.mockito.Mockito;
 

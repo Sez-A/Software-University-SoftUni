@@ -1,7 +1,3 @@
-package rpg_lab;
-
-import java.beans.BeanProperty;
-
 public class Axe implements Weapon {
 
     private int attackPoints;
