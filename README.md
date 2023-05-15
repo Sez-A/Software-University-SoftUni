@@ -19,7 +19,7 @@ The Software University's Java Developer path was a transformative experience th
 
 5. Java Web: The Java Web module introduced me to web development using Java. It covered topics such as web technologies (HTML, CSS, JavaScript), Servlets, JavaServer Pages (JSP), JavaServer Faces (JSF), Spring MVC (Model-View-Controller framework), security, RESTful APIs, and more.
 
-# Repository Structure
+## Repository Structure
 The repository is organized by course modules, with each module containing its own set of projects and assignments. The structure follows the progression of the Java Developer path. Here is an overview of the repository structure:
 
 - Programming Basics: This directory contains exercises and projects related to the Programming Basics course.
