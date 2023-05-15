@@ -40,3 +40,32 @@ The repository is organized by course modules, with each module containing its o
 
 - Java-Web: This directory contains exercises and projects related to the Java Web course.
 
+## Projects
+In addition to the coursework at the Software University, I had the opportunity to work on two exciting projects that helped me apply my skills and deepen my understanding of Java development. Here are brief descriptions of these projects:
+
+#### Mobilelele
+Mobilelele is a comprehensive car dealership application that I developed as part of my studies. This project involved front-end, back-end, and database development. The application allows users to browse through a wide range of car offers, add new offers, and interact with the dealership's inventory.
+
+#### Key features of the Mobilelele application include:
+
+- User-friendly interface for browsing and searching car offers.
+- Ability to add new offers to the inventory, including details such as make, model, year, price, and more.
+- Administrative operations restricted to authorized users, such as monitoring requests and managing the system.
+- Integration with a back-end database to store and retrieve car data efficiently.
+
+Mobilelele provided me with valuable experience in full-stack web development, integrating front-end design, back-end logic, and database management into a cohesive application.
+
+#### Pathfinder
+Pathfinder is a web application designed to enhance tourism experiences by providing users with a platform to discover and explore new routes in natural surroundings. The application allows users to select between different modes of travel, such as pedestrian, bicycle, motorcycle, or car, and find optimal routes based on their preferences.
+
+#### Key features of the Pathfinder application include:
+
+- Route selection based on the user's chosen mode of travel.
+- Display of important information about each route, including descriptions, pictures, videos, and difficulty levels.
+- User authentication and personalized experiences, such as the ability to leave comments and engage with other users.
+- Integration with mapping services and navigation tools to provide real-time directions.
+
+Pathfinder enabled me to leverage my skills in Java web development and integrate external APIs and services to create a dynamic and engaging user experience.
+
+These projects allowed me to apply the knowledge and skills I acquired during my studies at the Software University in practical, real-world scenarios. They further enhanced my understanding of Java development and provided me with valuable hands-on experience in building web applications with both front-end and back-end components.
+
