@@ -15,7 +15,9 @@ The Software University's Java Developer path was a transformative experience th
 
     - Java OOP (Object-Oriented Programming): This submodule focused on object-oriented programming concepts, such as classes, objects, inheritance, polymorphism, abstraction, encapsulation, interfaces, and design patterns. It emphasized building modular, reusable, and maintainable code.
 
-4. Java DB: This module focused on working with databases in a Java environment. Topics covered included database management systems, SQL, relational databases, database design principles, Hibernate (object-relational mapping framework), Spring Data JPA, and MySQL.
+4. Java DB: The Java DB module was divided into two submodules:
+    - Java DB: This submodule covered Java-related database topics, such as Hibernate (object-relational mapping framework), Spring Data JPA, and other Java-based database technologies.
+    - MySQL: This submodule focused on MySQL, covering topics such as relational database design, SQL queries, and database management.
 
 5. Java Web: The Java Web module introduced me to web development using Java. It covered topics such as web technologies (HTML, CSS, JavaScript), Servlets, JavaServer Pages (JSP), JavaServer Faces (JSF), Spring MVC (Model-View-Controller framework), security, RESTful APIs, and more.
 
@@ -32,7 +34,9 @@ The repository is organized by course modules, with each module containing its o
 
     - Java OOP: This subdirectory contains exercises and projects related to the Java OOP submodule.
 
-- Java DB: This directory contains exercises and projects related to the Databases course.
+- Java DB: This directory contains exercises and projects related to the Java DB course.
+    - Java DB: This subdirectory contains exercises and projects related to the Java DB submodule.
+    - MySQL: This subdirectory contains exercises and projects related to the MySQL submodule.
 
 - Java Web: This directory contains exercises and projects related to the Java Web course.
 
