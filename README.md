@@ -19,7 +19,7 @@ The Software University's Java Developer path was a transformative experience th
     - Java-DB: This submodule covered Java-related database topics, such as Hibernate (object-relational mapping framework), Spring Data JPA, and other Java-based database technologies.
     - MySQL: This submodule focused on MySQL, covering topics such as relational database design, SQL queries, and database management.
 
-5. Java-Web: The Java Web module introduced me to web development using Java. It covered topics such as web technologies (HTML, CSS, JavaScript), Servlets, JavaServer Pages (JSP), JavaServer Faces (JSF), Spring MVC (Model-View-Controller framework), security, RESTful APIs, and more.
+5. Java-Web: The Java Web module introduced me to web development using Java. It covered topics such as web technologies (HTML, CSS, JavaScript), Servlets, Spring MVC (Model-View-Controller framework), Spring-Security, RESTful APIs, and more.
 
 ## Repository Structure
 The repository is organized by course modules, with each module containing its own set of projects and assignments. The structure follows the progression of the Java Developer path. Here is an overview of the repository structure:
